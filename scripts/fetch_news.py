@@ -10,6 +10,30 @@ from datetime import datetime, timezone, timedelta
 CLIENT_ID = os.environ["NAVER_CLIENT_ID"]
 CLIENT_SECRET = os.environ["NAVER_CLIENT_SECRET"]
 
+# ═══ 허용 언론사 도메인 (경제/금융 전문지만) ═══
+ALLOWED_DOMAINS = [
+    "mk.co.kr",           # 매일경제
+    "heraldcorp.com",      # 헤럴드경제
+    "herald.co.kr",        # 헤럴드경제 (구도메인)
+    "fnnews.com",          # 파이낸셜뉴스
+    "mt.co.kr",            # 머니투데이
+    "moneytoday.co.kr",    # 머니투데이 (구도메인)
+    "bizwatch.co.kr",      # 비즈워치
+    "asiae.co.kr",         # 아시아경제
+    "edaily.co.kr",        # 이데일리
+    "biz.chosun.com",      # 조선비즈
+    "hankyung.com",        # 한국경제
+    "joseilbo.com",        # 조세일보
+    "sedaily.com",         # 서울경제
+]
+
+def is_allowed_source(url):
+    """URL이 허용된 언론사인지 확인"""
+    if not url:
+        return False
+    url_lower = url.lower()
+    return any(domain in url_lower for domain in ALLOWED_DOMAINS)
+
 # ═══ 티커 → 검색어 매핑 (한글 + 영문) ═══
 # 네이버에서 잘 검색되도록 한글 기업명 우선, 영문 티커 보조
 TICKER_QUERIES = {
@@ -138,11 +162,14 @@ def main():
         seen_urls = set()
         
         for q in [query, f"{ticker} 주가"]:
-            result = search_naver_news(q, display=5)
+            result = search_naver_news(q, display=20)
             if result and "items" in result:
                 for item in result["items"]:
                     url = item.get("originallink") or item.get("link", "")
                     if url in seen_urls:
+                        continue
+                    # 경제지 필터
+                    if not is_allowed_source(url):
                         continue
                     seen_urls.add(url)
                     
@@ -159,7 +186,12 @@ def main():
                         "date": item.get("pubDate", ""),
                         "mentions": mentioned,
                     })
+                    
+                    if len(articles) >= 5:
+                        break
             
+            if len(articles) >= 5:
+                break
             time.sleep(0.05)  # 레이트 리밋 방지
         
         # 최신순 정렬, 최대 5개
