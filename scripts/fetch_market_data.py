@@ -49,9 +49,9 @@ def fetch_json(url):
 
 
 def fetch_profiles():
-    """FMP Stable API에서 기업 프로필 수집 (1개씩)"""
-    print("\n[1/2] 기업 프로필 수집 중...")
-    all_profiles = {}
+    """FMP Stable API에서 기업 프로필 수집 (1개씩) — 시총, 가격 포함"""
+    print("\n[1/1] 기업 프로필+시세 수집 중...")
+    all_data = {}
     fail_count = 0
 
     for i, ticker in enumerate(TICKERS):
@@ -61,7 +61,8 @@ def fetch_profiles():
         if data and isinstance(data, list) and len(data) > 0:
             p = data[0]
             sym = p.get("symbol", ticker)
-            all_profiles[sym] = {
+            all_data[sym] = {
+                # 프로필 정보
                 "symbol": sym,
                 "companyName": p.get("companyName", ""),
                 "description": p.get("description", ""),
@@ -74,48 +75,14 @@ def fetch_profiles():
                 "fullTimeEmployees": p.get("fullTimeEmployees", ""),
                 "ipoDate": p.get("ipoDate", ""),
                 "image": p.get("image", ""),
+                # 시세 정보 (프로필 API에 포함됨)
                 "mktCap": p.get("mktCap", 0),
-            }
-            if (i + 1) % 10 == 0:
-                print(f"  ✓ {i+1}/{len(TICKERS)} 완료")
-        else:
-            fail_count += 1
-            print(f"  ✗ {ticker} 실패")
-
-        # Rate limiting: 무료 플랜 초당 5회 제한 대응
-        time.sleep(0.25)
-
-    print(f"  총 {len(all_profiles)}개 프로필 수집 완료 (실패: {fail_count}개)")
-    return all_profiles
-
-
-def fetch_quotes():
-    """FMP Stable API에서 시세 수집 (1개씩)"""
-    print("\n[2/2] 실시간 시세 수집 중...")
-    all_quotes = {}
-    fail_count = 0
-
-    for i, ticker in enumerate(TICKERS):
-        url = f"{FMP_STABLE}/quote?symbol={ticker}&apikey={FMP_KEY}"
-        data = fetch_json(url)
-
-        if data and isinstance(data, list) and len(data) > 0:
-            q = data[0]
-            sym = q.get("symbol", ticker)
-            all_quotes[sym] = {
-                "symbol": sym,
-                "price": q.get("price"),
-                "change": q.get("change"),
-                "changesPercentage": q.get("changesPercentage"),
-                "marketCap": q.get("marketCap"),
-                "volume": q.get("volume"),
-                "avgVolume": q.get("avgVolume"),
-                "dayHigh": q.get("dayHigh"),
-                "dayLow": q.get("dayLow"),
-                "yearHigh": q.get("yearHigh"),
-                "yearLow": q.get("yearLow"),
-                "open": q.get("open"),
-                "previousClose": q.get("previousClose"),
+                "price": p.get("price", None),
+                "changes": p.get("changes", None),
+                "beta": p.get("beta", None),
+                "volAvg": p.get("volAvg", None),
+                "lastDiv": p.get("lastDiv", None),
+                "range": p.get("range", ""),
             }
             if (i + 1) % 10 == 0:
                 print(f"  ✓ {i+1}/{len(TICKERS)} 완료")
@@ -125,8 +92,8 @@ def fetch_quotes():
 
         time.sleep(0.25)
 
-    print(f"  총 {len(all_quotes)}개 시세 수집 완료 (실패: {fail_count}개)")
-    return all_quotes
+    print(f"  총 {len(all_data)}개 수집 완료 (실패: {fail_count}개)")
+    return all_data
 
 
 def save_json(data, filename):
@@ -149,15 +116,33 @@ def main():
     now_kst = datetime.now(kst).strftime("%Y-%m-%d %H:%M KST")
     print(f"=== AI MESH 시장 데이터 수집 시작 ({now_kst}) ===")
 
-    profiles = fetch_profiles()
-    if profiles:
-        save_json({"updated_kst": now_kst, "count": len(profiles), "data": profiles}, "profiles.json")
+    all_data = fetch_profiles()
 
-    quotes = fetch_quotes()
-    if quotes:
-        save_json({"updated_kst": now_kst, "count": len(quotes), "data": quotes}, "quotes.json")
+    if all_data:
+        # profiles.json — 전체 데이터 (프로필 + 시세)
+        save_json({
+            "updated_kst": now_kst,
+            "count": len(all_data),
+            "data": all_data,
+        }, "profiles.json")
 
-    print(f"\n=== 완료! 프로필 {len(profiles)}개, 시세 {len(quotes)}개 ===")
+        # quotes.json — 시세 부분만 추출 (클라이언트 호환용)
+        quotes = {}
+        for sym, d in all_data.items():
+            quotes[sym] = {
+                "symbol": sym,
+                "price": d.get("price"),
+                "change": d.get("changes"),
+                "changesPercentage": round(d["changes"] / (d["price"] - d["changes"]) * 100, 2) if d.get("price") and d.get("changes") and (d["price"] - d["changes"]) != 0 else None,
+                "marketCap": d.get("mktCap"),
+            }
+        save_json({
+            "updated_kst": now_kst,
+            "count": len(quotes),
+            "data": quotes,
+        }, "quotes.json")
+
+    print(f"\n=== 완료! {len(all_data)}개 기업 데이터 수집 ===")
 
 
 if __name__ == "__main__":
