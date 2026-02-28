@@ -1,14 +1,23 @@
 #!/usr/bin/env python3
 """
 NASDAQ 100 뉴스 수집기 — 네이버 검색 API
-매일 GitHub Actions에서 실행, 결과를 data/news.json으로 저장
+매일 GitHub Actions에서 실행, 결과를 data/news.json으로 누적 저장
+
+핵심 변경:
+- 매일 리셋 → 90일(3개월) 누적 방식
+- 기존 news.json 로드 → 새 뉴스 추가 → 90일 초과 기사 삭제
+- co-mention은 전체 누적 데이터 기준으로 매번 재계산
+- 중복 URL 자동 제거
 """
 
-import os, json, time, urllib.request, urllib.parse
+import os, json, time, urllib.request, urllib.parse, re
 from datetime import datetime, timezone, timedelta
+from email.utils import parsedate_to_datetime
 
 CLIENT_ID = os.environ["NAVER_CLIENT_ID"]
 CLIENT_SECRET = os.environ["NAVER_CLIENT_SECRET"]
+
+RETENTION_DAYS = 90  # 뉴스 보관 기간 (3개월)
 
 # ═══ 허용 언론사 도메인 (경제/금융 전문지만) ═══
 ALLOWED_DOMAINS = [
@@ -28,14 +37,12 @@ ALLOWED_DOMAINS = [
 ]
 
 def is_allowed_source(url):
-    """URL이 허용된 언론사인지 확인"""
     if not url:
         return False
     url_lower = url.lower()
     return any(domain in url_lower for domain in ALLOWED_DOMAINS)
 
-# ═══ 티커 → 검색어 매핑 (한글 + 영문) ═══
-# 네이버에서 잘 검색되도록 한글 기업명 우선, 영문 티커 보조
+# ═══ 티커 → 검색어 매핑 ═══
 TICKER_QUERIES = {
     # Semiconductor
     "NVDA": "엔비디아", "AVGO": "브로드컴", "ASML": "ASML",
@@ -85,15 +92,13 @@ TICKER_QUERIES = {
     "ORLY": "오라일리오토", "CTAS": "신타스",
 }
 
+
 def search_naver_news(query, display=5):
-    """네이버 뉴스 검색 API 호출"""
     enc = urllib.parse.quote(query)
     url = f"https://openapi.naver.com/v1/search/news.json?query={enc}&display={display}&sort=date"
-    
     req = urllib.request.Request(url)
     req.add_header("X-Naver-Client-Id", CLIENT_ID)
     req.add_header("X-Naver-Client-Secret", CLIENT_SECRET)
-    
     try:
         with urllib.request.urlopen(req, timeout=10) as resp:
             if resp.getcode() == 200:
@@ -104,8 +109,6 @@ def search_naver_news(query, display=5):
 
 
 def clean_html(text):
-    """HTML 태그 및 엔티티 제거"""
-    import re
     text = re.sub(r"<[^>]+>", "", text)
     text = text.replace("&quot;", '"').replace("&amp;", "&")
     text = text.replace("&lt;", "<").replace("&gt;", ">")
@@ -113,54 +116,144 @@ def clean_html(text):
     return text.strip()
 
 
+def parse_date(date_str):
+    """다양한 날짜 형식을 ISO 형식으로 변환"""
+    if not date_str:
+        return None
+    try:
+        # RFC 2822 형식 (네이버 API 기본)
+        dt = parsedate_to_datetime(date_str)
+        return dt.isoformat()
+    except:
+        pass
+    # 이미 ISO 형식인 경우
+    if "T" in date_str:
+        return date_str
+    return date_str
+
+
+def is_within_retention(date_str, cutoff_date):
+    """기사가 보관 기간 내인지 확인"""
+    if not date_str:
+        return True  # 날짜 없으면 일단 보관
+    try:
+        if "T" in date_str:
+            # ISO 형식
+            dt_str = date_str.split("T")[0]
+            dt = datetime.strptime(dt_str, "%Y-%m-%d")
+        else:
+            # RFC 2822
+            dt = parsedate_to_datetime(date_str).replace(tzinfo=None)
+        return dt >= cutoff_date
+    except:
+        return True  # 파싱 실패하면 일단 보관
+
+
 def extract_mentioned_tickers(title, desc):
-    """뉴스 제목+본문에서 다른 NASDAQ 100 티커/기업명 언급 추출"""
     combined = (title + " " + desc).upper()
     mentions = set()
-    
-    # 티커 직접 매칭 (최소 경계 문자 체크)
     for ticker in TICKER_QUERIES:
         if len(ticker) >= 3 and ticker in combined:
             mentions.add(ticker)
-    
-    # 한글 기업명 매칭
     combined_kr = title + " " + desc
     kr_to_ticker = {}
     for t, q in TICKER_QUERIES.items():
         for keyword in q.split():
             if len(keyword) >= 2:
                 kr_to_ticker[keyword] = t
-    
     for keyword, ticker in kr_to_ticker.items():
         if keyword in combined_kr:
             mentions.add(ticker)
-    
     return list(mentions)
+
+
+def load_existing_news(path):
+    """기존 news.json 로드"""
+    if not os.path.exists(path):
+        print("  📄 기존 news.json 없음 — 새로 생성")
+        return None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+        stock_count = len(data.get("stocks", {}))
+        article_count = sum(len(v) for v in data.get("stocks", {}).values())
+        print(f"  📄 기존 news.json 로드: {stock_count}개 종목, {article_count}개 기사")
+        return data
+    except Exception as e:
+        print(f"  ⚠️ 기존 news.json 로드 실패: {e}")
+        return None
+
+
+def merge_articles(existing_articles, new_articles):
+    """기존 기사 + 새 기사 병합 (URL 기준 중복 제거)"""
+    seen_urls = set()
+    merged = []
+
+    # 새 기사 먼저 (최신 우선)
+    for art in new_articles:
+        url = art.get("url", "")
+        if url and url not in seen_urls:
+            seen_urls.add(url)
+            merged.append(art)
+
+    # 기존 기사 추가
+    for art in existing_articles:
+        url = art.get("url", "")
+        if url and url not in seen_urls:
+            seen_urls.add(url)
+            merged.append(art)
+
+    return merged
+
+
+def calculate_co_mentions(stocks_data):
+    """전체 누적 데이터 기준으로 co-mention 재계산"""
+    co_mention_count = {}
+
+    for ticker, articles in stocks_data.items():
+        for art in articles:
+            tickers_in_article = set(art.get("mentions", []))
+            tickers_in_article.add(ticker)
+            tickers_list = sorted(tickers_in_article)
+            for a_idx in range(len(tickers_list)):
+                for b_idx in range(a_idx + 1, len(tickers_list)):
+                    pair = f"{tickers_list[a_idx]}-{tickers_list[b_idx]}"
+                    co_mention_count[pair] = co_mention_count.get(pair, 0) + 1
+
+    # 2회 이상만 저장, 내림차순 정렬
+    return {
+        k: v for k, v in sorted(co_mention_count.items(), key=lambda x: -x[1])
+        if v >= 2
+    }
 
 
 def main():
     kst = timezone(timedelta(hours=9))
     now = datetime.now(kst)
+    cutoff_date = (now - timedelta(days=RETENTION_DAYS)).replace(tzinfo=None)
+
     print(f"🚀 뉴스 수집 시작: {now.strftime('%Y-%m-%d %H:%M KST')}")
     print(f"   총 {len(TICKER_QUERIES)}개 종목")
-    
-    news_data = {
-        "updated": now.isoformat(),
-        "updated_kst": now.strftime("%Y-%m-%d %H:%M"),
-        "stocks": {},        # ticker → [뉴스 목록]
-        "co_mentions": {},   # "TICKER1-TICKER2" → count (동시 언급)
-    }
-    
-    co_mention_count = {}
-    total_articles = 0
-    
+    print(f"   보관 기간: {RETENTION_DAYS}일 (~ {cutoff_date.strftime('%Y-%m-%d')} 이후)")
+
+    # ═══ 1. 기존 데이터 로드 ═══
+    out_path = os.path.join(os.path.dirname(__file__), "..", "data", "news.json")
+    out_path = os.path.abspath(out_path)
+    existing = load_existing_news(out_path)
+    existing_stocks = existing.get("stocks", {}) if existing else {}
+
+    # ═══ 2. 오늘 뉴스 수집 ═══
+    print(f"\n📡 오늘 뉴스 수집 중...")
+    today_new_count = 0
+
     for i, (ticker, query) in enumerate(TICKER_QUERIES.items()):
-        print(f"  [{i+1:3d}/{len(TICKER_QUERIES)}] {ticker}: '{query}'")
-        
-        # 한글 검색 + 영문 티커 검색 (결과 합치기)
-        articles = []
+        if (i + 1) % 10 == 0 or i == 0:
+            print(f"  [{i+1:3d}/{len(TICKER_QUERIES)}] {ticker}: '{query}'")
+
+        # 오늘 새로 수집
+        new_articles = []
         seen_urls = set()
-        
+
         for q in [query, f"{ticker} 주가"]:
             result = search_naver_news(q, display=20)
             if result and "items" in result:
@@ -168,70 +261,80 @@ def main():
                     url = item.get("originallink") or item.get("link", "")
                     if url in seen_urls:
                         continue
-                    # 경제지 필터
                     if not is_allowed_source(url):
                         continue
                     seen_urls.add(url)
-                    
+
                     title = clean_html(item.get("title", ""))
                     desc = clean_html(item.get("description", ""))
-                    
-                    # 다른 종목 동시 언급 추출
                     mentioned = extract_mentioned_tickers(title, desc)
-                    
-                    articles.append({
+                    pub_date = parse_date(item.get("pubDate", ""))
+
+                    new_articles.append({
                         "title": title,
                         "desc": desc[:200],
                         "url": url,
-                        "date": item.get("pubDate", ""),
+                        "date": pub_date,
                         "mentions": mentioned,
                     })
-                    
-                    if len(articles) >= 5:
+
+                    if len(new_articles) >= 10:
                         break
-            
-            if len(articles) >= 5:
+
+            if len(new_articles) >= 10:
                 break
-            time.sleep(0.05)  # 레이트 리밋 방지
-        
-        # 최신순 정렬, 최대 5개
-        articles = articles[:5]
-        news_data["stocks"][ticker] = articles
-        total_articles += len(articles)
-        
-        # 동시 언급 카운트
-        for art in articles:
-            tickers_in_article = set(art["mentions"])
-            tickers_in_article.add(ticker)
-            tickers_list = sorted(tickers_in_article)
-            for a_idx in range(len(tickers_list)):
-                for b_idx in range(a_idx + 1, len(tickers_list)):
-                    pair = f"{tickers_list[a_idx]}-{tickers_list[b_idx]}"
-                    co_mention_count[pair] = co_mention_count.get(pair, 0) + 1
-    
-    # 동시 언급 2회 이상만 저장
-    news_data["co_mentions"] = {
-        k: v for k, v in sorted(co_mention_count.items(), key=lambda x: -x[1])
-        if v >= 2
+            time.sleep(0.05)
+
+        today_new_count += len(new_articles)
+
+        # ═══ 3. 기존 기사와 병합 ═══
+        old_articles = existing_stocks.get(ticker, [])
+        merged = merge_articles(old_articles, new_articles)
+
+        # ═══ 4. 90일 초과 기사 제거 ═══
+        retained = [a for a in merged if is_within_retention(a.get("date"), cutoff_date)]
+
+        existing_stocks[ticker] = retained
+
+    # ═══ 5. co-mention 전체 재계산 ═══
+    print(f"\n🔗 co-mention 재계산 중...")
+    co_mentions = calculate_co_mentions(existing_stocks)
+
+    # ═══ 6. 통계 ═══
+    total_articles = sum(len(v) for v in existing_stocks.values())
+    tickers_with_news = sum(1 for v in existing_stocks.values() if len(v) > 0)
+
+    # ═══ 7. 저장 ═══
+    news_data = {
+        "updated": now.isoformat(),
+        "updated_kst": now.strftime("%Y-%m-%d %H:%M"),
+        "retention_days": RETENTION_DAYS,
+        "stats": {
+            "total_articles": total_articles,
+            "tickers_with_news": tickers_with_news,
+            "today_new": today_new_count,
+            "co_mention_pairs": len(co_mentions),
+        },
+        "stocks": existing_stocks,
+        "co_mentions": co_mentions,
     }
-    
-    # 저장
-    out_path = os.path.join(os.path.dirname(__file__), "..", "data", "news.json")
-    out_path = os.path.abspath(out_path)
+
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
-    
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(news_data, f, ensure_ascii=False, indent=1)
-    
+
+    file_size = os.path.getsize(out_path) / 1024
     print(f"\n✅ 완료!")
-    print(f"   기사 수: {total_articles}")
-    print(f"   동시 언급 쌍: {len(news_data['co_mentions'])}")
+    print(f"   오늘 수집: {today_new_count}개")
+    print(f"   전체 누적: {total_articles}개 ({tickers_with_news}개 종목)")
+    print(f"   co-mention 쌍: {len(co_mentions)}개")
+    print(f"   파일 크기: {file_size:.1f} KB")
     print(f"   저장: {out_path}")
-    
-    # 상위 동시 언급 출력
-    top = list(news_data["co_mentions"].items())[:15]
+
+    # 상위 co-mention
+    top = list(co_mentions.items())[:15]
     if top:
-        print(f"\n📊 동시 언급 TOP 15:")
+        print(f"\n📊 co-mention TOP 15:")
         for pair, count in top:
             print(f"   {pair}: {count}건")
 
