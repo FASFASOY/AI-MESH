@@ -19,7 +19,7 @@ from datetime import datetime, timezone, timedelta
 FMP_KEY = os.environ.get("FMP_API_KEY", "")
 FMP_STABLE = "https://financialmodelingprep.com/stable"
 FMP_V3 = "https://financialmodelingprep.com/api/v3"
-DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
+DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 
 # NASDAQ 100 티커 목록 (AI MESH에서 사용하는 전체 목록)
 TICKERS = [
