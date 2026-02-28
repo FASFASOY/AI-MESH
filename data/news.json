@@ -1,15 +1,33 @@
 {
- "updated": "2026-02-28T21:12:59.881958+09:00",
- "updated_kst": "2026-02-28 21:12",
+ "updated": "2026-03-01T07:51:51.787181+09:00",
+ "updated_kst": "2026-03-01 07:51",
  "retention_days": 90,
  "stats": {
-  "total_articles": 376,
+  "total_articles": 397,
   "tickers_with_news": 91,
-  "today_new": 382,
-  "co_mention_pairs": 132
+  "today_new": 381,
+  "co_mention_pairs": 133
  },
  "stocks": {
   "NVDA": [
+   {
+    "title": "스마트폰 D램 용량 ‘역대 최대’…메모리 품귀에도 AI 출혈경쟁",
+    "desc": "이런 상황에서 엔비디아를 포함한 빅테크가 개발·구축하는 그래픽처리장치(GPU)와 AI 데이터센터가 고대역폭메모리(HBM) 형태로 D램 물량을 먼저 흡수해가면서 스마트폰용 D램은 더 귀해지고 가격 부담도 가중되는...",
+    "url": "https://www.sedaily.com/article/20013926?ref=naver",
+    "date": "2026-03-01T07:01:00+09:00",
+    "mentions": [
+     "NVDA"
+    ]
+   },
+   {
+    "title": "미국의 이란 공격…글로벌 시장 충격에 ‘코스피’ 변동성도 커지나",
+    "desc": "엔비디아의 급락세가 영향을 미치며 7거래일 만에 하락했지만, 일주일 사이 ‘육천피’를 넘어 한때... 엔비디아의 역대급 실적에 삼성전자와 SK하이닉스는 한 주간 각각 14%, 12% 급등해 ‘20만전자’와 ‘100만닉스’를...",
+    "url": "https://www.mk.co.kr/article/11975502",
+    "date": "2026-03-01T06:52:00+09:00",
+    "mentions": [
+     "NVDA"
+    ]
+   },
    {
     "title": "“노화 비밀, 계산으로 푼다”...심우주보다 차가운 ‘영하 273도’ 황금...",
     "desc": "정재호 연세대 양자사업단장은 “10년 후에는 구글이나 엔비디아가 만든 항암제를 처방받는 ‘기술 독재’ 시대가 올 수도 있다”면서 “하드웨어와 달리 알고리즘과 소프트웨어는 전 세계가 같은 출발선에 있기에...",
@@ -72,14 +90,14 @@
     "url": "https://www.sedaily.com/article/20013831?ref=naver",
     "date": "2026-02-28T07:26:00+09:00",
     "mentions": [
-     "GOOGL",
-     "MSFT",
+     "TSLA",
      "AVGO",
+     "MSFT",
      "NVDA",
      "AAPL",
-     "TSLA",
-     "META",
-     "AMZN"
+     "AMZN",
+     "GOOGL",
+     "META"
     ]
    },
    {
@@ -97,13 +115,13 @@
     "url": "https://www.hankyung.com/article/2026022705661",
     "date": "2026-02-27T17:47:00+09:00",
     "mentions": [
-     "MU",
      "AVGO",
+     "AMD",
+     "MU",
      "NVDA",
      "INTC",
-     "AMD",
-     "META",
-     "AMZN"
+     "AMZN",
+     "META"
     ]
    },
    {
@@ -173,12 +191,12 @@
     "url": "https://www.mt.co.kr/stock/2026/02/27/2026022708564689389",
     "date": "2026-02-27T09:39:00+09:00",
     "mentions": [
-     "ASML",
      "AVGO",
-     "WDC",
      "NVDA",
      "INTC",
-     "LRCX"
+     "LRCX",
+     "ASML",
+     "WDC"
     ]
    },
    {
@@ -188,8 +206,8 @@
     "date": "2026-02-27T07:29:00+09:00",
     "mentions": [
      "AVGO",
-     "LRCX",
      "ASML",
+     "LRCX",
      "NVDA"
     ]
    },
@@ -200,8 +218,8 @@
     "date": "2026-02-27T06:53:00+09:00",
     "mentions": [
      "AVGO",
-     "LRCX",
      "ASML",
+     "LRCX",
      "NVDA"
     ]
    },
@@ -212,8 +230,8 @@
     "date": "2026-02-27T06:08:00+09:00",
     "mentions": [
      "AVGO",
-     "LRCX",
      "ASML",
+     "LRCX",
      "NVDA"
     ]
    }
@@ -225,13 +243,13 @@
     "url": "https://www.hankyung.com/article/2026022705661",
     "date": "2026-02-27T17:47:00+09:00",
     "mentions": [
-     "MU",
      "AVGO",
+     "AMD",
+     "MU",
      "NVDA",
      "INTC",
-     "AMD",
-     "META",
-     "AMZN"
+     "AMZN",
+     "META"
     ]
    },
    {
@@ -248,13 +266,42 @@
   ],
   "QCOM": [
    {
-    "title": "퀄컴, 인텔 파운드리 임원 영입... AI 반도체 공급망 강화",
-    "desc": "퀄컴이 인텔 파운드리 핵심 임원을 글로벌 공급망 책임자로 영입했다. AI 인프라 투자 경쟁이 격화되며 메모리·비메모리 전반의 공급망 관리 중요성이 커진 데 따른 포석으로 해석된다. 퀄컴은 26일(현지 시각) 2024년...",
-    "url": "https://biz.chosun.com/it-science/ict/2026/02/27/V4YCVM3LMRDIPLKVF3EHVPNY5I/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-    "date": "2026-02-27T18:15:00+09:00",
+    "title": "\"밤의 제왕, 나야나\"…삼성 vs 샤오미 글로벌 '울트라' 경쟁",
+    "desc": "스마트폰의 두뇌 역할을 하는 AP(애플리케이션 프로세서)는 양사 모두 퀄컴의 최신 칩인 스냅드래곤 8 엘리트 5세대 모바일 플랫폼을 탑재했다. 배터리는 용량은 샤오미17 울트라(6000mAh)가 갤럭시S26 울트라(5000mAh)...",
+    "url": "https://www.mt.co.kr/tech/2026/03/01/2026022818222975972",
+    "date": "2026-03-01T07:00:00+09:00",
     "mentions": [
-     "INTC",
+     "QCOM",
+     "AAPL"
+    ]
+   },
+   {
+    "title": "[MWC26]'괴물 카메라폰' 내놓은 샤오미…라이카 협업 '17 울트라·라이츠...",
+    "desc": "샤오미 17 시리즈의 모든 모델은 퀄컴의 최신 애플리케이션 프로세서(AP)인 '스냅드래곤 8 엘리트 5세대'를... 프로 제품에는 퀄컴의 최신 프로세서인 스냅드래곤 8 엘리트가 탑재된다. 샤오미는 이날 행사를 통해...",
+    "url": "https://view.asiae.co.kr/article/2026022823114657117",
+    "date": "2026-03-01T06:00:00+09:00",
+    "mentions": [
+     "QCOM",
+     "AAPL"
+    ]
+   },
+   {
+    "title": "'괴물 카메라' 장착한 '샤오미17 울트라' 첫 선",
+    "desc": "모바일 AP에 퀄컴 첨단 칩셋 탑재 샤오미 17 울트라 포토그래피 키트 프로는 라이카 바디를 연상시키는... 커스텀 3세대 퀄컴 오리온 중앙처리장치(CPU), 차세대 퀄컴 아드레노 GPU, 첨단 퀄컴 헥사곤 신경망처리장치...",
+    "url": "http://www.fnnews.com/news/202603010139459929",
+    "date": "2026-03-01T02:07:00+09:00",
+    "mentions": [
      "QCOM"
+    ]
+   },
+   {
+    "title": "[MWC 2026] 샤오미 첫 전기 하이퍼카 공개…“공기가 차체를 전면으로 통...",
+    "desc": "두뇌 역할을 하는 모바일 AP(애플리케이션 프로세서)에는 퀄컴 스냅드래곤 8 엘리트 5세대가 탑재됐다. 운영체제는 안드로이드 16과 샤오미의 하이퍼OS 3를 사용한다. 디스플레이는 6.9인치, 화면 밝기는 최대 3500니트다....",
+    "url": "https://biz.chosun.com/it-science/ict/2026/03/01/WUW77CDNLJEEPIEOAKQVWVII5A/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-03-01T02:06:00+09:00",
+    "mentions": [
+     "QCOM",
+     "AAPL"
     ]
    },
    {
@@ -263,11 +310,11 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01174246645316408",
     "date": "2026-01-10T04:59:00+09:00",
     "mentions": [
-     "MU",
+     "QCOM",
      "AVGO",
+     "MU",
      "AAPL",
-     "INTC",
-     "QCOM"
+     "INTC"
     ]
    },
    {
@@ -276,7 +323,17 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01669526645315424",
     "date": "2026-01-07T05:44:00+09:00",
     "mentions": [
-     "MSFT",
+     "QCOM",
+     "INTC",
+     "MSFT"
+    ]
+   },
+   {
+    "title": "퀄컴, 인텔 파운드리 임원 영입... AI 반도체 공급망 강화",
+    "desc": "퀄컴이 인텔 파운드리 핵심 임원을 글로벌 공급망 책임자로 영입했다. AI 인프라 투자 경쟁이 격화되며 메모리·비메모리 전반의 공급망 관리 중요성이 커진 데 따른 포석으로 해석된다. 퀄컴은 26일(현지 시각) 2024년...",
+    "url": "https://biz.chosun.com/it-science/ict/2026/02/27/V4YCVM3LMRDIPLKVF3EHVPNY5I/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-02-27T18:15:00+09:00",
+    "mentions": [
      "INTC",
      "QCOM"
     ]
@@ -313,16 +370,6 @@
     ]
    },
    {
-    "title": "[미국 주식 돋보기] 美 TI, 칩 재고 소진에 매출 상승 시동",
-    "desc": "아날로그 반도체 최강자로 올해 들어 주가 24% 급상승 팬데믹 때 비축된 재고 털어 숨은 AI 수혜주 기대 커져 AI서버 전력제어에도 활용 아날로그 반도체 최강자인 텍사스인스트루먼트(TI)가 불황의 터널을 지나...",
-    "url": "https://www.mk.co.kr/article/11960056",
-    "date": "2026-02-11T17:43:00+09:00",
-    "mentions": [
-     "TXN",
-     "INTC"
-    ]
-   },
-   {
     "title": "[美특징주]텍사스인스트루먼츠, 강세…\"잉여현금흐름 긍정적\"",
     "desc": "UBS가 텍사스인스트루먼츠(TXN)에 대한 목표가를 상향하고 나섰다. 이번 목표가 조정은 시장 기대를... “텍사스인스트루먼츠 주가는 매출총이익률보다 잉여현금흐름과 더 높은 상관관계를 가진다”고 덧붙였다.",
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01095526645322640",
@@ -338,8 +385,8 @@
     "date": "2025-12-31T21:01:00+09:00",
     "mentions": [
      "TXN",
-     "ADI",
-     "INTC"
+     "INTC",
+     "ADI"
     ]
    },
    {
@@ -351,6 +398,16 @@
      "TXN",
      "INTC",
      "AMD"
+    ]
+   },
+   {
+    "title": "[미국 주식 돋보기] 美 TI, 칩 재고 소진에 매출 상승 시동",
+    "desc": "아날로그 반도체 최강자로 올해 들어 주가 24% 급상승 팬데믹 때 비축된 재고 털어 숨은 AI 수혜주 기대 커져 AI서버 전력제어에도 활용 아날로그 반도체 최강자인 텍사스인스트루먼트(TI)가 불황의 터널을 지나...",
+    "url": "https://www.mk.co.kr/article/11960056",
+    "date": "2026-02-11T17:43:00+09:00",
+    "mentions": [
+     "TXN",
+     "INTC"
     ]
    }
   ],
@@ -404,11 +461,11 @@
     "url": "https://biz.heraldcorp.com/article/10679417?ref=naver",
     "date": "2026-02-21T20:41:00+09:00",
     "mentions": [
-     "MU",
-     "APP",
-     "INTC",
      "AMD",
-     "META"
+     "MU",
+     "INTC",
+     "META",
+     "APP"
     ]
    },
    {
@@ -448,8 +505,8 @@
     "url": "https://biz.chosun.com/it-science/ict/2026/02/27/V4YCVM3LMRDIPLKVF3EHVPNY5I/?utm_source=naver&utm_medium=original&utm_campaign=biz",
     "date": "2026-02-27T18:15:00+09:00",
     "mentions": [
-     "INTC",
-     "QCOM"
+     "QCOM",
+     "INTC"
     ]
    },
    {
@@ -458,11 +515,11 @@
     "url": "https://www.hankyung.com/article/2026022705661",
     "date": "2026-02-27T17:47:00+09:00",
     "mentions": [
-     "MU",
      "AVGO",
+     "AMD",
+     "MU",
      "NVDA",
-     "INTC",
-     "AMD"
+     "INTC"
     ]
    },
    {
@@ -502,12 +559,12 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01118486642402128",
     "date": "2025-12-25T01:22:00+09:00",
     "mentions": [
-     "KLAC",
      "AVGO",
      "NVDA",
+     "KLAC",
+     "LRCX",
      "ADI",
-     "CDNS",
-     "LRCX"
+     "CDNS"
     ]
    },
    {
@@ -516,11 +573,11 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01420246642399504",
     "date": "2025-12-17T04:45:00+09:00",
     "mentions": [
-     "KLAC",
      "NVDA",
+     "KLAC",
+     "LRCX",
      "ADI",
-     "CDNS",
-     "LRCX"
+     "CDNS"
     ]
    },
    {
@@ -530,9 +587,9 @@
     "date": "2025-12-10T17:44:00+09:00",
     "mentions": [
      "TXN",
+     "INTC",
      "MCHP",
-     "ADI",
-     "INTC"
+     "ADI"
     ]
    },
    {
@@ -541,8 +598,8 @@
     "url": "https://www.mk.co.kr/article/11588649",
     "date": "2025-12-31T21:01:00+09:00",
     "mentions": [
-     "ADI",
-     "INTC"
+     "INTC",
+     "ADI"
     ]
    },
    {
@@ -551,9 +608,9 @@
     "url": "https://www.mk.co.kr/article/11497730",
     "date": "2025-12-25T06:57:00+09:00",
     "mentions": [
-     "ADI",
-     "MPWR",
      "INTC",
+     "MPWR",
+     "ADI",
      "NVDA"
     ]
    },
@@ -563,9 +620,9 @@
     "url": "https://www.mk.co.kr/article/11490845",
     "date": "2025-12-16T16:48:00+09:00",
     "mentions": [
-     "ADI",
+     "INTC",
      "MPWR",
-     "INTC"
+     "ADI"
     ]
    }
   ],
@@ -576,8 +633,8 @@
     "url": "https://www.sedaily.com/article/20013847?ref=naver",
     "date": "2026-02-28T11:30:00+09:00",
     "mentions": [
-     "MU",
-     "INTC"
+     "INTC",
+     "MU"
     ]
    },
    {
@@ -586,8 +643,8 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=02135286645355112",
     "date": "2026-02-28T09:56:00+09:00",
     "mentions": [
-     "MU",
-     "INTC"
+     "INTC",
+     "MU"
     ]
    },
    {
@@ -600,6 +657,16 @@
     ]
    },
    {
+    "title": "마이크론, HBM4 점유율 우려에 출렁?…월가 “메모리 수요 확대 긍정적...",
+    "desc": "최근 차세대 고대역폭메모리(HBM4) 공급망 경쟁 우려로 주가 변동성이 확대된 미국 메모리 반도체 기업 마이크론테크놀로지(Micron Technology, 티커명 MU)에 대해 증권가에서는 증권가에서는 단기 노이즈와 달리 메모리...",
+    "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01180806645351504",
+    "date": "2026-02-17T08:01:00+09:00",
+    "mentions": [
+     "INTC",
+     "MU"
+    ]
+   },
+   {
     "title": "외국인 “삼전닉스 잘먹었습니다”…차익실현 매물 육탄방어한 개미들",
     "desc": "엔비디아는 2027년 수요에 대비해 선제적으로 재고를 축적하고 있다고 언급했는데, 이는 현재의 극심한 공급 부족 현상에 숨통이 트일 수 있다는 해석으로 이어지며 마이크론이 3.13% 하락하기도 했다. 또한...",
     "url": "https://www.mk.co.kr/article/11975185",
@@ -607,16 +674,6 @@
     "mentions": [
      "MU",
      "NVDA"
-    ]
-   },
-   {
-    "title": "마이크론, HBM4 점유율 우려에 출렁?…월가 “메모리 수요 확대 긍정적...",
-    "desc": "최근 차세대 고대역폭메모리(HBM4) 공급망 경쟁 우려로 주가 변동성이 확대된 미국 메모리 반도체 기업 마이크론테크놀로지(Micron Technology, 티커명 MU)에 대해 증권가에서는 증권가에서는 단기 노이즈와 달리 메모리...",
-    "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01180806645351504",
-    "date": "2026-02-17T08:01:00+09:00",
-    "mentions": [
-     "MU",
-     "INTC"
     ]
    },
    {
@@ -657,6 +714,13 @@
   ],
   "LRCX": [
    {
+    "title": "스마트폰 D램 용량 ‘역대 최대’…메모리 품귀에도 AI 출혈경쟁",
+    "desc": "1일 시장조사업체 카운터포인트리서치에 따르면 지난해 12월 전 세계 스마트폰의 평균 D램 용량은 8.... 카운터포인트리서치는 스마트폰 D램의 원가 비중(BoM)은 2020년 ‘아이폰 12 프로 맥스’가 8%, 지난해 아이폰 17...",
+    "url": "https://www.sedaily.com/article/20013926?ref=naver",
+    "date": "2026-03-01T07:01:00+09:00",
+    "mentions": []
+   },
+   {
     "title": "칩가격 치솟아도 폰은 ‘다다익램’",
     "desc": "27일 시장조사 업체 카운터포인트리서치에 따르면 지난해 12월 전 세계 스마트폰의 평균 D램 용량은 8.... 카운터포인트리서치는 스마트폰에서 D램의 원가 비중이 2020년 8%에서 지난해 10%, 향후 20% 이상까지 치솟을...",
     "url": "https://www.sedaily.com/article/20013801?ref=naver",
@@ -686,8 +750,8 @@
     "date": "2026-01-09T01:06:00+09:00",
     "mentions": [
      "STX",
-     "LRCX",
      "AVGO",
+     "LRCX",
      "NVDA"
     ]
    },
@@ -697,12 +761,12 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01118486642402128",
     "date": "2025-12-25T01:22:00+09:00",
     "mentions": [
-     "KLAC",
      "NVDA",
-     "ADI",
      "INTC",
-     "CDNS",
-     "LRCX"
+     "KLAC",
+     "LRCX",
+     "ADI",
+     "CDNS"
     ]
    }
   ],
@@ -713,12 +777,12 @@
     "url": "http://www.joseilbo.com/news/news_read.php?uid=563542&class=53&grp=",
     "date": "2026-02-26T08:36:00+09:00",
     "mentions": [
-     "ASML",
      "MU",
-     "KLAC",
      "NVDA",
      "INTC",
-     "LRCX"
+     "KLAC",
+     "LRCX",
+     "ASML"
     ]
    },
    {
@@ -727,12 +791,12 @@
     "url": "https://www.mt.co.kr/world/2026/02/27/2026022607534867171",
     "date": "2026-02-26T07:57:00+09:00",
     "mentions": [
-     "ASML",
      "MU",
-     "KLAC",
      "NVDA",
      "INTC",
-     "LRCX"
+     "KLAC",
+     "LRCX",
+     "ASML"
     ]
    }
   ],
@@ -759,10 +823,10 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01138166645320344",
     "date": "2026-01-22T01:55:00+09:00",
     "mentions": [
-     "MRVL",
      "INTC",
+     "MU",
      "ARM",
-     "MU"
+     "MRVL"
     ]
    }
   ],
@@ -782,9 +846,9 @@
     "url": "https://www.hankyung.com/article/2025121667046",
     "date": "2025-12-16T14:54:00+09:00",
     "mentions": [
-     "APP",
+     "NXPI",
      "INTC",
-     "NXPI"
+     "APP"
     ]
    }
   ],
@@ -816,15 +880,6 @@
     ]
    },
    {
-    "title": "'챗GPT 개발사' 오픈AI, 160兆 신규투자 유치…기업가치 평가액 1200兆",
-    "desc": "오픈AI의 최대 투자자였던 마이크로소프트(MS)는 이번 투자 라운드에는 참여하지 않았지만, 양사 관계가 견고하다고 강조했다. 오픈AI와 마이크로소프트는 이날 공동성명을 내고 \"오늘 발표된 어떤 내용도...",
-    "url": "https://view.asiae.co.kr/article/2026022809170448000",
-    "date": "2026-02-28T09:17:00+09:00",
-    "mentions": [
-     "MSFT"
-    ]
-   },
-   {
     "title": "엔비디아 \"생각하는 자율주행 AI\" 공개…테슬라 FSD에 도전장 [빈난새의...",
     "desc": "#그외 특징주 #UNH 유나이티드헬스는 에버코어ISI가 견조한 이익창출력을 근거로 투자의견 '아웃퍼폼', 목표주가 $400로 커버리지를 개시하며 상승했습니다. #MCHP 마이크로칩테크놀로지는 2025년 4분기 잠정 실적을...",
     "url": "https://www.hankyung.com/article/202601075604i",
@@ -833,6 +888,15 @@
      "MCHP",
      "TSLA",
      "NVDA"
+    ]
+   },
+   {
+    "title": "'챗GPT 개발사' 오픈AI, 160兆 신규투자 유치…기업가치 평가액 1200兆",
+    "desc": "오픈AI의 최대 투자자였던 마이크로소프트(MS)는 이번 투자 라운드에는 참여하지 않았지만, 양사 관계가 견고하다고 강조했다. 오픈AI와 마이크로소프트는 이날 공동성명을 내고 \"오늘 발표된 어떤 내용도...",
+    "url": "https://view.asiae.co.kr/article/2026022809170448000",
+    "date": "2026-02-28T09:17:00+09:00",
+    "mentions": [
+     "MSFT"
     ]
    },
    {
@@ -894,9 +958,9 @@
     "url": "https://www.mk.co.kr/article/11497730",
     "date": "2025-12-25T06:57:00+09:00",
     "mentions": [
-     "ADI",
-     "MPWR",
      "INTC",
+     "MPWR",
+     "ADI",
      "NVDA"
     ]
    },
@@ -906,9 +970,9 @@
     "url": "https://www.mk.co.kr/article/11490845",
     "date": "2025-12-16T16:48:00+09:00",
     "mentions": [
-     "ADI",
+     "INTC",
      "MPWR",
-     "INTC"
+     "ADI"
     ]
    },
    {
@@ -917,8 +981,8 @@
     "url": "https://www.hankyung.com/article/2025121667046",
     "date": "2025-12-16T14:54:00+09:00",
     "mentions": [
-     "MPWR",
-     "INTC"
+     "INTC",
+     "MPWR"
     ]
    },
    {
@@ -927,9 +991,9 @@
     "url": "https://www.mk.co.kr/article/11485434",
     "date": "2025-12-05T17:31:00+09:00",
     "mentions": [
-     "ADI",
-     "MPWR",
      "INTC",
+     "MPWR",
+     "ADI",
      "NVDA"
     ]
    }
@@ -951,9 +1015,9 @@
     "url": "https://view.asiae.co.kr/article/2026022313174854515",
     "date": "2026-02-23T14:32:00+09:00",
     "mentions": [
+     "STX",
      "AMZN",
      "PLTR",
-     "STX",
      "MSFT"
     ]
    },
@@ -965,9 +1029,9 @@
     "mentions": [
      "MSFT",
      "STX",
-     "WDC",
+     "AMZN",
      "PLTR",
-     "AMZN"
+     "WDC"
     ]
    }
   ],
@@ -988,8 +1052,8 @@
     "url": "https://www.mt.co.kr/stock/2026/02/27/2026022708564689389",
     "date": "2026-02-27T09:39:00+09:00",
     "mentions": [
-     "MU",
      "INTC",
+     "MU",
      "WDC",
      "NVDA"
     ]
@@ -1028,6 +1092,45 @@
   ],
   "MSFT": [
    {
+    "title": "\"호르무즈 해협 봉쇄\"에 스태그플레이션 우려 고조…AI에 치명적일 수도",
+    "desc": "기술주 강세론자인 댄 아이브스 웨드부시 증권 애널리스트는 유가 폭등이 마이크로소프트(MS), 구글 등 하이퍼스케일러들의 마진을 잠식할 것이고, 이것이 결국 AI 사이클 둔화로 이어질 수 있다고 경고했다....",
+    "url": "http://www.fnnews.com/news/202603010331211151",
+    "date": "2026-03-01T04:13:00+09:00",
+    "mentions": [
+     "MSFT",
+     "GOOGL"
+    ]
+   },
+   {
+    "title": "AI 무기화 논란에 ‘앤트로픽’ 고립되자… 오픈AI, 美국방부에 서비스...",
+    "desc": "아마존·구글·마이크로소프트·오픈AI 직원 일부와 노동단체 연합은 공개서한을 내고 자사 경영진에 앤트로픽과의 연대를 촉구했다. 국방부의 무제한 사용 요구를 거부하라는 내용이다. 최근 국방부의 기밀 업무 사용...",
+    "url": "https://biz.chosun.com/international/international_general/2026/03/01/NTO7G2AJRNGYFHTT5Z2K7553GQ/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-03-01T01:29:00+09:00",
+    "mentions": [
+     "AMZN",
+     "MSFT",
+     "GOOGL"
+    ]
+   },
+   {
+    "title": "전국서 모여 뜨거운 경쟁…제주도에 분 ‘브리지 열풍’",
+    "desc": "워렌 버핏 버크셔 해서웨이 회장과 빌 게이츠 마이크로소프트 창업자 등이 즐기는 것으로 유명한 브리지는 최근 한국에서도 큰 인기를 끌고 있다. 제주특별자치도브리지협회 전국 토너먼트를 포함해 올해...",
+    "url": "https://www.mk.co.kr/article/11975462",
+    "date": "2026-02-28T21:46:00+09:00",
+    "mentions": [
+     "MSFT"
+    ]
+   },
+   {
+    "title": "'채권왕' 빌 그로스 \"AI 대형 기술주 경계…통신·에너지 등 선호\"",
+    "desc": "그 중에서 특히 오라클(ORCL), 마이크로소프트(MSFT), 아이비엠(IBM) 등을 빠르게 매도되고 있는 종목군으로... 최근 주가 변동성이 극심한 대형 기술주에 투자해 큰 수익을 노리기보다는 연 5~9% 정도의 안정적인 수익에...",
+    "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01722006645354128",
+    "date": "2026-02-25T05:16:00+09:00",
+    "mentions": [
+     "MSFT"
+    ]
+   },
+   {
     "title": "\"큰 거 온다\"…'2500조원' 스페이스X 내달 IPO절차 착수",
     "desc": "상장이 성공적으로 마무리될 경우 스페이스X는 엔비디아, 애플, 마이크로소프트, 알파벳, 아마존 등과 어깨를 나란히 하는 기업가치를 지닌 세계 최고 수준의 상장사로 자리매김할 가능성이 있습니다. 이번 IPO를...",
     "url": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5178707",
@@ -1051,15 +1154,6 @@
      "AAPL",
      "NVDA",
      "AMZN"
-    ]
-   },
-   {
-    "title": "'채권왕' 빌 그로스 \"AI 대형 기술주 경계…통신·에너지 등 선호\"",
-    "desc": "그 중에서 특히 오라클(ORCL), 마이크로소프트(MSFT), 아이비엠(IBM) 등을 빠르게 매도되고 있는 종목군으로... 최근 주가 변동성이 극심한 대형 기술주에 투자해 큰 수익을 노리기보다는 연 5~9% 정도의 안정적인 수익에...",
-    "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01722006645354128",
-    "date": "2026-02-25T05:16:00+09:00",
-    "mentions": [
-     "MSFT"
     ]
    },
    {
@@ -1223,11 +1317,11 @@
     "url": "http://www.fnnews.com/news/202602280646021485",
     "date": "2026-02-28T06:51:00+09:00",
     "mentions": [
-     "NFLX",
-     "WBD",
      "NVDA",
+     "AMZN",
      "PLTR",
-     "AMZN"
+     "NFLX",
+     "WBD"
     ]
    },
    {
@@ -1265,8 +1359,8 @@
     "url": "https://view.asiae.co.kr/article/2026022615504693572",
     "date": "2026-02-26T15:57:00+09:00",
     "mentions": [
-     "CDNS",
-     "SNPS"
+     "SNPS",
+     "CDNS"
     ]
    },
    {
@@ -1275,9 +1369,9 @@
     "url": "https://www.hankyung.com/article/2026022547991",
     "date": "2026-02-25T17:25:00+09:00",
     "mentions": [
-     "CDNS",
      "INTC",
-     "SNPS"
+     "SNPS",
+     "CDNS"
     ]
    },
    {
@@ -1286,9 +1380,9 @@
     "url": "https://www.hankyung.com/article/202602242013i",
     "date": "2026-02-25T07:01:00+09:00",
     "mentions": [
-     "CDNS",
      "INTC",
-     "SNPS"
+     "SNPS",
+     "CDNS"
     ]
    },
    {
@@ -1306,8 +1400,8 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01118486642402128",
     "date": "2025-12-25T01:22:00+09:00",
     "mentions": [
-     "CDNS",
      "INTC",
+     "CDNS",
      "NVDA"
     ]
    },
@@ -1317,11 +1411,11 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01420246642399504",
     "date": "2025-12-17T04:45:00+09:00",
     "mentions": [
-     "KLAC",
      "NVDA",
+     "KLAC",
+     "LRCX",
      "ADI",
-     "CDNS",
-     "LRCX"
+     "CDNS"
     ]
    }
   ],
@@ -1333,8 +1427,8 @@
     "date": "2026-02-27T21:01:00+09:00",
     "mentions": [
      "INTC",
-     "SNPS",
-     "WDAY"
+     "WDAY",
+     "SNPS"
     ]
    },
    {
@@ -1343,8 +1437,8 @@
     "url": "https://view.asiae.co.kr/article/2026022615504693572",
     "date": "2026-02-26T15:57:00+09:00",
     "mentions": [
-     "CDNS",
-     "SNPS"
+     "SNPS",
+     "CDNS"
     ]
    },
    {
@@ -1353,8 +1447,8 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01125046645317720",
     "date": "2026-01-14T01:17:00+09:00",
     "mentions": [
-     "INTC",
-     "SNPS"
+     "SNPS",
+     "INTC"
     ]
    },
    {
@@ -1363,8 +1457,8 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01210326645314112",
     "date": "2026-01-03T05:06:00+09:00",
     "mentions": [
-     "INTC",
-     "SNPS"
+     "SNPS",
+     "INTC"
     ]
    },
    {
@@ -1388,8 +1482,8 @@
     "mentions": [
      "WMT",
      "SHOP",
-     "GOOGL",
-     "ADBE"
+     "ADBE",
+     "GOOGL"
     ]
    },
    {
@@ -1428,12 +1522,21 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=04237766645354456",
     "date": "2026-02-26T10:47:00+09:00",
     "mentions": [
-     "WDAY",
-     "INTU"
+     "INTU",
+     "WDAY"
     ]
    }
   ],
   "ADP": [
+   {
+    "title": "2월 물가 2% 넘게 올랐나....중국 ‘양회’ 개막 [한동훈의 위클리전망...",
+    "desc": "4일 고용정보업체 ADP의 2월 민간 신규 고용, 6일 미 노동부의 2월 비농업 고용자수 및 2월 실업률이 공개된다. ADP의 민간고용은 전월 보다 개선될 것으로 보이지만 노동부의 비농업 고용자수는 증가폭이 둔화돼 노동 시장이...",
+    "url": "https://www.sedaily.com/article/20013922?ref=naver",
+    "date": "2026-03-01T07:00:00+09:00",
+    "mentions": [
+     "ADP"
+    ]
+   },
    {
     "title": "기존 약에 다른 약 더하자…재발한 난소암, 치료 효과 향상",
     "desc": "PARP(Poly ADP-ribose polymerase) 억제제는 난소암 등에 쓰이는 표적 항암 치료제다. 암세포의 성장으로 이어지는 DNA의 복구 자체를 차단해 정밀 의료의 대표 사례기도 하다. 하지만 상당수 환자가 치료 과정에서 억제제에...",
@@ -1503,8 +1606,8 @@
     "date": "2026-02-24T16:25:00+09:00",
     "mentions": [
      "ZS",
-     "CRWD",
-     "DDOG"
+     "DDOG",
+     "CRWD"
     ]
    },
    {
@@ -1514,8 +1617,8 @@
     "date": "2026-02-24T11:03:00+09:00",
     "mentions": [
      "ZS",
-     "CRWD",
-     "DDOG"
+     "DDOG",
+     "CRWD"
     ]
    },
    {
@@ -1524,8 +1627,8 @@
     "url": "http://www.joseilbo.com/news/news_read.php?uid=563392&class=78&grp=",
     "date": "2026-02-24T10:47:00+09:00",
     "mentions": [
-     "CRWD",
-     "DDOG"
+     "DDOG",
+     "CRWD"
     ]
    },
    {
@@ -1552,8 +1655,8 @@
     "url": "https://www.mt.co.kr/world/2026/02/09/2026020720162673092",
     "date": "2026-02-09T05:35:00+09:00",
     "mentions": [
-     "APP",
-     "DDOG"
+     "DDOG",
+     "APP"
     ]
    },
    {
@@ -1727,8 +1830,8 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01472726645355112",
     "date": "2026-02-28T06:13:00+09:00",
     "mentions": [
-     "MSFT",
      "ZS",
+     "MSFT",
      "NVDA"
     ]
    },
@@ -1804,8 +1907,8 @@
     "mentions": [
      "WMT",
      "SHOP",
-     "GOOGL",
-     "ADBE"
+     "ADBE",
+     "GOOGL"
     ]
    },
    {
@@ -1883,11 +1986,11 @@
     "url": "https://www.sedaily.com/article/20013851?ref=naver",
     "date": "2026-02-28T12:46:00+09:00",
     "mentions": [
-     "GOOGL",
      "MSFT",
      "AAPL",
      "NVDA",
-     "AMZN"
+     "AMZN",
+     "GOOGL"
     ]
    },
    {
@@ -1896,13 +1999,13 @@
     "url": "https://view.asiae.co.kr/article/2026022709010807096",
     "date": "2026-02-28T09:42:00+09:00",
     "mentions": [
-     "FANG",
-     "GOOGL",
-     "NFLX",
      "MSFT",
      "AAPL",
+     "AMZN",
+     "GOOGL",
      "META",
-     "AMZN"
+     "NFLX",
+     "FANG"
     ]
    },
    {
@@ -1911,8 +2014,8 @@
     "url": "https://www.sedaily.com/article/20013831?ref=naver",
     "date": "2026-02-28T07:26:00+09:00",
     "mentions": [
-     "AMZN",
      "GOOGL",
+     "AMZN",
      "NVDA"
     ]
    },
@@ -1963,15 +2066,15 @@
     "url": "https://view.asiae.co.kr/article/2026022709010807096",
     "date": "2026-02-28T09:42:00+09:00",
     "mentions": [
-     "FANG",
-     "GOOGL",
-     "NFLX",
+     "TSLA",
      "MSFT",
      "NVDA",
      "AAPL",
-     "TSLA",
+     "AMZN",
+     "GOOGL",
      "META",
-     "AMZN"
+     "NFLX",
+     "FANG"
     ]
    },
    {
@@ -1980,14 +2083,14 @@
     "url": "https://www.sedaily.com/article/20013831?ref=naver",
     "date": "2026-02-28T07:26:00+09:00",
     "mentions": [
-     "GOOGL",
-     "MSFT",
+     "TSLA",
      "AVGO",
+     "MSFT",
      "NVDA",
      "AAPL",
-     "TSLA",
-     "META",
-     "AMZN"
+     "AMZN",
+     "GOOGL",
+     "META"
     ]
    },
    {
@@ -2015,9 +2118,9 @@
     "url": "https://biz.chosun.com/it-science/ict/2026/02/27/HR7GZGNX25DVZI2LJAYK5S5XGU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
     "date": "2026-02-27T10:39:00+09:00",
     "mentions": [
-     "META",
-     "AMD",
      "GOOGL",
+     "AMD",
+     "META",
      "NVDA"
     ]
    },
@@ -2027,8 +2130,8 @@
     "url": "https://www.sedaily.com/article/20013396?ref=naver",
     "date": "2026-02-27T06:44:00+09:00",
     "mentions": [
-     "MSFT",
      "META",
+     "MSFT",
      "NVDA"
     ]
    },
@@ -2047,13 +2150,13 @@
     "url": "https://www.mt.co.kr/world/2026/02/26/2026022614322912392",
     "date": "2026-02-26T15:11:00+09:00",
     "mentions": [
-     "WMT",
-     "GOOGL",
      "MSFT",
      "NVDA",
      "AAPL",
+     "AMZN",
+     "GOOGL",
      "META",
-     "AMZN"
+     "WMT"
     ]
    },
    {
@@ -2069,10 +2172,28 @@
   ],
   "NFLX": [
    {
-    "title": "국중박에 뜬 블핑·광화문 가는 BTS…전세계 홀린 '힙트레디션' [김수영...",
-    "desc": "넷플릭스 '케이팝 데몬 헌터스'의 전 세계적인 인기와 함께 한국인은 물론이고 외국인들에게도 '핫플'로 떠오른 국립중앙박물관이 한류의 핵심 동력인 K팝과 만나 시너지를 냈다. 블랙핑크의 컴백에 맞춰 진행한...",
-    "url": "https://www.hankyung.com/article/2026022701707",
-    "date": "2026-02-28T20:29:00+09:00",
+    "title": "오디오북·전자책 타고 반등…K출판시장 살아난다",
+    "desc": "유튜브, 넷플릭스 등 OTT(온라인동영상서비스)의 활성화와 경기침체로 인한 구매력 저하, 논픽션의 침체 등이 복합적으로 영향을 줬다. 대한출판문화협회의 '출판시장통계'에 따르면 주요 출판사 매출은 2022년 5조...",
+    "url": "https://www.mt.co.kr/culture/2026/03/01/2026022714112531999",
+    "date": "2026-03-01T07:45:00+09:00",
+    "mentions": [
+     "NFLX"
+    ]
+   },
+   {
+    "title": "신혜선이 곧 장르...‘레이디 두아’ 압도적 1위 비결 [샤이닝스타]",
+    "desc": "지난달 25일 넷플릭스 TOP 10 웹사이트에 따르면 ‘레이디 두아’가 공개 2주 차에 1천만 시청수(시청 시간을 작품의 총 러닝 타임으로 나눈 값)를 기록, 압도적인 수치로 글로벌 TOP 10 비영어 쇼 1위에 올랐다. 그뿐만 아니라...",
+    "url": "https://www.mk.co.kr/article/11974949",
+    "date": "2026-03-01T07:28:00+09:00",
+    "mentions": [
+     "NFLX"
+    ]
+   },
+   {
+    "title": "‘아파트 아파트’ 블랙핑크 로제, 국내 최초 英 브릿 어워즈 수상",
+    "desc": "이날 넷플릭스 애니메이션 영화 ‘케이팝 데몬 헌터스’ 오리지널사운드트랙(OST) ‘골든’(Golden)은 ‘아파트’와 함께 ‘올해의 인터내셔널 노래’ 후보에 올랐다.",
+    "url": "https://biz.chosun.com/international/international_general/2026/03/01/VSK3IGWC4ZDODMQJ6N6KHDANMY/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-03-01T07:17:00+09:00",
     "mentions": [
      "NFLX"
     ]
@@ -2083,10 +2204,10 @@
     "url": "https://www.hankyung.com/article/2026012382841",
     "date": "2026-01-30T09:05:00+09:00",
     "mentions": [
-     "META",
-     "NFLX",
      "WMT",
-     "AMZN"
+     "AMZN",
+     "NFLX",
+     "META"
     ]
    },
    {
@@ -2095,7 +2216,16 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01836806645321000",
     "date": "2026-01-24T15:32:00+09:00",
     "mentions": [
-     "WBD",
+     "NFLX",
+     "WBD"
+    ]
+   },
+   {
+    "title": "국중박에 뜬 블핑·광화문 가는 BTS…전세계 홀린 '힙트레디션' [김수영...",
+    "desc": "넷플릭스 '케이팝 데몬 헌터스'의 전 세계적인 인기와 함께 한국인은 물론이고 외국인들에게도 '핫플'로 떠오른 국립중앙박물관이 한류의 핵심 동력인 K팝과 만나 시너지를 냈다. 블랙핑크의 컴백에 맞춰 진행한...",
+    "url": "https://www.hankyung.com/article/2026022701707",
+    "date": "2026-02-28T20:29:00+09:00",
+    "mentions": [
      "NFLX"
     ]
    },
@@ -2167,6 +2297,18 @@
     ]
    },
    {
+    "title": "앤트로픽 협력 발표에 투매 멈춰…3대 지수 동반 상승 [뉴욕증시]",
+    "desc": "디지털 광고 플랫폼 앱러빈은 3.31%, 전자서명 기업 도큐사인은 2.63% 상승하며 반등 흐름에 동참했다. 반도체주 역시 강세를 보였다. 메타가 AMD의 AI 칩을 대규모 매입했다는 소식이 전해지면서 AMD는 8.77% 급등했다....",
+    "url": "https://www.mk.co.kr/article/11971119",
+    "date": "2026-02-25T08:54:00+09:00",
+    "mentions": [
+     "INTC",
+     "AMD",
+     "META",
+     "APP"
+    ]
+   },
+   {
     "title": "잭 도시 \"AI가 일자리 바꾼다\"…블록, 직원 절반 감원",
     "desc": "회사는 2024년부터 주가 부진 속에 사업 모델과 인력 구조를 재편해왔으며, 자체 개발 AI 에이전트 ‘구스... 잭 도시 블록 최고경영자(CEO)는 개인 간 결제 애플리케이션(앱) 캐시앱(Cash App)의 이용자 성장 재점화와...",
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=03073366645354784",
@@ -2183,18 +2325,6 @@
     "date": "2026-02-25T21:01:00+09:00",
     "mentions": [
      "APP"
-    ]
-   },
-   {
-    "title": "앤트로픽 협력 발표에 투매 멈춰…3대 지수 동반 상승 [뉴욕증시]",
-    "desc": "디지털 광고 플랫폼 앱러빈은 3.31%, 전자서명 기업 도큐사인은 2.63% 상승하며 반등 흐름에 동참했다. 반도체주 역시 강세를 보였다. 메타가 AMD의 AI 칩을 대규모 매입했다는 소식이 전해지면서 AMD는 8.77% 급등했다....",
-    "url": "https://www.mk.co.kr/article/11971119",
-    "date": "Wed, 25 Feb 2026 08:54:00 +0900",
-    "mentions": [
-     "INTC",
-     "APP",
-     "AMD",
-     "META"
     ]
    }
   ],
@@ -2216,13 +2346,6 @@
     "mentions": []
    },
    {
-    "title": "“내 갤럭시도 친환경 소재였네”…삼성, ‘지구를 위한 갤럭시’ 확장...",
-    "desc": "메르세데스-벤츠의 경우 1억원(EQE 이상)이 넘는 전동화 모델인 EQ시리즈 차량에 사용되는 시트를 비롯해 대시보드, 도어 트림, 센터 콘솔 등에 친환경 소재를 탑재하고 있다. 신형 GLC 전동화 모델에는 ‘비건 패키지’를...",
-    "url": "https://www.mk.co.kr/article/11972641",
-    "date": "2026-02-26T10:46:00+09:00",
-    "mentions": []
-   },
-   {
     "title": "심장병, 충분히 막을 수 있다? 의사가 말한 생활 습관은",
     "desc": "지중해식 식단이나 DASH(고혈압 예방) 식단처럼 과학적 근거가 있는 식단이 권장된다. 불포화 지방이 풍부한... 가급적이면 급주가 답이다 과거에는 레드와인이 심장에 좋다는 인식이 있었으나, 최신 연구들에 따르면 그...",
     "url": "http://www.joseilbo.com/news/news_read.php?uid=563010&class=27&grp=",
@@ -2230,6 +2353,13 @@
     "mentions": [
      "DASH"
     ]
+   },
+   {
+    "title": "“내 갤럭시도 친환경 소재였네”…삼성, ‘지구를 위한 갤럭시’ 확장...",
+    "desc": "메르세데스-벤츠의 경우 1억원(EQE 이상)이 넘는 전동화 모델인 EQ시리즈 차량에 사용되는 시트를 비롯해 대시보드, 도어 트림, 센터 콘솔 등에 친환경 소재를 탑재하고 있다. 신형 GLC 전동화 모델에는 ‘비건 패키지’를...",
+    "url": "https://www.mk.co.kr/article/11972641",
+    "date": "2026-02-26T10:46:00+09:00",
+    "mentions": []
    }
   ],
   "EA": [
@@ -2336,8 +2466,8 @@
     "url": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00007&news_seq_no=5178700",
     "date": "2026-02-28T13:45:00+09:00",
     "mentions": [
-     "WBD",
-     "NFLX"
+     "NFLX",
+     "WBD"
     ]
    },
    {
@@ -2346,19 +2476,8 @@
     "url": "http://www.joseilbo.com/news/news_read.php?uid=563731&class=53&grp=",
     "date": "2026-02-28T07:03:00+09:00",
     "mentions": [
-     "WBD",
-     "NFLX"
-    ]
-   },
-   {
-    "title": "[뉴욕증시] 관세 발 인플레 충격과 AI 우려 속 하락…엔비디아, 4.2% 급락",
-    "desc": "한편 워너브라더스 디스커버리(WBD) 인수전에서 발을 뺀 넷플릭스와 인수에 성공한 파라마운트 스카이댄스 주가는 각각 10%, 20% 넘게 폭등했다. 일제히 하락 기술주 약세 속에 빛을 내던 순환매 종목들도...",
-    "url": "http://www.fnnews.com/news/202602280646021485",
-    "date": "2026-02-28T06:51:00+09:00",
-    "mentions": [
-     "WBD",
      "NFLX",
-     "NVDA"
+     "WBD"
     ]
    },
    {
@@ -2367,8 +2486,8 @@
     "url": "https://www.mk.co.kr/article/11975287",
     "date": "2026-02-28T09:49:00+09:00",
     "mentions": [
-     "WBD",
-     "NFLX"
+     "NFLX",
+     "WBD"
     ]
    },
    {
@@ -2377,8 +2496,18 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01620326645355112",
     "date": "2026-02-28T07:02:00+09:00",
     "mentions": [
+     "NFLX",
+     "WBD"
+    ]
+   },
+   {
+    "title": "[뉴욕증시] 관세 발 인플레 충격과 AI 우려 속 하락…엔비디아, 4.2% 급락",
+    "desc": "약 1100억달러에 WBD를 인수하고, 위약금 28억달러도 대신 내게 된 파라마운트 주가는 더 큰 폭으로 뛰었다. 2.33달러(20.84%) 폭등한 13.51달러로 치솟았다. 투자자들은 파라마운트가 합병에 따른 반독점 규제를...",
+    "url": "http://www.fnnews.com/news/202602280646021485",
+    "date": "2026-02-28T06:51:00+09:00",
+    "mentions": [
      "WBD",
-     "NFLX"
+     "NVDA"
     ]
    },
    {
@@ -2426,6 +2555,26 @@
    }
   ],
   "AMZN": [
+   {
+    "title": "\"30%에 사서 80% 받는다?\"…韓수출기업 '파산 채권' 경고등 [글로벌 머니...",
+    "desc": "파산 법정 심리에서 아마존 측 법률 대리인 캐롤라인 레클러 변호사는 자사의 4억 7500만 달러 규모의 지분 투자가 휴지 조각이 될 위기를 거론하며 삭스의 회생 가능성에 대해 \"거의 또는 전혀 확신이 없다\"고 비관적으로...",
+    "url": "https://www.hankyung.com/article/202602270346i",
+    "date": "2026-03-01T07:01:00+09:00",
+    "mentions": [
+     "AMZN"
+    ]
+   },
+   {
+    "title": "AI 무기화 논란에 ‘앤트로픽’ 고립되자… 오픈AI, 美국방부에 서비스...",
+    "desc": "아마존·구글·마이크로소프트·오픈AI 직원 일부와 노동단체 연합은 공개서한을 내고 자사 경영진에 앤트로픽과의 연대를 촉구했다. 국방부의 무제한 사용 요구를 거부하라는 내용이다. 최근 국방부의 기밀 업무 사용...",
+    "url": "https://biz.chosun.com/international/international_general/2026/03/01/NTO7G2AJRNGYFHTT5Z2K7553GQ/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-03-01T01:29:00+09:00",
+    "mentions": [
+     "AMZN",
+     "MSFT",
+     "GOOGL"
+    ]
+   },
    {
     "title": "“나, 한국에 가서 이렇게 예뻐졌어”…SNS에 번지는 ‘K뷰티 투어’ 열...",
     "desc": "‘아누아 히알루론산 크림’은 올리브영에서 60ml 2만8900원에 구매할 수 있지만, 아마존에서는 30ml 3만4600원에 판매되고 있다. R사의 ‘비건 립밤’ 역시 국내에서는 1만3000원 수준이지만 해외 온라인몰에서는 1만9900원에...",
@@ -2602,7 +2751,7 @@
   "MAR": [
    {
     "title": "“아들, 서류 챙겼지?”...졸업·입학생이면 고급 호텔 뷔페가 ‘공짜’",
-    "desc": "서울 서초구에 위치한 JW메리어트 호텔은 프리미엄 뷔페 레스토랑 ‘플레이버즈’를 방문한 초·중·고를... AC호텔 바이 메리어트 강남의 뷔페 레스토랑 AC키친의 경우 졸업 또는 입학을 맞은 고객 본인에게는 뷔페 이용...",
+    "desc": "서울 서초구에 위치한 JW메리어트 호텔은 프리미엄 뷔페 레스토랑 ‘플레이버즈’를 방문한 초·중·고를... AC호텔 바이 메리어트 강남의 뷔페 레스토랑 ‘AC키친’의 경우 졸업 또는 입학을 맞은 고객 본인에게는 뷔페...",
     "url": "https://www.mk.co.kr/article/11975454",
     "date": "2026-02-28T21:13:00+09:00",
     "mentions": [
@@ -2681,12 +2830,12 @@
     "url": "https://biz.chosun.com/international/international_economy/2026/02/27/7PANSWBKYNEVZBB3GJHAWU4QP4/?utm_source=naver&utm_medium=original&utm_campaign=biz",
     "date": "2026-02-27T23:43:00+09:00",
     "mentions": [
-     "WMT",
+     "TSLA",
      "NFLX",
      "MSFT",
      "AAPL",
-     "TSLA",
-     "META"
+     "META",
+     "WMT"
     ]
    },
    {
@@ -2713,8 +2862,8 @@
     "url": "https://www.hankyung.com/article/2026012382841",
     "date": "2026-01-30T09:05:00+09:00",
     "mentions": [
-     "WMT",
-     "AMZN"
+     "AMZN",
+     "WMT"
     ]
    },
    {
@@ -2775,34 +2924,21 @@
   ],
   "AAPL": [
    {
-    "title": "“수도사들이 흙을 먹어요”…집념의 과학이 최고의 와인 만들었다 [전...",
-    "desc": "애플이 저가 스마트폰 시장을 포기하고 프리미엄 라인에 집중하는 것, 에르메스가 대량 생산을 거부하는 것과 같은 논리입니다. 14세기 부르고뉴는 이미 데이터 기반 브랜드 전략을 실행하고 있었던 것입니다. 과거...",
-    "url": "https://www.mk.co.kr/article/11968645",
-    "date": "2026-02-28T18:04:00+09:00",
+    "title": "스마트폰 D램 용량 ‘역대 최대’…메모리 품귀에도 AI 출혈경쟁",
+    "desc": "칩플레이션(메모리 가격 상승)으로 스마트폰 원가가 급증한 상황에서도 삼성전자(005930)와 애플을 포함한... 애플 아이폰 시리즈의 평균 D램 용량은 같은 기간 7GB램대에서 10GB램 가까이로 급증했다. 아이폰은 특유의...",
+    "url": "https://www.sedaily.com/article/20013926?ref=naver",
+    "date": "2026-03-01T07:01:00+09:00",
     "mentions": [
      "AAPL"
     ]
    },
    {
-    "title": "팀 쿡, S26 공개 직후 반격?…\"이제 애플의 시간\" 신제품 예고",
-    "desc": "팀 쿡 애플 최고경영자(CEO)가 직접 애플 신제품 공개를 예고하며 기대감을 끌어올렸다. 지난 26일(현지시간) 쿡 CEO는 자신의 엑스(X·옛 트위터)를 통해 \"대단한 한 주가 기다리고 있다\"며 \"월요일 아침부터 바로 시작...",
-    "url": "https://view.asiae.co.kr/article/2026022815472518653",
-    "date": "2026-02-28T15:54:00+09:00",
+    "title": "\"밤의 제왕, 나야나\"…삼성 vs 샤오미 글로벌 '울트라' 경쟁",
+    "desc": "샤오미는 국내 점유율이 '0%'로 알려졌지만 글로벌 시장에선 애플·삼성에 이은 3위 사업자다. 시장조사업체 카운터포인트리서치에 따르면 지난해 4분기 글로벌 스마트폰 시장 점유율은 △애플 25% △삼성 18...",
+    "url": "https://www.mt.co.kr/tech/2026/03/01/2026022818222975972",
+    "date": "2026-03-01T07:00:00+09:00",
     "mentions": [
      "AAPL"
-    ]
-   },
-   {
-    "title": "\"큰 거 온다\"…'2500조원' 스페이스X 내달 IPO절차 착수",
-    "desc": "상장이 성공적으로 마무리될 경우 스페이스X는 엔비디아, 애플, 마이크로소프트, 알파벳, 아마존 등과... #스페이스X #IPO #기업공개 #미국증권거래위원회 #xAI #엔비디아 #애플 #마이크로소프트 #아람코",
-    "url": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5178707",
-    "date": "2026-02-28T14:17:00+09:00",
-    "mentions": [
-     "GOOGL",
-     "MSFT",
-     "AAPL",
-     "NVDA",
-     "AMZN"
     ]
    },
    {
@@ -2839,6 +2975,47 @@
     "date": "2026-02-27T08:44:00+09:00",
     "mentions": [
      "AAPL"
+    ]
+   },
+   {
+    "title": "[MWC26]'괴물 카메라폰' 내놓은 샤오미…라이카 협업 '17 울트라·라이츠...",
+    "desc": "샤오미 17 시리즈의 모든 모델은 퀄컴의 최신 애플리케이션 프로세서(AP)인 '스냅드래곤 8 엘리트 5세대'를... 샤오미는 이날 발표 현장에서 애플의 아이폰 17 프로와의 배터리 성능을 비교하는 영상을 통해 배터리...",
+    "url": "https://view.asiae.co.kr/article/2026022823114657117",
+    "date": "2026-03-01T06:00:00+09:00",
+    "mentions": [
+     "QCOM",
+     "AAPL"
+    ]
+   },
+   {
+    "title": "“수도사들이 흙을 먹어요”…집념의 과학이 최고의 와인 만들었다 [전...",
+    "desc": "애플이 저가 스마트폰 시장을 포기하고 프리미엄 라인에 집중하는 것, 에르메스가 대량 생산을 거부하는 것과 같은 논리입니다. 14세기 부르고뉴는 이미 데이터 기반 브랜드 전략을 실행하고 있었던 것입니다. 과거...",
+    "url": "https://www.mk.co.kr/article/11968645",
+    "date": "2026-02-28T18:04:00+09:00",
+    "mentions": [
+     "AAPL"
+    ]
+   },
+   {
+    "title": "팀 쿡, S26 공개 직후 반격?…\"이제 애플의 시간\" 신제품 예고",
+    "desc": "팀 쿡 애플 최고경영자(CEO)가 직접 애플 신제품 공개를 예고하며 기대감을 끌어올렸다. 지난 26일(현지시간) 쿡 CEO는 자신의 엑스(X·옛 트위터)를 통해 \"대단한 한 주가 기다리고 있다\"며 \"월요일 아침부터 바로 시작...",
+    "url": "https://view.asiae.co.kr/article/2026022815472518653",
+    "date": "2026-02-28T15:54:00+09:00",
+    "mentions": [
+     "AAPL"
+    ]
+   },
+   {
+    "title": "\"큰 거 온다\"…'2500조원' 스페이스X 내달 IPO절차 착수",
+    "desc": "상장이 성공적으로 마무리될 경우 스페이스X는 엔비디아, 애플, 마이크로소프트, 알파벳, 아마존 등과... #스페이스X #IPO #기업공개 #미국증권거래위원회 #xAI #엔비디아 #애플 #마이크로소프트 #아람코",
+    "url": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5178707",
+    "date": "2026-02-28T14:17:00+09:00",
+    "mentions": [
+     "GOOGL",
+     "MSFT",
+     "AAPL",
+     "NVDA",
+     "AMZN"
     ]
    },
    {
@@ -3001,8 +3178,8 @@
     "url": "http://www.fnnews.com/news/202601141000034469",
     "date": "2026-01-14T10:11:00+09:00",
     "mentions": [
-     "TMUS",
-     "PLTR"
+     "PLTR",
+     "TMUS"
     ]
    }
   ],
@@ -3017,19 +3194,19 @@
     ]
    },
    {
-    "title": "스타벅스서 또 논란 터졌다…\"이게 무슨 뜻이냐\" 한국인 인종차별 의혹",
-    "desc": "미국의 한 스타벅스 매장에서 한국인 고객이 인종차별을 당했다는 의혹이 제기돼 온라인에서 논란이 확산하고 있다. 지난 26일 사회관계망서비스(SNS)에는 \"오늘 한국인 동료가 스타벅스에서 블랙커피를 주문했는데...",
-    "url": "https://view.asiae.co.kr/article/2026022811280213168",
-    "date": "2026-02-28T11:32:00+09:00",
+    "title": "[美특징주]스타벅스, 실적 발표 후 추가 상승 기대…주가 상승",
+    "desc": "다음주 실적 발표를 앞두고 있는 스타벅스(SBUX) 주가가 추가 상승 가능할 것이라는 긍정적 의견이 나왔다. 23일(현지시간) 오후 3시49분 현재 스타벅스는 전 거래일 대비 1.78%(1.71달러) 상승한 97.54달러에 거래되고 있다....",
+    "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01233286645321000",
+    "date": "2026-01-24T05:56:00+09:00",
     "mentions": [
      "SBUX"
     ]
    },
    {
-    "title": "[美특징주]스타벅스, 실적 발표 후 추가 상승 기대…주가 상승",
-    "desc": "다음주 실적 발표를 앞두고 있는 스타벅스(SBUX) 주가가 추가 상승 가능할 것이라는 긍정적 의견이 나왔다. 23일(현지시간) 오후 3시49분 현재 스타벅스는 전 거래일 대비 1.78%(1.71달러) 상승한 97.54달러에 거래되고 있다....",
-    "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01233286645321000",
-    "date": "2026-01-24T05:56:00+09:00",
+    "title": "스타벅스서 또 논란 터졌다…\"이게 무슨 뜻이냐\" 한국인 인종차별 의혹",
+    "desc": "미국의 한 스타벅스 매장에서 한국인 고객이 인종차별을 당했다는 의혹이 제기돼 온라인에서 논란이 확산하고 있다. 지난 26일 사회관계망서비스(SNS)에는 \"오늘 한국인 동료가 스타벅스에서 블랙커피를 주문했는데...",
+    "url": "https://view.asiae.co.kr/article/2026022811280213168",
+    "date": "2026-02-28T11:32:00+09:00",
     "mentions": [
      "SBUX"
     ]
@@ -3078,8 +3255,8 @@
     "url": "https://www.mk.co.kr/article/11957091",
     "date": "2026-02-08T17:43:00+09:00",
     "mentions": [
-     "MDLZ",
-     "SBUX"
+     "SBUX",
+     "MDLZ"
     ]
    },
    {
@@ -3100,10 +3277,10 @@
     "url": "https://www.hankyung.com/article/202602189831i",
     "date": "2026-02-18T21:17:00+09:00",
     "mentions": [
+     "AMZN",
      "KHC",
      "AAPL",
-     "GOOGL",
-     "AMZN"
+     "GOOGL"
     ]
    },
    {
@@ -3130,6 +3307,15 @@
     ]
    },
    {
+    "title": "[美특징주]크래프트하인즈, 새 CEO 임명에 소폭 강세",
+    "desc": "크래프트하인즈(KHC)가 강세를 보이고 있다. 새로운 최고경영자(CEO) 임명 소식이 전해진 영향으로... 크래프트 하인즈는 기존 합병 후 장기간 매출 성장 둔화, 주가 약세, 운영 효율성 문제 등에 시달렸다. 이를...",
+    "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01111926642399504",
+    "date": "2025-12-17T01:03:00+09:00",
+    "mentions": [
+     "KHC"
+    ]
+   },
+   {
     "title": "\"오늘 아침에도 먹었는데…\" 쥐·새 배설물 발견된 美 유통제품 대거 리...",
     "desc": "공개된 목록에는 액상 데이퀼과 타이레놀 등 일반의약품, 치어리오스와 프로스티드 등 시리얼, 프링글스, 크래프트 맥앤치즈, 누텔라, 하인즈 케첩과 식초 등 다양한 식품이 포함됐다. 또 퓨리나, 프리스키, 팬시피스트...",
     "url": "https://view.asiae.co.kr/article/2026013015530067266",
@@ -3142,15 +3328,6 @@
     "url": "http://www.fnnews.com/news/202601281902064317",
     "date": "2026-01-28T19:02:00+09:00",
     "mentions": []
-   },
-   {
-    "title": "[美특징주]크래프트하인즈, 새 CEO 임명에 소폭 강세",
-    "desc": "크래프트하인즈(KHC)가 강세를 보이고 있다. 새로운 최고경영자(CEO) 임명 소식이 전해진 영향으로... 크래프트 하인즈는 기존 합병 후 장기간 매출 성장 둔화, 주가 약세, 운영 효율성 문제 등에 시달렸다. 이를...",
-    "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01111926642399504",
-    "date": "2025-12-17T01:03:00+09:00",
-    "mentions": [
-     "KHC"
-    ]
    }
   ],
   "KDP": [
@@ -3419,9 +3596,9 @@
     "url": "https://www.hankyung.com/article/202601087948i",
     "date": "2026-01-08T01:27:00+09:00",
     "mentions": [
-     "REGN",
      "INTC",
-     "META"
+     "META",
+     "REGN"
     ]
    }
   ],
@@ -3559,10 +3736,10 @@
     "url": "https://www.sedaily.com/NewsView/2H1Y17V4XS",
     "date": "2025-12-31T17:20:00+09:00",
     "mentions": [
-     "INSM",
-     "GOOGL",
      "MU",
      "INTC",
+     "GOOGL",
+     "INSM",
      "LRCX"
     ]
    }
@@ -3598,6 +3775,35 @@
   ],
   "TSLA": [
    {
+    "title": "한국 남자는 왜 포르쉐에 미칠까…“나 ‘오빠 얼굴’ 보고 만나” 듣고...",
+    "desc": "BMW, 벤츠, 테슬라, 볼보, 렉서스, 아우디 다음입니다. 포르쉐코리아가 2014년 창립한 이후 두 번째로 1만대 클럽에도 가입했습니다. 판매차종 구성도 좋습니다. 내연기관차 38%, 순수 전기차(BEV) 34%, 플러그인 하이브리드(PHEV)...",
+    "url": "https://www.mk.co.kr/article/11972684",
+    "date": "2026-03-01T06:08:00+09:00",
+    "mentions": [
+     "TSLA"
+    ]
+   },
+   {
+    "title": "윌리엄 루 샤오미 사장 \"AIoT 10억대 연결 돌파…향후 5년 240억 달러 투...",
+    "desc": "샤오미의 신형 전기 SUV ‘YU7’은 올해 1월 중국 시장에서 약 3만 7869대 판매되며 테슬라 모델Y를 제치고 베스트셀러 1위를 기록하는 등 중국시장에서 돌풍을 일으키고 있다. 루 사장은 “2025년 말까지 50만 대...",
+    "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=02578086645355112",
+    "date": "2026-02-28T23:32:00+09:00",
+    "mentions": [
+     "TSLA"
+    ]
+   },
+   {
+    "title": "고액자산가들 계좌 봤더니...‘삼전·닉스’ 외에 이것도 있었다",
+    "desc": "지난 달 CES 2026에서 차세대 휴머노이드 로봇 ‘아틀라스’를 공개하며 주가가 치솟은 3위 현대차(9.9... 3%), Direxion Daily TSLA Bull 2X Shares ETF(3.3%), 엔비디아(2.9%), 마이크로소프트(2.2%) 등이 뒤를 이었다. 최근 은...",
+    "url": "https://www.sedaily.com/article/20009794?ref=naver",
+    "date": "2026-02-18T13:26:00+09:00",
+    "mentions": [
+     "TSLA",
+     "MSFT",
+     "NVDA"
+    ]
+   },
+   {
     "title": "스페이스X, 이르면 다음달 IPO 시작…“기업가치 1800조원→2500조원”",
     "desc": "일론 머스크 테슬라 최고경영자(CEO)가 이끄는 우주항공 기업 스페이스X가 이르면 다음달 기업공개(IPO) 절차에 본격적으로 돌입한다. 블룸버그통신은 27일(현지 시간) 스페이스X가 이르면 3월 미국 증권거래위원회...",
     "url": "https://www.sedaily.com/article/20013851?ref=naver",
@@ -3629,17 +3835,6 @@
      "TSLA",
      "META",
      "AMZN"
-    ]
-   },
-   {
-    "title": "고액자산가들 계좌 봤더니...‘삼전·닉스’ 외에 이것도 있었다",
-    "desc": "지난 달 CES 2026에서 차세대 휴머노이드 로봇 ‘아틀라스’를 공개하며 주가가 치솟은 3위 현대차(9.9... 3%), Direxion Daily TSLA Bull 2X Shares ETF(3.3%), 엔비디아(2.9%), 마이크로소프트(2.2%) 등이 뒤를 이었다. 최근 은...",
-    "url": "https://www.sedaily.com/article/20009794?ref=naver",
-    "date": "2026-02-18T13:26:00+09:00",
-    "mentions": [
-     "MSFT",
-     "TSLA",
-     "NVDA"
     ]
    },
    {
@@ -3708,9 +3903,9 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01617046645349864",
     "date": "2026-02-12T05:01:00+09:00",
     "mentions": [
-     "CSCO",
      "WMT",
-     "HON"
+     "HON",
+     "CSCO"
     ]
    },
    {
@@ -3719,8 +3914,8 @@
     "url": "https://view.asiae.co.kr/article/2026020506595781266",
     "date": "2026-02-05T06:59:00+09:00",
     "mentions": [
-     "AMD",
      "AMGN",
+     "AMD",
      "HON"
     ]
    },
@@ -3798,8 +3993,8 @@
     "url": "https://view.asiae.co.kr/article/2026012917124123846",
     "date": "2026-01-30T00:01:00+09:00",
     "mentions": [
-     "CPRT",
-     "ISRG"
+     "ISRG",
+     "CPRT"
     ]
    }
   ],
@@ -3873,8 +4068,8 @@
     "url": "http://www.smedaily.co.kr/news/articleView.html?idxno=345670",
     "date": "2025-12-03T10:40:00+09:00",
     "mentions": [
-     "FANG",
-     "NFLX"
+     "NFLX",
+     "FANG"
     ]
    }
   ],
@@ -3916,21 +4111,21 @@
  },
  "co_mentions": {
   "AMZN-NVDA": 23,
-  "AMZN-MSFT": 21,
+  "AMZN-MSFT": 23,
   "GOOGL-NVDA": 20,
   "AAPL-GOOGL": 20,
+  "AMZN-GOOGL": 20,
   "INTC-NVDA": 18,
   "MSFT-NVDA": 18,
-  "AMZN-GOOGL": 18,
   "AVGO-NVDA": 17,
   "AAPL-MSFT": 16,
   "AAPL-NVDA": 16,
+  "GOOGL-MSFT": 16,
   "META-NVDA": 15,
   "AAPL-AMZN": 15,
   "INTC-MU": 15,
   "NVDA-TSLA": 14,
   "AMZN-META": 14,
-  "GOOGL-MSFT": 13,
   "META-MSFT": 12,
   "AAPL-META": 11,
   "AAPL-TSLA": 11,
@@ -3938,12 +4133,12 @@
   "LRCX-NVDA": 11,
   "MSFT-TSLA": 10,
   "GOOGL-TSLA": 10,
-  "NFLX-WBD": 10,
   "AVGO-META": 9,
   "META-TSLA": 9,
   "MU-NVDA": 9,
   "ASML-INTC": 9,
   "ADI-INTC": 9,
+  "NFLX-WBD": 9,
   "AMZN-AVGO": 8,
   "AMZN-TSLA": 8,
   "AMD-META": 8,
@@ -3968,6 +4163,7 @@
   "AVGO-MU": 5,
   "INTC-LRCX": 5,
   "NVDA-WDC": 5,
+  "AAPL-QCOM": 5,
   "INTC-TXN": 5,
   "CDNS-NVDA": 5,
   "ADI-MPWR": 5,
@@ -3987,7 +4183,6 @@
   "MPWR-NVDA": 4,
   "CSCO-NVDA": 4,
   "AMZN-NFLX": 4,
-  "NFLX-NVDA": 4,
   "CRWD-NVDA": 4,
   "CRWD-WDAY": 4,
   "NVDA-WDAY": 4,
@@ -4005,6 +4200,7 @@
   "LRCX-MU": 3,
   "STX-WDC": 3,
   "AMZN-PLTR": 3,
+  "NFLX-NVDA": 3,
   "GOOGL-WMT": 3,
   "DDOG-ZS": 3,
   "AAPL-FANG": 3,
