@@ -18,7 +18,6 @@ from datetime import datetime, timezone, timedelta
 
 FMP_KEY = os.environ.get("FMP_API_KEY", "")
 FMP_STABLE = "https://financialmodelingprep.com/stable"
-FMP_V3 = "https://financialmodelingprep.com/api/v3"
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
 
 # NASDAQ 100 티커 목록 (AI MESH에서 사용하는 전체 목록)
@@ -39,14 +38,16 @@ TICKERS = [
 
 
 def fetch_json(url):
+    """URL에서 JSON 데이터를 가져옴"""
     req = urllib.request.Request(url, headers={"User-Agent": "AI-MESH/1.0"})
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
-            return json.loads(resp.read().decode())
+            raw = resp.read().decode()
+            return json.loads(raw)
     except urllib.error.HTTPError as e:
         body = ""
         try:
-            body = e.read().decode()[:200]
+            body = e.read().decode()[:300]
         except:
             pass
         print(f"  HTTP Error {e.code}: {url[:80]}...")
@@ -89,8 +90,11 @@ def fetch_profiles():
                         "mktCap": p.get("mktCap", 0),
                     }
             print(f"  ✓ {len(data)}개 프로필 수신")
+        elif data and isinstance(data, dict):
+            # 단일 객체로 반환되는 경우
+            print(f"  ⚠ dict 형식 응답: {str(data)[:150]}")
         else:
-            print(f"  ✗ 배치 실패")
+            print(f"  ✗ 배치 실패 (data={type(data).__name__})")
 
         if i + 50 < len(TICKERS):
             time.sleep(0.5)
@@ -100,14 +104,14 @@ def fetch_profiles():
 
 
 def fetch_quotes():
-    """FMP V3 API에서 실시간 시세 수집 (50개씩 배치)"""
+    """FMP Stable API에서 시세 수집 (50개씩 배치)"""
     print("\n[2/2] 실시간 시세 수집 중...")
     all_quotes = {}
 
     for i in range(0, len(TICKERS), 50):
         batch = TICKERS[i:i+50]
         symbols = ",".join(batch)
-        url = f"{FMP_V3}/quote/{symbols}?apikey={FMP_KEY}"
+        url = f"{FMP_STABLE}/quote?symbol={symbols}&apikey={FMP_KEY}"
         print(f"  배치 {i//50 + 1}: {len(batch)}개 요청...")
 
         data = fetch_json(url)
@@ -131,8 +135,10 @@ def fetch_quotes():
                         "previousClose": q.get("previousClose"),
                     }
             print(f"  ✓ {len(data)}개 시세 수신")
+        elif data and isinstance(data, dict):
+            print(f"  ⚠ dict 형식 응답: {str(data)[:150]}")
         else:
-            print(f"  ✗ 배치 실패")
+            print(f"  ✗ 배치 실패 (data={type(data).__name__})")
 
         if i + 50 < len(TICKERS):
             time.sleep(0.5)
@@ -155,7 +161,7 @@ def main():
     if not FMP_KEY:
         print("ERROR: FMP_API_KEY 환경변수가 설정되지 않았습니다.")
         exit(1)
-    
+
     # 디버그: 키 앞 4자리만 표시
     print(f"API Key: {FMP_KEY[:4]}...{FMP_KEY[-4:]} (길이: {len(FMP_KEY)})")
 
@@ -184,6 +190,10 @@ def main():
         save_json(quotes_out, "quotes.json")
 
     print(f"\n=== 완료! 프로필 {len(profiles)}개, 시세 {len(quotes)}개 ===")
+
+
+if __name__ == "__main__":
+    main()
 
 
 if __name__ == "__main__":
