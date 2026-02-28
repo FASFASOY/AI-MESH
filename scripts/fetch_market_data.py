@@ -39,13 +39,18 @@ TICKERS = [
 
 
 def fetch_json(url):
-    """URL에서 JSON 데이터를 가져옴"""
     req = urllib.request.Request(url, headers={"User-Agent": "AI-MESH/1.0"})
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
             return json.loads(resp.read().decode())
     except urllib.error.HTTPError as e:
+        body = ""
+        try:
+            body = e.read().decode()[:200]
+        except:
+            pass
         print(f"  HTTP Error {e.code}: {url[:80]}...")
+        print(f"  Response: {body}")
         return None
     except Exception as e:
         print(f"  Error: {e}")
