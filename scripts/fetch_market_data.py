@@ -149,8 +149,10 @@ def save_json(data, filename):
 def main():
     if not FMP_KEY:
         print("ERROR: FMP_API_KEY 환경변수가 설정되지 않았습니다.")
-        print("GitHub Secrets에 FMP_API_KEY를 등록하세요.")
         exit(1)
+    
+    # 디버그: 키 앞 4자리만 표시
+    print(f"API Key: {FMP_KEY[:4]}...{FMP_KEY[-4:]} (길이: {len(FMP_KEY)})")
 
     kst = timezone(timedelta(hours=9))
     now_kst = datetime.now(kst).strftime("%Y-%m-%d %H:%M KST")
