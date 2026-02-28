@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI MESH — NASDAQ 100 Ecosystem</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0e1a;--surface:#111827;--surface2:#1a2035;--border:#1f2937;--border2:#374151;
+  --text1:#e5e7eb;--text2:#9ca3af;--text3:#6b7280;--text4:#4b5563;
+  --accent:#3b82f6;--accent2:#60a5fa;--green:#22c55e;--amber:#f59e0b;--red:#ef4444;
+  --font:"Plus Jakarta Sans","Noto Sans KR",sans-serif;
+  --panel-w:380px;
+}
+body{background:var(--bg);overflow:hidden;font-family:var(--font);color:var(--text1)}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--border2)}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.tab{padding:8px 0;font-size:12px;font-weight:600;color:var(--text3);cursor:pointer;border-bottom:2px solid transparent;transition:all .2s}
+.tab:hover{color:var(--text2)}
+.tab.active{color:var(--accent2);border-bottom-color:var(--accent2)}
+.chip{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;border-radius:6px;font-size:11px;font-weight:500;cursor:pointer;transition:all .15s;border:1px solid var(--border);color:var(--text3);background:transparent;white-space:nowrap}
+.chip:hover{border-color:var(--border2);color:var(--text2);background:var(--surface)}
+.chip.on{background:#3b82f612;border-color:#3b82f644;color:var(--accent2)}
+.news-card{display:block;padding:12px;border-radius:8px;text-decoration:none;transition:background .15s;border:1px solid transparent}
+.news-card:hover{background:var(--surface2);border-color:var(--border)}
+.conn-row{padding:12px 0;cursor:pointer;transition:background .15s;border-radius:6px}
+.conn-row:hover{background:var(--surface2)}
+</style>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.9/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const{useState,useMemo,useCallback,useRef,useEffect}=React;
+
+/* ═══ DATA URLs (GitHub-hosted static JSON) ═══ */
+const DATA_BASE="https://raw.githubusercontent.com/FASFASOY/AI-MESH/main/data";
+const PROFILES_URL=`${DATA_BASE}/profiles.json`;
+const QUOTES_URL=`${DATA_BASE}/quotes.json`;
+const NEWS_URL=`${DATA_BASE}/news.json`;
+const LOGO_BASE=`${DATA_BASE}/logos`;
+
+/* ═══ CONSTANTS ═══ */
+const SECTORS={
+  semiconductor:{label:"Semiconductor",color:"#22d3ee",bg:"#0c4a5e"},
+  "software&cloud":{label:"Software & Cloud",color:"#818cf8",bg:"#2e1065"},
+  "internet&info":{label:"Internet & Info",color:"#f472b6",bg:"#5c1a3d"},
+  "internet retail":{label:"Internet Retail",color:"#f97316",bg:"#5c2d0e"},
+  "consumer lifestyle":{label:"Consumer Lifestyle",color:"#a3e635",bg:"#2d4a1e"},
+  healthcare:{label:"Healthcare",color:"#14b8a6",bg:"#0d4f4f"},
+  "mobility&industrial":{label:"Mobility & Industrial",color:"#eab308",bg:"#4a3d0a"},
+};
+function edgeColor(w){
+  if(w>=70)return"#a78bfa";
+  if(w>=45)return"#818cf8";
+  return"#475569";
+}
+
+const STOCKS_RAW=[
+["NVDA","NVIDIA","semiconductor",3400],["AVGO","Broadcom","semiconductor",1050],
+["ASML","ASML","semiconductor",350],["AMD","AMD","semiconductor",200],
+["QCOM","Qualcomm","semiconductor",195],["TXN","Texas Instruments","semiconductor",180],
+["ARM","ARM Holdings","semiconductor",170],["AMAT","Applied Materials","semiconductor",145],
+["INTC","Intel","semiconductor",110],["ADI","Analog Devices","semiconductor",110],
+["MU","Micron","semiconductor",115],["LRCX","Lam Research","semiconductor",105],
+["KLAC","KLA Corp","semiconductor",95],["MRVL","Marvell","semiconductor",80],
+["NXPI","NXP Semi","semiconductor",58],["MCHP","Microchip","semiconductor",35],
+["MPWR","Monolithic Power","semiconductor",38],["STX","Seagate","semiconductor",22],
+["WDC","Western Digital","semiconductor",24],
+["AAPL","Apple","consumer lifestyle",3500],["MSFT","Microsoft","software&cloud",3200],
+["AMZN","Amazon","internet retail",2700],["GOOGL","Alphabet A","internet&info",2500],
+["META","Meta","internet&info",1900],["TSLA","Tesla","mobility&industrial",1400],
+["NFLX","Netflix","internet&info",420],
+["CSCO","Cisco","software&cloud",240],["PLTR","Palantir","software&cloud",260],
+["CDNS","Cadence","software&cloud",82],["SNPS","Synopsys","software&cloud",78],
+["ADBE","Adobe","software&cloud",195],["INTU","Intuit","software&cloud",180],
+["ADP","ADP","software&cloud",120],["WDAY","Workday","software&cloud",68],
+["DDOG","Datadog","software&cloud",42],["VRSK","Verisk","software&cloud",40],
+["CTSH","Cognizant","software&cloud",40],["CSGP","CoStar","software&cloud",34],
+["PAYX","Paychex","software&cloud",52],["MSTR","MicroStrategy","software&cloud",85],
+["PANW","Palo Alto","software&cloud",130],["CRWD","CrowdStrike","software&cloud",95],
+["FTNT","Fortinet","software&cloud",62],["ZS","Zscaler","software&cloud",32],
+["TEAM","Atlassian","software&cloud",48],["ADSK","Autodesk","software&cloud",58],
+["SHOP","Shopify","software&cloud",120],["ROP","Roper Technologies","software&cloud",58],
+["TRI","Thomson Reuters","software&cloud",85],
+["BKNG","Booking","internet retail",170],["MELI","MercadoLibre","internet retail",105],
+["APP","AppLovin","internet&info",110],["ABNB","Airbnb","internet retail",82],
+["PYPL","PayPal","internet retail",78],["DASH","DoorDash","internet&info",68],
+["EA","EA","internet&info",40],["TTWO","Take-Two","internet&info",32],
+["PDD","PDD Holdings","internet&info",155],["WBD","Warner Bros Discovery","internet&info",25],
+["MAR","Marriott","internet retail",78],["ROST","Ross Stores","internet retail",48],
+["WMT","Walmart","internet retail",680],
+["CHTR","Charter","internet&info",52],["CMCSA","Comcast","internet&info",160],
+["COST","Costco","consumer lifestyle",420],["PEP","PepsiCo","consumer lifestyle",230],
+["TMUS","T-Mobile","consumer lifestyle",260],["SBUX","Starbucks","consumer lifestyle",108],
+["MDLZ","Mondelez","consumer lifestyle",98],["MNST","Monster","consumer lifestyle",58],
+["KHC","Kraft Heinz","consumer lifestyle",44],["KDP","Keurig Dr Pepper","consumer lifestyle",48],
+["CCEP","Coca-Cola Europacific","consumer lifestyle",42],
+["CEG","Constellation Energy","consumer lifestyle",75],["XEL","Xcel Energy","consumer lifestyle",38],
+["AEP","AEP","consumer lifestyle",52],["EXC","Exelon","consumer lifestyle",40],
+["ISRG","Intuitive Surgical","healthcare",195],["AMGN","Amgen","healthcare",160],
+["VRTX","Vertex","healthcare",130],["GILD","Gilead","healthcare",115],
+["REGN","Regeneron","healthcare",95],["GEHC","GE Healthcare","healthcare",45],
+["DXCM","DexCom","healthcare",32],["IDXX","IDEXX","healthcare",40],
+["ALNY","Alnylam","healthcare",35],["INSM","Insmed","healthcare",15],
+["LIN","Linde","healthcare",210],
+["HON","Honeywell","mobility&industrial",150],["AXON","Axon Enterprise","mobility&industrial",45],
+["CSX","CSX","mobility&industrial",68],["CPRT","Copart","mobility&industrial",55],
+["ODFL","Old Dominion","mobility&industrial",44],["FAST","Fastenal","mobility&industrial",44],
+["FANG","Diamondback","mobility&industrial",52],["BKR","Baker Hughes","mobility&industrial",44],
+["FER","Ferrovial","mobility&industrial",42],["PCAR","Paccar","mobility&industrial",58],
+["ORLY","O'Reilly Auto","mobility&industrial",65],["CTAS","Cintas","mobility&industrial",78],
+];
+
+const STOCKS_STATIC=STOCKS_RAW.map(([t,n,s,c])=>({id:t,name:n,sector:s,cap:c}));
+
+const EDGES_RAW=[
+["NVDA","MSFT","AI칩 공급관계","최대 고객사","핵심 GPU 공급사",95],
+["NVDA","META","AI칩 공급관계","대량 구매 고객","GPU 공급사",88],
+["NVDA","AMZN","GPU 클라우드 공급","클라우드 GPU 고객","GPU 공급사",82],
+["NVDA","GOOGL","AI칩 공급관계","GPU 고객사","GPU 공급사",78],
+["NVDA","TSLA","AI 학습·자율주행","AI 학습·자율주행 고객","GPU 공급사",65],
+["NVDA","AMD","GPU 경쟁","직접 경쟁사","직접 경쟁사",90],
+["NVDA","AVGO","AI칩 생태계","커스텀 칩 경쟁사","범용 GPU 경쟁사",60],
+["NVDA","ARM","CPU+GPU 협력","CPU 아키텍처 파트너","GPU 생태계 파트너",58],
+["NVDA","MU","HBM 메모리 공급","HBM 메모리 공급사","HBM 탑재 고객",65],
+["NVDA","MRVL","데이터센터 반도체","네트워킹 칩 협력사","GPU 생태계 파트너",50],
+["NVDA","PLTR","AI 인프라 수요","AI 플랫폼 고객","GPU 인프라 공급사",45],
+["NVDA","ISRG","AI 로봇 비전","AI 의료 고객","AI 비전 공급사",30],
+["NVDA","CEG","AI 데이터센터 전력","전력 공급사","전력 수요 고객",35],
+["NVDA","CSCO","데이터센터 네트워킹","네트워킹 인프라 파트너","GPU 생태계 파트너",42],
+["AMD","INTC","CPU 경쟁","직접 경쟁사","직접 경쟁사",85],
+["AMD","MSFT","Xbox·Azure 공급","콘솔·클라우드 고객","칩 공급사",60],
+["AMD","AMZN","AWS 칩 공급","클라우드 고객","CPU 공급사",50],
+["AMD","TSLA","AI칩 연관","잠재적 AI칩 고객","칩 공급사 후보",35],
+["AMD","MU","메모리 공급관계","메모리 공급사","메모리 탑재 고객",45],
+["AVGO","GOOGL","커스텀 TPU 설계","TPU 설계 고객","커스텀 칩 설계사",68],
+["AVGO","META","네트워킹 칩","네트워킹 칩 고객","네트워킹 공급사",50],
+["AVGO","AAPL","무선 부품 공급","무선 칩 고객","무선 부품 공급사",55],
+["AVGO","MRVL","데이터센터 네트워킹","네트워킹 경쟁사","네트워킹 경쟁사",52],
+["AVGO","CSCO","네트워킹 반도체","네트워킹 칩 고객","칩 공급사",48],
+["ASML","INTC","EUV 장비 공급","EUV 장비 고객","EUV 독점 공급사",72],
+["ASML","AMAT","반도체 장비 동종","장비 동종업계","장비 동종업계",55],
+["ASML","LRCX","반도체 장비 동종","장비 동종업계","장비 동종업계",50],
+["AMAT","LRCX","장비 경쟁","직접 경쟁사","직접 경쟁사",65],
+["KLAC","AMAT","장비 동종","검사장비 동종","공정장비 동종",50],
+["KLAC","LRCX","장비 동종","검사장비 동종","식각장비 동종",48],
+["CDNS","SNPS","EDA 양강","직접 경쟁사","직접 경쟁사",82],
+["CDNS","ARM","칩 설계 생태계","IP 파트너","EDA 툴 파트너",50],
+["SNPS","ARM","칩 설계 생태계","IP 파트너","EDA 툴 파트너",50],
+["ADSK","CDNS","설계 소프트웨어","EDA 설계 동종","CAD 설계 동종",35],
+["TXN","ADI","아날로그 경쟁","직접 경쟁사","직접 경쟁사",65],
+["ADI","NXPI","자동차 반도체","자동차 칩 경쟁사","자동차 칩 경쟁사",48],
+["ADI","MCHP","아날로그 동종","아날로그 동종업계","아날로그 동종업계",45],
+["ADI","MPWR","전력 반도체 경쟁","전력IC 경쟁사","아날로그 경쟁사",42],
+["NXPI","TSLA","자동차 칩 공급","자동차 칩 고객","자동차 칩 공급사",40],
+["QCOM","AAPL","모뎀 칩 공급","모뎀 칩 고객","모뎀 칩 공급사",58],
+["QCOM","ARM","모바일 칩 라이선스","CPU IP 라이선서","라이선스 고객",52],
+["STX","WDC","스토리지 경쟁","직접 경쟁사","직접 경쟁사",70],
+["MU","STX","메모리·스토리지","NAND 경쟁사","DRAM 경쟁사",42],
+["MU","WDC","메모리·스토리지","NAND 경쟁사","DRAM 경쟁사",40],
+["MSFT","GOOGL","AI 플랫폼 경쟁","AI 검색 경쟁사","AI 플랫폼 경쟁사",80],
+["MSFT","AMZN","클라우드 경쟁","클라우드 경쟁사","클라우드 경쟁사",78],
+["MSFT","META","빅테크 AI 경쟁","AI 경쟁사","AI 경쟁사",58],
+["MSFT","AAPL","OS 플랫폼 경쟁","OS 경쟁사","OS 경쟁사",55],
+["GOOGL","META","AI 광고 경쟁","광고 플랫폼 경쟁사","광고 플랫폼 경쟁사",70],
+["GOOGL","AMZN","클라우드·광고 경쟁","클라우드·광고 경쟁사","클라우드·광고 경쟁사",68],
+["GOOGL","AAPL","모바일 검색 계약","검색 파트너(수익 분배)","기본 검색 제공사",62],
+["AMZN","META","광고 시장 경쟁","광고 시장 진입 경쟁사","광고 시장 경쟁사",42],
+["AAPL","TSLA","하드웨어·EV 연관","EV 잠재 경쟁사","소비자 하드웨어 경쟁사",32],
+["NFLX","AMZN","스트리밍 경쟁","스트리밍 경쟁사","스트리밍 경쟁사",55],
+["NFLX","GOOGL","콘텐츠 경쟁","YouTube 경쟁사","스트리밍 경쟁사",42],
+["NFLX","WBD","스트리밍 경쟁","Max 경쟁사","스트리밍 경쟁사",52],
+["NFLX","AAPL","스트리밍 경쟁","Apple TV+ 경쟁사","스트리밍 경쟁사",38],
+["WBD","CMCSA","미디어 경쟁","Peacock 경쟁사","Max 경쟁사",48],
+["CMCSA","CHTR","케이블 경쟁","직접 경쟁사","직접 경쟁사",65],
+["CMCSA","NFLX","미디어 경쟁","스트리밍 경쟁사","케이블 경쟁사",50],
+["TMUS","CMCSA","통신·미디어 경쟁","통신 경쟁사","통신 경쟁사",40],
+["TMUS","CHTR","통신 경쟁","케이블 경쟁사","무선 통신 경쟁사",35],
+["MSFT","CRWD","보안 경쟁","보안 플랫폼 경쟁사","보안 경쟁사",48],
+["MSFT","ADBE","생성형 AI 경쟁","크리에이티브 AI 경쟁사","플랫폼 경쟁사",48],
+["MSFT","PLTR","AI 플랫폼 경쟁","AI 데이터 경쟁사","플랫폼 경쟁사",42],
+["AMZN","SHOP","이커머스 플랫폼","이커머스 경쟁사","이커머스 플랫폼 경쟁사",45],
+["AMZN","WMT","리테일 경쟁","오프라인·온라인 경쟁사","이커머스 경쟁사",72],
+["GOOGL","CSCO","클라우드 네트워킹","네트워킹 인프라 파트너","클라우드 파트너",35],
+["MSFT","CSCO","협업·네트워킹 경쟁","Teams vs Webex 경쟁사","협업·네트워킹 경쟁사",45],
+["ADBE","SHOP","디지털 마케팅","커머스 마케팅 파트너","크리에이티브 파트너",38],
+["ADP","PAYX","급여 서비스 경쟁","직접 경쟁사","직접 경쟁사",72],
+["ADP","WDAY","HR 소프트웨어 경쟁","HR 소프트웨어 경쟁사","급여 서비스 경쟁사",45],
+["INTU","ADP","재무·급여 연계","급여 서비스 연관","회계 소프트웨어 연관",38],
+["PLTR","AMZN","AWS 파트너","AWS 클라우드 파트너","AI 플랫폼 고객",45],
+["PLTR","CRWD","보안·데이터 협력","보안 데이터 파트너","데이터 분석 파트너",38],
+["DDOG","TEAM","DevOps 생태계","DevOps 도구 연계","모니터링 연계",40],
+["MSTR","MSFT","BI·크립토","BI 경쟁사","BI 플랫폼 경쟁사",35],
+["CTSH","MSFT","IT 서비스·클라우드","클라우드 파트너","IT 서비스 파트너",35],
+["SHOP","WMT","이커머스 협력","커머스 채널 파트너","이커머스 플랫폼 파트너",38],
+["TRI","VRSK","데이터 분석 동종","데이터 분석 동종","데이터 분석 동종",35],
+["ROP","VRSK","니치 소프트웨어","데이터 소프트웨어 동종","니치 소프트웨어 동종",32],
+["ADSK","ADBE","크리에이티브 소프트웨어","디지털 크리에이티브 동종","3D 설계 동종",38],
+["PANW","CRWD","보안 플랫폼 경쟁","엔드포인트 경쟁사","방화벽 경쟁사",75],
+["PANW","FTNT","방화벽 경쟁","직접 경쟁사","직접 경쟁사",68],
+["PANW","ZS","클라우드 보안 경쟁","제로트러스트 경쟁사","SASE 경쟁사",55],
+["CRWD","ZS","엔드포인트·제로트러스트","제로트러스트 경쟁사","엔드포인트 경쟁사",50],
+["FTNT","ZS","네트워크 보안 경쟁","클라우드 보안 경쟁사","네트워크 보안 경쟁사",45],
+["PANW","CSCO","네트워크 보안 경쟁","네트워크 보안 경쟁사","차세대 방화벽 경쟁사",52],
+["FTNT","CSCO","방화벽 경쟁","UTM 경쟁사","방화벽 경쟁사",48],
+["CRWD","AXON","공공안전 데이터","공공안전 데이터 파트너","보안 기술 파트너",30],
+["APP","META","모바일 광고 경쟁","광고 플랫폼 경쟁사","모바일 광고 경쟁사",45],
+["APP","GOOGL","디지털 광고 경쟁","광고 플랫폼 경쟁사","모바일 광고 경쟁사",42],
+["PDD","AMZN","글로벌 이커머스 경쟁","글로벌 이커머스 경쟁사","중국발 이커머스 경쟁사",50],
+["PDD","MELI","이머징 이커머스","이머징 마켓 경쟁사","중국 이커머스 경쟁사",38],
+["PDD","WMT","리테일 경쟁","글로벌 리테일 경쟁사","가격 경쟁 이커머스",42],
+["BKNG","ABNB","여행 플랫폼 경쟁","직접 경쟁사","직접 경쟁사",72],
+["BKNG","MAR","여행·숙박 경쟁","호텔 직접예약 경쟁사","OTA 경쟁사",55],
+["ABNB","MAR","숙박 경쟁","호텔 경쟁사","숙박공유 경쟁사",50],
+["BKNG","GOOGL","여행 검색 의존","검색 광고 플랫폼","여행 광고 고객",40],
+["PYPL","AMZN","결제 연계","결제 파트너","결제 수단 파트너",38],
+["PYPL","SHOP","결제 인프라","결제 인프라 고객","결제 수단 공급사",42],
+["MELI","AMZN","LatAm 이커머스 경쟁","중남미 경쟁사","중남미 경쟁사",42],
+["WMT","COST","리테일 경쟁","창고형 리테일 경쟁사","대형 리테일 경쟁사",55],
+["ROST","WMT","할인 리테일 경쟁","대형 할인 경쟁사","오프프라이스 경쟁사",35],
+["DASH","AMZN","배달·이커머스","이커머스 배달 경쟁사","음식 배달 경쟁사",38],
+["EA","TTWO","게임 퍼블리셔 경쟁","직접 경쟁사","직접 경쟁사",65],
+["EA","MSFT","게임 플랫폼","Xbox 퍼블리셔 파트너","게임 콘텐츠 파트너",35],
+["TTWO","MSFT","게임 플랫폼","Xbox 퍼블리셔 파트너","게임 콘텐츠 파트너",32],
+["PEP","MNST","음료 경쟁·유통","에너지 음료 경쟁사","음료 유통 파트너",50],
+["PEP","KHC","식품 동종","식품 동종업계","식품 동종업계",45],
+["PEP","MDLZ","전 그룹사 동종","스낵 동종업계","음료 동종업계",55],
+["PEP","KDP","음료 경쟁","음료 경쟁사","음료 경쟁사",52],
+["PEP","CCEP","음료 경쟁","코카콜라 보틀러 경쟁","펩시 경쟁사",60],
+["KDP","CCEP","음료 경쟁","코카콜라 보틀러 경쟁","KDP 경쟁사",48],
+["KDP","MNST","에너지 음료 경쟁","에너지 음료 경쟁사","음료 경쟁사",40],
+["SBUX","PEP","RTD 음료 협력","RTD 유통 파트너","RTD 브랜드 파트너",35],
+["COST","MDLZ","유통·제조 관계","식품 공급사","유통 채널",35],
+["CEG","XEL","전력 유틸리티","유틸리티 동종","유틸리티 동종",55],
+["CEG","AEP","전력 유틸리티","유틸리티 동종","유틸리티 동종",50],
+["CEG","EXC","원전·전력","전력 동종(분사 관계)","전력 동종(분사 관계)",58],
+["XEL","AEP","유틸리티 동종","유틸리티 동종업계","유틸리티 동종업계",60],
+["XEL","EXC","유틸리티 동종","유틸리티 동종업계","유틸리티 동종업계",45],
+["AEP","EXC","유틸리티 동종","유틸리티 동종업계","유틸리티 동종업계",50],
+["CEG","AMZN","전력 공급 계약","데이터센터 전력 고객","원전 전력 공급사",35],
+["CEG","MSFT","전력 공급 계약","데이터센터 전력 고객","원전 전력 공급사",35],
+["AMGN","GILD","바이오 대형","바이오 대형 동종","바이오 대형 동종",55],
+["AMGN","REGN","바이오 대형","바이오 대형 동종","바이오 대형 동종",55],
+["VRTX","REGN","바이오 대형","바이오 대형 동종","바이오 대형 동종",48],
+["GILD","REGN","바이오 동종","바이오 동종업계","바이오 동종업계",45],
+["ALNY","REGN","RNA 치료제","RNA 치료 경쟁사","RNA 경쟁사",42],
+["ALNY","INSM","희귀질환 바이오","희귀질환 동종","희귀질환 동종",38],
+["INSM","VRTX","희귀질환 경쟁","희귀질환 경쟁사","희귀질환 경쟁사",35],
+["ISRG","GEHC","의료기기 동종","의료기기 동종업계","수술 로봇 동종업계",50],
+["DXCM","IDXX","헬스케어 테크","헬스케어 테크 동종","헬스케어 테크 동종",30],
+["LIN","GEHC","의료·산업 가스","의료기기 동종","의료 가스 공급",32],
+["AMGN","VRTX","바이오 대형","바이오 대형 동종","바이오 대형 동종",48],
+["GILD","ALNY","바이오 동종","바이오 동종업계","바이오 동종업계",35],
+["HON","AXON","산업·공공안전 테크","공공안전 기술 동종","산업 기술 동종",35],
+["CSX","ODFL","물류·운송 경쟁","화물 운송 경쟁사","철도 화물 경쟁사",55],
+["FANG","BKR","에너지 밸류체인","유전 서비스 공급사","원유 생산 고객",55],
+["FAST","CPRT","산업 서비스 동종","산업 서비스 동종","산업 서비스 동종",32],
+["TSLA","PCAR","전기트럭 경쟁","전기트럭 경쟁사","EV 트럭 경쟁사",40],
+["TSLA","HON","EV·자율주행 부품","자율주행 센서 공급사","EV 기업 고객",32],
+["ORLY","CPRT","자동차 애프터마켓","차량 부품 경쟁사","중고차 경매 동종",38],
+["FER","CSX","인프라·운송","운송 인프라 동종","철도 인프라 동종",30],
+["CSCO","AMZN","네트워킹 인프라","클라우드 네트워킹 고객","네트워킹 공급사",40],
+["AAPL","CSCO","기업용 기기·네트워크","기업 네트워크 파트너","기업 기기 파트너",30],
+];
+const EDGES=EDGES_RAW.map(([a,b,n,ac,bc,w])=>({from:a,to:b,desc:n,aLabel:ac,bLabel:bc,weight:w}));
+
+/* ═══ LAYOUT ═══ */
+
+/* ═══ LAYOUT ENGINE ═══ */
+function computeLayout(stocks,edges){
+  const groups={};stocks.forEach(s=>{if(!groups[s.sector])groups[s.sector]=[];groups[s.sector].push(s);});
+  const cx=1500,cy=1200,pos={};
+  const sectorOrder=["semiconductor","software&cloud","internet&info","internet retail","consumer lifestyle","healthcare","mobility&industrial"];
+  const secAngle={};
+  sectorOrder.forEach((s,i)=>{secAngle[s]=(i/sectorOrder.length)*Math.PI*2-Math.PI/2;});
+
+  // Mag7 heptagon — sorted so each vertex is near its sector direction
+  const mag7=["NVDA","MSFT","AAPL","AMZN","GOOGL","META","TSLA"];
+  const mag7R=200;
+  const mag7data=mag7.map(id=>{const s=stocks.find(st=>st.id===id);return{id,sa:s?secAngle[s.sector]:0};})
+    .sort((a,b)=>a.sa-b.sa);
+  mag7data.forEach((m,i)=>{
+    const a=(i/7)*Math.PI*2-Math.PI/2;
+    pos[m.id]={x:cx+mag7R*Math.cos(a),y:cy+mag7R*Math.sin(a)};
+  });
+
+  // Remaining stocks: sector-biased concentric rings
+  const remaining=stocks.filter(s=>!mag7.includes(s.id)).sort((a,b)=>b.cap-a.cap);
+  const rings=[
+    {from:0,to:12,r:400},
+    {from:13,to:38,r:590},
+    {from:39,to:92,r:780},
+  ];
+  rings.forEach(ring=>{
+    const slice=remaining.slice(ring.from,ring.to+1);
+    const bySec={};slice.forEach(s=>{if(!bySec[s.sector])bySec[s.sector]=[];bySec[s.sector].push(s);});
+    const total=slice.length;
+    sectorOrder.forEach(sec=>{
+      const grp=bySec[sec]||[];if(!grp.length)return;
+      const arcLen=(grp.length/total)*Math.PI*2;
+      const startA=secAngle[sec]-arcLen/2;
+      grp.forEach((s,gi)=>{
+        const a=startA+(gi+0.5)/grp.length*arcLen;
+        const jit=((gi*7+sec.length*3)%5-2)*12;
+        pos[s.id]={x:cx+(ring.r+jit)*Math.cos(a),y:cy+(ring.r+jit)*Math.sin(a)};
+      });
+    });
+  });
+
+  // Anchor nodes (big tech + sector leaders)
+  const ids=Object.keys(pos);
+  const anchors=new Set([
+    'NVDA','MSFT','AAPL','AMZN','GOOGL','META','TSLA',
+    'AVGO','ASML','AMD','CSCO','ADBE','INTU','PANW','SHOP',
+    'NFLX','APP','PDD','WMT','BKNG','COST','PEP','TMUS',
+    'ISRG','AMGN','VRTX','HON','PCAR','CTAS',
+  ]);
+
+  // Relationship-based adjustment (pull small nodes toward connected anchors)
+  const maxPull=80,iterations=8;
+  for(let iter=0;iter<iterations;iter++){
+    const newPos={};
+    ids.forEach(id=>{newPos[id]={x:pos[id].x,y:pos[id].y};});
+    ids.forEach(id=>{
+      if(anchors.has(id))return;
+      const connections=edges.filter(e=>(e.from===id||e.to===id));
+      if(connections.length===0)return;
+      let pullX=0,pullY=0,totalWeight=0;
+      connections.forEach(e=>{
+        const otherId=e.from===id?e.to:e.from;
+        if(!anchors.has(otherId)||!pos[otherId])return;
+        const dx=pos[otherId].x-pos[id].x,dy=pos[otherId].y-pos[id].y;
+        const strength=e.weight/100;
+        pullX+=dx*strength;pullY+=dy*strength;totalWeight+=strength;
+      });
+      if(totalWeight>0){
+        const dampening=0.15;
+        const moveX=(pullX/totalWeight)*dampening,moveY=(pullY/totalWeight)*dampening;
+        const moveDist=Math.sqrt(moveX*moveX+moveY*moveY);
+        const limitedMove=Math.min(moveDist,maxPull/iterations);
+        const scale=moveDist>0?limitedMove/moveDist:0;
+        newPos[id].x+=moveX*scale;newPos[id].y+=moveY*scale;
+      }
+    });
+    ids.forEach(id=>{if(!anchors.has(id)){pos[id]=newPos[id];}});
+  }
+
+  // Collision resolution (anchors don't move)
+  const radii={};stocks.forEach(s=>{radii[s.id]=getR(s.cap);});
+  for(let iter=0;iter<40;iter++){
+    let moved=false;
+    for(let i=0;i<ids.length;i++){
+      for(let j=i+1;j<ids.length;j++){
+        const a=pos[ids[i]],b=pos[ids[j]];
+        const dx=b.x-a.x,dy=b.y-a.y;
+        const dist=Math.sqrt(dx*dx+dy*dy)||0.1;
+        const minD=(radii[ids[i]]||18)+(radii[ids[j]]||18)+6;
+        if(dist<minD){
+          const push=(minD-dist)/2;
+          const ux=dx/dist,uy=dy/dist;
+          const wA=radii[ids[i]]||18,wB=radii[ids[j]]||18;
+          const rA=wB/(wA+wB),rB=wA/(wA+wB);
+          if(!anchors.has(ids[i])){a.x-=ux*push*rA;a.y-=uy*push*rA;}
+          if(!anchors.has(ids[j])){b.x+=ux*push*rB;b.y+=uy*push*rB;}
+          moved=true;
+        }
+      }
+    }
+    if(!moved)break;
+  }
+  ids.forEach(id=>{pos[id].x=Math.round(pos[id].x);pos[id].y=Math.round(pos[id].y);});
+
+  // Sector convex hulls for background
+  const hulls={};
+  sectorOrder.forEach(sec=>{
+    const pts=stocks.filter(s=>s.sector===sec).map(s=>pos[s.id]).filter(Boolean);
+    if(pts.length<3)return;
+    hulls[sec]=convexHull(pts);
+  });
+  return{pos,hulls};
+}
+
+function convexHull(points){
+  const pts=[...points].sort((a,b)=>a.x-b.x||a.y-b.y);
+  if(pts.length<3)return pts;
+  const cross=(o,a,b)=>(a.x-o.x)*(b.y-o.y)-(a.y-o.y)*(b.x-o.x);
+  const lower=[];for(const p of pts){while(lower.length>=2&&cross(lower[lower.length-2],lower[lower.length-1],p)<=0)lower.pop();lower.push(p);}
+  const upper=[];for(const p of pts.reverse()){while(upper.length>=2&&cross(upper[upper.length-2],upper[upper.length-1],p)<=0)upper.pop();upper.push(p);}
+  return lower.slice(0,-1).concat(upper.slice(0,-1));
+}
+
+function expandHull(hull,pad){
+  const cx=hull.reduce((s,p)=>s+p.x,0)/hull.length;
+  const cy=hull.reduce((s,p)=>s+p.y,0)/hull.length;
+  return hull.map(p=>{const dx=p.x-cx,dy=p.y-cy,d=Math.sqrt(dx*dx+dy*dy)||1;return{x:p.x+dx/d*pad,y:p.y+dy/d*pad};});
+}
+
+function hullToPath(hull,pad){
+  const exp=expandHull(hull,pad);if(exp.length<3)return"";
+  let d=`M ${exp[0].x} ${exp[0].y}`;
+  for(let i=0;i<exp.length;i++){
+    const p0=exp[(i-1+exp.length)%exp.length],p1=exp[i],p2=exp[(i+1)%exp.length],p3=exp[(i+2)%exp.length];
+    d+=` C ${p1.x+(p2.x-p0.x)/5} ${p1.y+(p2.y-p0.y)/5}, ${p2.x-(p3.x-p1.x)/5} ${p2.y-(p3.y-p1.y)/5}, ${p2.x} ${p2.y}`;
+  }
+  return d+"Z";
+}
+
+function getR(c){return Math.max(18,Math.min(60,Math.sqrt(c)*1.05));}
+const LOGO=(t)=>`${LOGO_BASE}/${t}.png`;
+
+/* ═══ SIDE PANEL ═══ */
+function SidePanel({stock,edges,onClose,profiles,stockMap,onSelect,newsData}){
+  const[tab,setTab]=useState("overview");
+  const[descExpanded,setDescExpanded]=useState(false);
+  const[translated,setTranslated]=useState(null); // {ticker, text}
+  const[translating,setTranslating]=useState(false);
+  if(!stock)return null;
+  const sec=SECTORS[stock.sector];if(!sec)return null;
+  const pr=profiles[stock.id];
+  const liveCap=pr?.mktCap?Math.round(pr.mktCap/1e9):null;
+  const showCap=liveCap||stock.cap;
+  const diff=liveCap?liveCap-stock.cap:0;
+  const articles=newsData?.stocks?.[stock.id]||[];
+  const newsCount=articles.length;
+
+  // Reset when stock changes
+  useEffect(()=>{setDescExpanded(false);setTranslated(null);setTab("overview");},[stock.id]);
+
+  const translateDesc=async()=>{
+    if(!pr?.description||translating)return;
+    if(translated?.ticker===stock.id){setTranslated(null);return;} // toggle off
+    setTranslating(true);
+    try{
+      // Split into chunks of ~400 chars (MyMemory limit ~500)
+      const full=pr.description;
+      const chunks=[];
+      for(let i=0;i<full.length;i+=400){chunks.push(full.slice(i,i+400));}
+      const results=[];
+      for(const chunk of chunks){
+        const url=`https://api.mymemory.translated.net/get?q=${encodeURIComponent(chunk)}&langpair=en|ko`;
+        const resp=await fetch(url);
+        const data=await resp.json();
+        results.push(data.responseData?.translatedText||chunk);
+        if(chunks.length>1)await new Promise(r=>setTimeout(r,300));
+      }
+      setTranslated({ticker:stock.id,text:results.join("")});
+    }catch(e){setTranslated({ticker:stock.id,text:"번역 중 오류가 발생했습니다."});}
+    setTranslating(false);
+  };
+
+  const tabStyle=(t)=>({padding:"10px 0",fontSize:12,fontWeight:600,cursor:"pointer",
+    borderBottom:tab===t?"2px solid var(--accent2)":"2px solid transparent",
+    color:tab===t?"var(--accent2)":"var(--text3)",transition:"all .2s"});
+
+  return <div style={{position:"absolute",top:0,right:0,width:"var(--panel-w)",height:"100vh",background:"var(--surface)",
+    borderLeft:"1px solid var(--border)",zIndex:20,display:"flex",flexDirection:"column",
+    animation:"fadeIn .2s ease-out",fontFamily:"var(--font)"}}>
+
+    {/* Panel Header */}
+    <div style={{padding:"20px 24px 0",flexShrink:0}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:16}}>
+        <div style={{display:"flex",alignItems:"center",gap:12}}>
+          <img src={LOGO(stock.id)} alt="" width={40} height={40} style={{borderRadius:10,background:"#fff",flexShrink:0}} onError={e=>{e.target.style.display="none"}}/>
+          <div>
+            <div style={{display:"flex",alignItems:"center",gap:8}}>
+              <span style={{fontSize:20,fontWeight:800,color:"var(--text1)",letterSpacing:-.3}}>{stock.id}</span>
+              <span style={{fontSize:10,fontWeight:600,color:sec.color,background:sec.color+"15",padding:"2px 8px",borderRadius:4}}>{sec.label}</span>
+            </div>
+            <div style={{color:"var(--text3)",fontSize:12,marginTop:2}}>{stock.name}</div>
+          </div>
+        </div>
+        <div onClick={onClose} style={{width:28,height:28,borderRadius:6,display:"flex",alignItems:"center",justifyContent:"center",
+          cursor:"pointer",color:"var(--text4)",fontSize:16,transition:"all .15s",flexShrink:0}}
+          onMouseEnter={e=>{e.currentTarget.style.background="var(--surface2)";e.currentTarget.style.color="var(--text2)"}}
+          onMouseLeave={e=>{e.currentTarget.style.background="transparent";e.currentTarget.style.color="var(--text4)"}}>✕</div>
+      </div>
+
+      {/* Price Bar */}
+      <div style={{display:"flex",alignItems:"baseline",gap:10,marginBottom:4}}>
+        <span style={{fontSize:28,fontWeight:800,color:"var(--text1)",letterSpacing:-.5}}>
+          ${showCap>=1000?(showCap/1000).toFixed(1)+"T":showCap+"B"}
+        </span>
+        {diff!==0&&<span style={{fontSize:13,fontWeight:700,color:diff>0?"var(--green)":"var(--red)"}}>{diff>0?"+":""}{diff}B</span>}
+        {liveCap&&<span style={{fontSize:9,fontWeight:600,color:"var(--green)",background:"#22c55e15",padding:"2px 6px",borderRadius:4}}>LIVE</span>}
+      </div>
+      {pr?.price!=null&&<div style={{color:"var(--text2)",fontSize:13,marginBottom:16}}>
+        ${Number(pr.price).toLocaleString(undefined,{minimumFractionDigits:2})}
+        {pr.changes!=null&&<span style={{color:pr.changes>=0?"var(--green)":"var(--red)",marginLeft:8,fontWeight:600}}>
+          {pr.changes>=0?"+":""}{pr.changes.toFixed(2)} ({pr.changesPercentage!=null?(pr.changes>=0?"+":"")+pr.changesPercentage.toFixed(2):((pr.changes/(pr.price-pr.changes))*100).toFixed(2)}%)
+        </span>}
+      </div>}
+
+      {/* Tabs */}
+      <div style={{display:"flex",gap:24,borderBottom:"1px solid var(--border)"}}>
+        <div style={tabStyle("overview")} onClick={()=>setTab("overview")}>Overview</div>
+        <div style={tabStyle("news")} onClick={()=>setTab("news")}>News{newsCount>0&&` (${newsCount})`}</div>
+        <div style={tabStyle("connections")} onClick={()=>setTab("connections")}>Links ({edges.length})</div>
+      </div>
+    </div>
+
+    {/* Tab Content */}
+    <div style={{flex:1,overflowY:"auto",padding:"16px 24px 24px"}}>
+
+      {/* OVERVIEW TAB */}
+      {tab==="overview"&&pr&&<div style={{animation:"fadeIn .15s ease-out"}}>
+        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8,marginBottom:16}}>
+          {[
+            pr.ceo&&["CEO",pr.ceo],
+            pr.industry&&["Industry",pr.industry],
+            pr.fullTimeEmployees&&["Employees",Number(pr.fullTimeEmployees).toLocaleString()],
+            pr.country&&["Country",pr.country],
+            pr.ipoDate&&["IPO",pr.ipoDate],
+            pr.exchange&&["Exchange",pr.exchange],
+          ].filter(Boolean).map(([k,v],i)=><div key={i} style={{background:"var(--surface2)",borderRadius:8,padding:"10px 12px"}}>
+            <div style={{color:"var(--text4)",fontSize:10,fontWeight:600,letterSpacing:.5,marginBottom:4}}>{k.toUpperCase()}</div>
+            <div style={{color:"var(--text1)",fontSize:12,fontWeight:500,lineHeight:1.3}}>{v}</div>
+          </div>)}
+        </div>
+        {pr.website&&<a href={pr.website} target="_blank" rel="noopener noreferrer"
+          style={{display:"block",color:"var(--accent2)",fontSize:12,marginBottom:16,textDecoration:"none"}}>
+          {pr.website.replace(/https?:\/\//,"")} ↗</a>}
+        {pr.description&&<div>
+          {/* Translate / Original toggle */}
+          <div style={{display:"flex",gap:8,marginBottom:10}}>
+            <div onClick={translateDesc} style={{padding:"5px 12px",borderRadius:6,fontSize:11,fontWeight:600,cursor:"pointer",
+              transition:"all .15s",border:"1px solid var(--border)",
+              background:translated?.ticker===stock.id?"#3b82f612":"transparent",
+              color:translated?.ticker===stock.id?"var(--accent2)":"var(--text3)"}}>
+              {translating?"번역 중...":translated?.ticker===stock.id?"원문 보기":"🌐 한국어 번역"}
+            </div>
+          </div>
+          {/* Description text */}
+          <div style={{color:"var(--text2)",fontSize:12,lineHeight:1.7}}>
+            {(()=>{
+              const txt=translated?.ticker===stock.id?translated.text:pr.description;
+              const isLong=txt.length>300;
+              const show=descExpanded||!isLong?txt:txt.slice(0,300)+"…";
+              return <>{show}{isLong&&<span onClick={()=>setDescExpanded(p=>!p)}
+                style={{display:"inline-block",marginLeft:6,color:"var(--accent2)",fontSize:11,fontWeight:600,
+                cursor:"pointer",borderBottom:"1px solid #60a5fa44"}}>
+                {descExpanded?"접기":"더보기"}</span>}</>;
+            })()}
+          </div>
+        </div>}
+      </div>}
+
+      {/* NEWS TAB */}
+      {tab==="news"&&<div style={{animation:"fadeIn .15s ease-out"}}>
+        {newsData?.updated_kst&&<div style={{color:"var(--text4)",fontSize:11,marginBottom:12}}>Updated {newsData.updated_kst}</div>}
+        {articles.length===0&&<div style={{color:"var(--text4)",fontSize:13,textAlign:"center",padding:"40px 0"}}>No news available</div>}
+        <div style={{display:"flex",flexDirection:"column",gap:4}}>
+          {articles.map((a,i)=>{
+            const hasCoMention=a.mentions&&a.mentions.length>1;
+            return <a key={i} href={a.url} target="_blank" rel="noopener noreferrer" className="news-card">
+              <div style={{color:"var(--text1)",fontSize:13,fontWeight:600,lineHeight:1.5,marginBottom:6}}>{a.title}</div>
+              <div style={{color:"var(--text3)",fontSize:11,lineHeight:1.5}}>{a.desc}</div>
+              {hasCoMention&&<div style={{marginTop:8,display:"flex",flexWrap:"wrap",gap:4}}>
+                {a.mentions.filter(t=>t!==stock.id).slice(0,5).map(t=>
+                  <span key={t} onClick={ev=>{ev.preventDefault();ev.stopPropagation();onSelect&&onSelect(t);}}
+                    style={{fontSize:10,fontWeight:600,color:"#f59e0b",background:"#f59e0b12",
+                    padding:"2px 8px",borderRadius:4,cursor:"pointer",border:"1px solid "+"#f59e0b33"}}>{t}</span>)}
+              </div>}
+            </a>;
+          })}
+        </div>
+      </div>}
+
+      {/* CONNECTIONS TAB */}
+      {tab==="connections"&&<div style={{animation:"fadeIn .15s ease-out"}}>
+        {edges.sort((a,b)=>b.weight-a.weight).map((e,i)=>{
+          const oid=e.from===stock.id?e.to:e.from;
+          const dl=e.from===stock.id?e.aLabel:e.bLabel;
+          const ec=edgeColor(e.weight);
+          const ot=stockMap[oid],os=ot?SECTORS[ot.sector]:null;
+          return <div key={i} className="conn-row" onClick={()=>onSelect&&onSelect(oid)}
+            style={{borderBottom:i<edges.length-1?"1px solid var(--border)":"none",padding:"14px 4px"}}>
+            <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:6}}>
+              <div style={{display:"flex",alignItems:"center",gap:10}}>
+                <img src={LOGO(oid)} alt="" width={24} height={24} style={{borderRadius:6,background:"#fff"}} onError={e=>{e.target.style.display="none"}}/>
+                <div>
+                  <span style={{fontSize:14,fontWeight:700,color:"var(--text1)"}}>{oid}</span>
+                  <span style={{fontSize:11,color:"var(--text3)",marginLeft:8}}>{ot?.name}</span>
+                </div>
+              </div>
+              <div style={{display:"flex",alignItems:"center",gap:8}}>
+                {e.newsBoost>0&&<span style={{fontSize:10,fontWeight:600,color:"#f59e0b",background:"#f59e0b12",
+                  padding:"2px 6px",borderRadius:4}}>📰+{e.newsBoost}</span>}
+                <span style={{fontSize:13,fontWeight:700,color:ec,minWidth:28,textAlign:"right"}}>{e.weight}</span>
+              </div>
+            </div>
+            <div style={{color:"var(--text2)",fontSize:12,lineHeight:1.4,marginBottom:4}}>{dl}</div>
+            <span style={{fontSize:10,color:ec,background:ec+"12",padding:"2px 8px",borderRadius:4,fontWeight:500}}>{e.desc}</span>
+          </div>;
+        })}
+      </div>}
+    </div>
+  </div>;
+}
+
+
+/* ═══ APP ═══ */
+function App(){
+  const[sel,setSel]=useState(null);
+  const[secF,setSecF]=useState(null);
+  const[search,setSearch]=useState("");
+  const[logoLoaded,setLogoLoaded]=useState({});
+  const[vb,setVb]=useState({x:350,y:50,w:2300,h:2300});
+  const[pan,setPan]=useState(false);
+  const panRef=useRef({x:0,y:0,vx:0,vy:0});
+  const didDrag=useRef(false);
+  const cRef=useRef(null);
+  const[profiles,setProfiles]=useState({});
+  const[apiStatus,setApiStatus]=useState("idle");
+  const[lastUpdate,setLastUpdate]=useState(null);
+  const[stocks,setStocks]=useState(STOCKS_STATIC);
+  const[constChanges,setConstChanges]=useState(null);
+  const[showAlert,setShowAlert]=useState(true);
+  const[newsData,setNewsData]=useState(null);
+  const[newsStatus,setNewsStatus]=useState("idle");
+  const[showLegend,setShowLegend]=useState(false);
+
+  const stockMap=useMemo(()=>{const m={};stocks.forEach(s=>{m[s.id]=s;});return m;},[stocks]);
+  const layout=useMemo(()=>computeLayout(stocks,EDGES),[stocks]);
+  const POS=layout.pos;
+  const sectorHulls=layout.hulls;
+
+  /* FETCH STATIC DATA (from GitHub-hosted JSON) */
+  useEffect(()=>{
+    let dead=false;
+    async function go(){
+      setApiStatus("loading");
+      try{
+        // 프로필 + 시세 동시 fetch
+        const[profResp,quoteResp]=await Promise.allSettled([
+          fetch(PROFILES_URL).then(r=>r.json()),
+          fetch(QUOTES_URL).then(r=>r.json()),
+        ]);
+
+        const profData=profResp.status==="fulfilled"?profResp.value:null;
+        const quoteData=quoteResp.status==="fulfilled"?quoteResp.value:null;
+
+        if(dead)return;
+
+        const pm={};
+
+        // 프로필 적용
+        if(profData?.data){
+          Object.values(profData.data).forEach(p=>{
+            if(p?.symbol)pm[p.symbol]={
+              ...p,
+              companyName:p.companyName,
+              price:null,changes:null,changesPercentage:null,
+            };
+          });
+          console.log("[Profile]",Object.keys(pm).length,"loaded from",profData.updated_kst);
+        }
+
+        // 시세 병합
+        if(quoteData?.data){
+          Object.values(quoteData.data).forEach(q=>{
+            if(!q?.symbol)return;
+            if(!pm[q.symbol])pm[q.symbol]={symbol:q.symbol};
+            if(q.marketCap)pm[q.symbol].mktCap=q.marketCap;
+            if(q.price!=null)pm[q.symbol].price=q.price;
+            if(q.change!=null)pm[q.symbol].changes=q.change;
+            if(q.changesPercentage!=null)pm[q.symbol].changesPercentage=q.changesPercentage;
+          });
+          console.log("[Quote]",Object.keys(quoteData.data).length,"loaded from",quoteData.updated_kst);
+        }
+
+        setProfiles(pm);
+        setStocks(prev=>prev.map(s=>{const p=pm[s.id];return p?.mktCap?{...s,cap:Math.max(1,Math.round(p.mktCap/1e9))}:s;}));
+        setLastUpdate(Date.now());
+        setApiStatus(quoteData?"live":"cached");
+
+      }catch(err){
+        console.error("[Data Fetch]",err);
+        if(!dead)setApiStatus("error");
+      }
+    }
+    go();
+    // 5분마다 시세 갱신 시도
+    const iv=setInterval(go,5*60*1000);
+    return()=>{dead=true;clearInterval(iv);};
+  },[]);
+
+  /* NEWS FETCH */
+  useEffect(()=>{
+    setNewsStatus("loading");
+    fetch(NEWS_URL).then(r=>r.json()).then(d=>{setNewsData(d);setNewsStatus("loaded");}).catch(()=>setNewsStatus("error"));
+  },[]);
+
+  const coBoost=useMemo(()=>{
+    if(!newsData?.co_mentions)return{};
+    const m={};
+    Object.entries(newsData.co_mentions).forEach(([pair,count])=>{m[pair]=Math.min(15,Math.round(count*1.5));});
+    return m;
+  },[newsData]);
+
+  const effectiveEdges=useMemo(()=>EDGES.map(e=>{
+    const pair=[e.from,e.to].sort().join("-");
+    const boost=coBoost[pair]||0;
+    return boost?{...e,weight:Math.min(100,e.weight+boost),newsBoost:boost}:{...e,newsBoost:0};
+  }),[coBoost]);
+
+  const selStock=stockMap[sel];
+  const conEdges=useMemo(()=>sel?effectiveEdges.filter(e=>e.from===sel||e.to===sel):[],[sel,effectiveEdges]);
+  const conSet=useMemo(()=>{const s=new Set();conEdges.forEach(e=>{s.add(e.from);s.add(e.to);});return s;},[conEdges]);
+  const searchSet=useMemo(()=>{if(!search)return null;const q=search.toUpperCase();return new Set(stocks.filter(s=>s.id.includes(q)||s.name.toUpperCase().includes(q)).map(s=>s.id));},[search,stocks]);
+  const filteredSearch=useMemo(()=>{if(!search)return[];const q=search.toUpperCase();return stocks.filter(s=>s.id.includes(q)||s.name.toUpperCase().includes(q)).slice(0,8);},[search,stocks]);
+
+  /* Pan/Zoom */
+  const onWheel=useCallback(ev=>{ev.preventDefault();const f=ev.deltaY>0?1.1:0.9;setVb(p=>{const nw=p.w*f,nh=p.h*f;if(nw<500||nw>8000)return p;return{x:p.x+(p.w-nw)/2,y:p.y+(p.h-nh)/2,w:nw,h:nh};});},[]);
+  const onMD=useCallback(ev=>{if(ev.button!==0)return;setPan(true);didDrag.current=false;panRef.current={x:ev.clientX,y:ev.clientY,vx:vb.x,vy:vb.y};},[vb]);
+  const onMM=useCallback(ev=>{if(!pan)return;const dx=Math.abs(ev.clientX-panRef.current.x),dy=Math.abs(ev.clientY-panRef.current.y);if(dx>3||dy>3)didDrag.current=true;const svg=cRef.current?.querySelector("svg");if(!svg)return;const r=svg.getBoundingClientRect();setVb(p=>({...p,x:panRef.current.vx-(ev.clientX-panRef.current.x)*(vb.w/r.width),y:panRef.current.vy-(ev.clientY-panRef.current.y)*(vb.h/r.height)}));},[pan,vb.w,vb.h]);
+  const onMU=useCallback(()=>setPan(false),[]);
+  useEffect(()=>{const el=cRef.current;if(!el)return;el.addEventListener("wheel",onWheel,{passive:false});return()=>el.removeEventListener("wheel",onWheel);},[onWheel]);
+
+  const zoomIn=()=>setVb(p=>{const nw=p.w*.75,nh=p.h*.75;return nw<500?p:{x:p.x+(p.w-nw)/2,y:p.y+(p.h-nh)/2,w:nw,h:nh};});
+  const zoomOut=()=>setVb(p=>{const nw=p.w*1.35,nh=p.h*1.35;return nw>8000?p:{x:p.x+(p.w-nw)/2,y:p.y+(p.h-nh)/2,w:nw,h:nh};});
+  const resetV=()=>setVb({x:350,y:50,w:2300,h:2300});
+  const animRef=useRef(null);
+  const focusNode=useCallback(id=>{
+    const p=POS[id];if(!p)return;
+    setSel(id);setSearch("");
+    // Smooth animate viewBox to center on node
+    const target={x:p.x-600,y:p.y-500,w:1200,h:1000};
+    const start={...vb};
+    const t0=performance.now();
+    const dur=400; // ms
+    if(animRef.current)cancelAnimationFrame(animRef.current);
+    const tick=(now)=>{
+      const t=Math.min(1,(now-t0)/dur);
+      // Ease out cubic
+      const e=1-Math.pow(1-t,3);
+      setVb({
+        x:start.x+(target.x-start.x)*e,
+        y:start.y+(target.y-start.y)*e,
+        w:start.w+(target.w-start.w)*e,
+        h:start.h+(target.h-start.h)*e,
+      });
+      if(t<1)animRef.current=requestAnimationFrame(tick);
+    };
+    animRef.current=requestAnimationFrame(tick);
+  },[POS,vb]);
+
+  // Pre-compute all ticker label positions to avoid label-label and label-node overlap
+  const labelPos=useMemo(()=>{
+    const placed=[];
+    const result={};
+    const sorted=[...stocks].sort((a,b)=>b.cap-a.cap);
+    sorted.forEach(s=>{
+      const p=POS[s.id];if(!p)return;
+      const r=getR(s.cap);
+      const fs=r>50?12:r>30?10:8;
+      const pw=s.id.length*fs*.65+10;
+      const ph=fs+6;
+      const cands=[
+        {x:p.x, y:p.y+r+11},
+        {x:p.x, y:p.y-r-11},
+        {x:p.x+r+pw/2+2, y:p.y+4},
+        {x:p.x-r-pw/2-2, y:p.y+4},
+        {x:p.x+r*.7+pw/2, y:p.y+r*.7+6},
+        {x:p.x-r*.7-pw/2, y:p.y+r*.7+6},
+        {x:p.x+r*.7+pw/2, y:p.y-r*.7-6},
+        {x:p.x-r*.7-pw/2, y:p.y-r*.7-6},
+      ];
+      let best=cands[0],bestScore=-Infinity;
+      cands.forEach(c=>{
+        let score=0,blocked=false;
+        stocks.forEach(st2=>{
+          if(st2.id===s.id)return;
+          const np=POS[st2.id];if(!np)return;
+          const r2=getR(st2.cap);
+          if(Math.sqrt((c.x-np.x)**2+(c.y-np.y)**2)<r2+6)blocked=true;
+        });
+        if(blocked)score=-10000;
+        placed.forEach(pl=>{
+          if(Math.abs(c.x-pl.x)<(pw/2+pl.w/2+2)&&Math.abs(c.y-pl.y)<(ph/2+pl.h/2+2))score-=500;
+        });
+        if(c.y>p.y)score+=20;
+        if(score>bestScore){bestScore=score;best=c;}
+      });
+      result[s.id]={x:best.x,y:best.y,fs,pw,ph};
+      placed.push({x:best.x,y:best.y,w:pw,h:ph});
+    });
+    return result;
+  },[stocks,POS]);
+
+  const stDot=apiStatus==="live"?"var(--green)":apiStatus==="cached"?"#f59e0b":apiStatus==="loading"?"var(--accent2)":"var(--text4)";
+
+  return <div style={{width:"100%",height:"100vh",overflow:"hidden",background:"var(--bg)",position:"relative"}}>
+
+    {/* ══ TOOLBAR ══ */}
+    <div style={{position:"absolute",top:0,left:0,right:sel?"var(--panel-w)":0,height:44,zIndex:15,
+      display:"flex",alignItems:"center",justifyContent:"space-between",padding:"0 20px",
+      background:"var(--surface)",borderBottom:"1px solid var(--border)",transition:"right .2s"}}>
+
+      {/* Left: Logo */}
+      <div style={{display:"flex",alignItems:"center",gap:12}}>
+        <span style={{fontSize:15,fontWeight:800,letterSpacing:-.5,color:"var(--text1)"}}>AI</span>
+        <span style={{fontSize:15,fontWeight:800,letterSpacing:-.5,color:"var(--accent2)"}}>MESH</span>
+        <div style={{width:1,height:20,background:"var(--border)",margin:"0 4px"}}/>
+        <span style={{fontSize:11,color:"var(--text4)",fontWeight:500}}>NASDAQ 100</span>
+      </div>
+
+      {/* Center: Search */}
+      <div style={{position:"relative",width:280}}>
+        <div style={{position:"relative"}}>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text4)" strokeWidth="2"
+            style={{position:"absolute",left:10,top:"50%",transform:"translateY(-50%)"}}>
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input value={search} onChange={e=>setSearch(e.target.value)}
+            placeholder="Search ticker or company..."
+            style={{width:"100%",padding:"7px 12px 7px 32px",borderRadius:8,background:"var(--bg)",
+            border:"1px solid var(--border)",color:"var(--text1)",fontSize:12,outline:"none",
+            fontFamily:"var(--font)",transition:"border-color .15s"}}
+            onFocus={e=>e.target.style.borderColor="var(--accent)"}
+            onBlur={e=>e.target.style.borderColor="var(--border)"}/>
+        </div>
+        {filteredSearch.length>0&&<div style={{position:"absolute",top:"100%",left:0,right:0,marginTop:4,
+          background:"var(--surface)",border:"1px solid var(--border)",borderRadius:10,overflow:"hidden",zIndex:100,
+          boxShadow:"0 12px 40px rgba(0,0,0,.5)"}}>
+          {filteredSearch.map(s=><div key={s.id} onClick={()=>focusNode(s.id)}
+            style={{padding:"10px 14px",cursor:"pointer",display:"flex",alignItems:"center",gap:10,
+            borderBottom:"1px solid var(--border)",transition:"background .1s"}}
+            onMouseEnter={e=>e.currentTarget.style.background="var(--surface2)"}
+            onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
+            <div style={{width:6,height:6,borderRadius:"50%",background:SECTORS[s.sector]?.color,flexShrink:0}}/>
+            <span style={{fontSize:13,fontWeight:700,color:"var(--text1)"}}>{s.id}</span>
+            <span style={{fontSize:11,color:"var(--text3)"}}>{s.name}</span>
+            <span style={{fontSize:11,color:"var(--text4)",marginLeft:"auto",fontWeight:600}}>
+              ${s.cap>=1000?(s.cap/1000).toFixed(1)+"T":s.cap+"B"}</span>
+          </div>)}</div>}
+      </div>
+
+      {/* Right: Status */}
+      <div style={{display:"flex",alignItems:"center",gap:12}}>
+        <div style={{display:"flex",alignItems:"center",gap:6}}>
+          <div style={{width:6,height:6,borderRadius:"50%",background:stDot,boxShadow:`0 0 8px ${stDot}`,
+            animation:apiStatus==="loading"?"pulse 1.5s infinite":"none"}}/>
+          <span style={{fontSize:10,fontWeight:600,color:"var(--text3)"}}>MARKET</span>
+        </div>
+        {newsStatus==="loaded"&&<div style={{display:"flex",alignItems:"center",gap:6}}>
+          <div style={{width:6,height:6,borderRadius:"50%",background:"#f59e0b",boxShadow:"0 0 8px var(--amber)"}}/>
+          <span style={{fontSize:10,fontWeight:600,color:"var(--text3)"}}>NEWS</span>
+        </div>}
+      </div>
+    </div>
+
+    {/* ══ SECTOR FILTER BAR ══ */}
+    <div style={{position:"absolute",top:44,left:0,right:sel?"var(--panel-w)":0,height:36,zIndex:14,
+      display:"flex",alignItems:"center",gap:6,padding:"0 20px",
+      background:"var(--bg)",borderBottom:"1px solid var(--border)",transition:"right .2s",overflowX:"auto"}}>
+      <div className={`chip${!secF?" on":""}`} onClick={()=>setSecF(null)}
+        style={!secF?{background:"#3b82f612",borderColor:"#3b82f644",color:"var(--accent2)"}:{}}>All</div>
+      {Object.entries(SECTORS).map(([k,v])=>{
+        const on=secF===k;
+        return <div key={k} className={`chip${on?" on":""}`} onClick={()=>setSecF(on?null:k)}
+          style={on?{background:v.color+"12",borderColor:v.color+"44",color:v.color}:{}}>
+          <div style={{width:6,height:6,borderRadius:"50%",background:v.color,flexShrink:0}}/>{v.label}
+        </div>;
+      })}
+    </div>
+
+    {/* ══ CONSTITUENT ALERT ══ */}
+    {showAlert&&constChanges&&(constChanges.added.length>0||constChanges.removed.length>0)&&
+      <div style={{position:"absolute",top:90,left:"50%",transform:"translateX(-50%)",
+        background:"var(--surface)",border:"1px solid #f59e0b44",borderRadius:12,
+        padding:"14px 20px",zIndex:30,maxWidth:440,boxShadow:"0 8px 32px rgba(0,0,0,.6)",animation:"fadeIn .2s ease-out"}}>
+        <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}>
+          <span style={{color:"#f59e0b",fontSize:13,fontWeight:700}}>구성종목 변경 감지</span>
+          <div onClick={()=>setShowAlert(false)} style={{cursor:"pointer",color:"var(--text4)",fontSize:16}}>✕</div></div>
+        {constChanges.added.length>0&&<div style={{marginBottom:4}}><span style={{color:"var(--green)",fontSize:11,fontWeight:600}}>+ 편입: </span><span style={{color:"var(--text2)",fontSize:11}}>{constChanges.added.join(", ")}</span></div>}
+        {constChanges.removed.length>0&&<div><span style={{color:"var(--red)",fontSize:11,fontWeight:600}}>− 편출: </span><span style={{color:"var(--text2)",fontSize:11}}>{constChanges.removed.join(", ")}</span></div>}
+      </div>}
+
+    {/* ══ ZOOM CONTROLS ══ */}
+    <div style={{position:"absolute",bottom:20,right:sel?`calc(var(--panel-w) + 16px)`:20,zIndex:12,
+      display:"flex",flexDirection:"column",gap:2,transition:"right .2s"}}>
+      {[{l:"+",f:zoomIn},{l:"−",f:zoomOut},{l:"⟲",f:resetV}].map(({l,f})=>
+        <div key={l} onClick={f} style={{width:36,height:36,borderRadius:8,background:"var(--surface)",
+          border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",
+          cursor:"pointer",color:"var(--text2)",fontSize:18,fontWeight:700,transition:"all .15s"}}
+          onMouseEnter={e=>{e.currentTarget.style.background="var(--surface2)";e.currentTarget.style.borderColor="var(--border2)"}}
+          onMouseLeave={e=>{e.currentTarget.style.background="var(--surface)";e.currentTarget.style.borderColor="var(--border)"}}>{l}</div>
+      )}
+    </div>
+
+    {/* ══ LEGEND (toggle) ══ */}
+    <div style={{position:"absolute",bottom:20,left:20,zIndex:12}}>
+      <div onClick={()=>setShowLegend(p=>!p)} style={{width:36,height:36,borderRadius:8,background:"var(--surface)",
+        border:"1px solid var(--border)",display:"flex",alignItems:"center",justifyContent:"center",
+        cursor:"pointer",color:showLegend?"var(--accent2)":"var(--text3)",fontSize:14,fontWeight:700,transition:"all .15s"}}
+        onMouseEnter={e=>{e.currentTarget.style.background="var(--surface2)"}}
+        onMouseLeave={e=>{e.currentTarget.style.background="var(--surface)"}}>?</div>
+      {showLegend&&<div style={{position:"absolute",bottom:42,left:0,background:"var(--surface)",
+        borderRadius:10,padding:"14px 16px",border:"1px solid var(--border)",
+        fontSize:11,color:"var(--text3)",minWidth:180,animation:"fadeIn .15s ease-out",
+        boxShadow:"0 8px 32px rgba(0,0,0,.5)"}}>
+        <div style={{fontWeight:700,color:"var(--text2)",fontSize:12,marginBottom:10}}>Guide</div>
+        {[["Strong (70+)","#a78bfa",2.5],["Medium (45–69)","#818cf8",1.5],["Weak (–44)","#475569",.8]].map(([l,c,w])=>
+          <div key={l} style={{display:"flex",alignItems:"center",gap:8,marginBottom:6}}>
+            <svg width={28} height={6}><line x1={0} y1={3} x2={28} y2={3} stroke={c} strokeWidth={w} opacity={.8}/></svg>
+            <span>{l}</span></div>)}
+        <div style={{display:"flex",alignItems:"center",gap:8,marginTop:4,paddingTop:8,borderTop:"1px solid var(--border)"}}>
+          <svg width={28} height={6}><line x1={0} y1={3} x2={28} y2={3} stroke="#f59e0b" strokeWidth={2} opacity={.7}/></svg>
+          <span>News co-mention</span></div>
+        <div style={{display:"flex",alignItems:"center",gap:8,marginTop:6}}>
+          <svg width={14} height={14}><circle cx={7} cy={7} r={5} fill="var(--surface2)" stroke="#818cf8" strokeWidth={1}/></svg>
+          <span>Size = Market Cap</span></div>
+      </div>}
+    </div>
+
+    {/* ══ SVG CANVAS ══ */}
+    <div ref={cRef} style={{position:"absolute",top:80,left:0,right:sel?"var(--panel-w)":0,bottom:0,
+      cursor:pan?"grabbing":"grab",transition:"right .2s"}}
+      onMouseDown={onMD} onMouseMove={onMM} onMouseUp={onMU} onMouseLeave={onMU}>
+      <svg viewBox={`${vb.x} ${vb.y} ${vb.w} ${vb.h}`} width="100%" height="100%" style={{display:"block"}}
+        onClick={()=>{if(!didDrag.current){setSel(null);setSecF(null);}}}>
+        <defs>
+          <radialGradient id="g"><stop offset="0%" stopColor="#1e293b" stopOpacity=".12"/><stop offset="100%" stopColor="#020309" stopOpacity="0"/></radialGradient>
+          <filter id="blur"><feGaussianBlur stdDeviation="25"/></filter>
+        </defs>
+        <rect x={-500} y={-500} width={4500} height={4500} fill="url(#g)" opacity={.3}/>
+
+        {/* Sector hulls */}
+        {sectorHulls&&Object.entries(sectorHulls).map(([sec,hull])=>{
+          const s=SECTORS[sec];if(!s||!hull)return null;
+          const pathD=hullToPath(hull,60);if(!pathD)return null;
+          return <g key={sec}>
+            <path d={pathD} fill={s.color} opacity={.025} filter="url(#blur)"/>
+            <path d={pathD} fill="none" stroke={s.color} strokeWidth={.5} opacity={.04} strokeDasharray="8 8"/>
+          </g>;
+        })}
+
+        {/* Sector labels — placed at outer edge of sector, away from center */}
+        {sectorHulls&&Object.entries(sectorHulls).map(([sec,hull])=>{
+          const s=SECTORS[sec];if(!s||!hull||hull.length<3)return null;
+          const hcx=hull.reduce((a,p)=>a+p.x,0)/hull.length;
+          const hcy=hull.reduce((a,p)=>a+p.y,0)/hull.length;
+          const mapCx=1500,mapCy=1200;
+          const dx=hcx-mapCx,dy=hcy-mapCy;
+          const d=Math.sqrt(dx*dx+dy*dy)||1;
+          const ux=dx/d,uy=dy/d;
+          let maxProj=-Infinity,outerPt=hull[0];
+          hull.forEach(p=>{
+            const proj=(p.x-mapCx)*ux+(p.y-mapCy)*uy;
+            if(proj>maxProj){maxProj=proj;outerPt=p;}
+          });
+          // Start further out
+          let lx=outerPt.x+ux*90;
+          let ly=outerPt.y+uy*90;
+          // Check against all nodes + their ticker text zone (r + 20px below)
+          const checkCollision=(cx,cy)=>{
+            let minD=Infinity;
+            stocks.forEach(st=>{
+              const np=POS[st.id];if(!np)return;
+              const r=getR(st.cap);
+              // Check node center
+              const dd=Math.sqrt((cx-np.x)**2+(cy-np.y)**2);
+              const clearance=r+25; // node radius + buffer
+              if(dd<clearance&&dd<minD)minD=dd;
+              // Check ticker text zone below node
+              const ty=np.y+r+10;
+              const td=Math.sqrt((cx-np.x)**2+(cy-ty)**2);
+              if(td<35&&td<minD)minD=td;
+            });
+            return minD;
+          };
+          // Push outward until no collision (up to 10 tries)
+          for(let tries=0;tries<10;tries++){
+            if(checkCollision(lx,ly)>35)break;
+            lx+=ux*20;ly+=uy*20;
+          }
+          const label=s.label.toUpperCase();
+          const rw=Math.max(90,label.length*9+20);
+          return <g key={`l-${sec}`}>
+            <rect x={lx-rw/2} y={ly-12} width={rw} height={24} rx={6}
+              fill={s.color} opacity={.06}/>
+            <text x={lx} y={ly+1} textAnchor="middle" dominantBaseline="middle"
+              fill={s.color} fontSize={12} fontWeight={800} fontFamily="'Plus Jakarta Sans'"
+              opacity={.55} letterSpacing={2}>
+              {label}</text>
+          </g>;
+        })}
+
+        {/* Edges */}
+        {effectiveEdges.map((e,i)=>{
+          const p1=POS[e.from],p2=POS[e.to];if(!p1||!p2)return null;
+          const isHL=sel&&(e.from===sel||e.to===sel);
+          const secOk=!secF||stockMap[e.from]?.sector===secF||stockMap[e.to]?.sector===secF;
+          const srchOk=!searchSet||searchSet.has(e.from)||searchSet.has(e.to);
+          const dim=(sel&&!isHL)||!secOk||!srchOk;
+          const ec=edgeColor(e.weight);
+          const bw=e.weight>=70?2.5:e.weight>=45?1.5:.7;
+          const hasBoost=e.newsBoost>0;
+          return <line key={i} x1={p1.x} y1={p1.y} x2={p2.x} y2={p2.y}
+            stroke={hasBoost&&!dim?"#f59e0b":ec}
+            strokeWidth={isHL?Math.max(2.5,e.weight/16):bw}
+            opacity={dim?.02:isHL?.85:hasBoost?.45:.25}/>;
+        })}
+
+        {/* Edge Labels (on select) */}
+        {sel&&conEdges.map((e,i)=>{
+          const p1=POS[e.from],p2=POS[e.to];if(!p1||!p2)return null;
+          const mx=(p1.x+p2.x)/2,my=(p1.y+p2.y)/2;
+          const other=e.from===sel?e.to:e.from;
+          const ec=edgeColor(e.weight);
+          return <g key={i}><rect x={mx-55} y={my-12} width={110} height={22} rx={6} fill="#0a0e1aee" stroke={ec+"44"} strokeWidth={.5}/>
+            <text x={mx} y={my+2} textAnchor="middle" dominantBaseline="middle" fill={ec} fontSize={8} fontFamily="'Plus Jakarta Sans'" fontWeight={600}>{other}: {e.desc}</text></g>;
+        })}
+
+        {/* Nodes */}
+        {stocks.map(s=>{
+          const p=POS[s.id];if(!p)return null;
+          const r=getR(s.cap),sec=SECTORS[s.sector];if(!sec)return null;
+          const isSel=sel===s.id,isHL=sel&&conSet.has(s.id)&&!isSel;
+          const secOk=!secF||s.sector===secF;
+          const srchOk=!searchSet||searchSet.has(s.id);
+          const dim=(sel&&!isSel&&!isHL)||!secOk||!srchOk;
+          const hasLogo=logoLoaded[s.id],logoR=r*.5;
+          return <g key={s.id} onClick={ev=>{ev.stopPropagation();if(!didDrag.current)focusNode(s.id);}} style={{cursor:"pointer"}} opacity={dim?.08:1}>
+            {(isSel||isHL)&&<circle cx={p.x} cy={p.y} r={r+10} fill="none" stroke={sec.color} strokeWidth={isSel?2:1} opacity={isSel?.6:.3} strokeDasharray={isSel?"none":"4 4"}/>}
+            <circle cx={p.x} cy={p.y} r={r} fill={isSel?sec.color+"18":"#0f1225"} stroke={sec.color} strokeWidth={isSel?2:r>40?1:.6} opacity={dim?.3:1}/>
+            <circle cx={p.x} cy={p.y-(r>35?6:0)} r={logoR} fill={hasLogo?"#fff":sec.bg} stroke={sec.color} strokeWidth={.3} opacity={.9}/>
+            {!hasLogo&&<text x={p.x} y={p.y-(r>35?5:0)+1} textAnchor="middle" dominantBaseline="middle" fill={sec.color}
+              fontSize={r>50?18:r>30?13:9} fontWeight={700} fontFamily="'Plus Jakarta Sans'" style={{pointerEvents:"none"}} letterSpacing={.5}>
+              {s.id.length<=4?s.id:s.id.slice(0,3)}</text>}
+            <defs><clipPath id={`c-${s.id}`}><circle cx={p.x} cy={p.y-(r>35?6:0)} r={logoR}/></clipPath></defs>
+            <image href={LOGO(s.id)} x={p.x-logoR} y={p.y-logoR-(r>35?6:0)} width={logoR*2} height={logoR*2}
+              clipPath={`url(#c-${s.id})`} preserveAspectRatio="xMidYMid slice" style={{pointerEvents:"none"}}
+              onLoad={()=>setLogoLoaded(p=>({...p,[s.id]:true}))} onError={()=>setLogoLoaded(p=>({...p,[s.id]:false}))}/>
+            {/* Ticker label — precomputed position */}
+            {(()=>{
+              const lp=labelPos[s.id];if(!lp)return null;
+              return <g style={{pointerEvents:"none"}}>
+                <rect x={lp.x-lp.pw/2} y={lp.y-lp.ph/2} width={lp.pw} height={lp.ph} rx={4}
+                  fill="#0a0e1a" opacity={dim?.15:.8}/>
+                <text x={lp.x} y={lp.y+1} textAnchor="middle" dominantBaseline="middle"
+                  fill={dim?"#333":"#fff"} fontSize={lp.fs} fontWeight={700}
+                  fontFamily="'Plus Jakarta Sans'" letterSpacing={.5}
+                  style={{userSelect:"none"}}>{s.id}</text>
+              </g>;
+            })()}
+          </g>;
+        })}
+      </svg>
+    </div>
+
+    {/* ══ SIDE PANEL ══ */}
+    {selStock&&<SidePanel stock={selStock} edges={conEdges} onClose={()=>setSel(null)}
+      profiles={profiles} stockMap={stockMap} onSelect={focusNode} newsData={newsData}/>}
+
+    {/* ══ HINT ══ */}
+    {!sel&&<div style={{position:"absolute",bottom:20,left:"50%",transform:"translateX(-50%)",
+      background:"var(--surface)",borderRadius:8,padding:"6px 16px",border:"1px solid var(--border)",
+      zIndex:5,color:"var(--text4)",fontSize:11,fontWeight:500,whiteSpace:"nowrap"}}>
+      Scroll to zoom · Drag to pan · Click node for details</div>}
+  </div>;
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App/>);
+</script>
+</body>
+</html>
