@@ -1,5 +1,5 @@
 {
-  "updated_kst": "2026-03-01 10:20 KST",
+  "updated_kst": "2026-03-01 10:47 KST",
   "count": 100,
   "data": {
     "NVDA": {
@@ -7,7 +7,7 @@
       "price": 177.19,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 4306603081652
     },
     "AVGO": {
       "symbol": "AVGO",
@@ -28,7 +28,7 @@
       "price": 200.21,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 326424386100
     },
     "QCOM": {
       "symbol": "QCOM",
@@ -63,7 +63,7 @@
       "price": 45.61,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 227821950000
     },
     "ADI": {
       "symbol": "ADI",
@@ -140,63 +140,63 @@
       "price": 264.18,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 3882897899414
     },
     "MSFT": {
       "symbol": "MSFT",
       "price": 392.74,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 2916341926200
     },
     "AMZN": {
       "symbol": "AMZN",
       "price": 210,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 2254333382700
     },
     "GOOGL": {
       "symbol": "GOOGL",
       "price": 311.76,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 3771360870268
     },
     "META": {
       "symbol": "META",
       "price": 648.18,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 1634057222646
     },
     "TSLA": {
       "symbol": "TSLA",
       "price": 402.51,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 1510391397880
     },
     "NFLX": {
       "symbol": "NFLX",
       "price": 96.24,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 407799998242
     },
     "CSCO": {
       "symbol": "CSCO",
       "price": 79.46,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 313953949661
     },
     "PLTR": {
       "symbol": "PLTR",
       "price": 137.19,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 314366769300
     },
     "CDNS": {
       "symbol": "CDNS",
@@ -217,7 +217,7 @@
       "price": 262.41,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 109844822064
     },
     "INTU": {
       "symbol": "INTU",
@@ -329,7 +329,7 @@
       "price": 120.73,
       "change": null,
       "changesPercentage": null,
-      "marketCap": 0
+      "marketCap": 157562748823
     },
     "ROP": {
       "symbol": "ROP",
