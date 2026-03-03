@@ -1,0 +1,3506 @@
+{
+  "updated_kst": "2026-03-03 22:20 KST",
+  "count": 500,
+  "data": {
+    "NVDA": {
+      "symbol": "NVDA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 4434264000000.0
+    },
+    "AAPL": {
+      "symbol": "AAPL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 3886391380800.0005
+    },
+    "MSFT": {
+      "symbol": "MSFT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 2959484468239.8003
+    },
+    "AVGO": {
+      "symbol": "AVGO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 1511612912597.18
+    },
+    "ORCL": {
+      "symbol": "ORCL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 428958081750.0
+    },
+    "CSCO": {
+      "symbol": "CSCO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 313700505395.64
+    },
+    "PLTR": {
+      "symbol": "PLTR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 347199562965.87
+    },
+    "INTC": {
+      "symbol": "INTC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 227280622478.0
+    },
+    "TXN": {
+      "symbol": "TXN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 190422303400.68
+    },
+    "AMD": {
+      "symbol": "AMD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 323832201636.66003
+    },
+    "KLAC": {
+      "symbol": "KLAC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 201196044054.45
+    },
+    "AMAT": {
+      "symbol": "AMAT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 295365720300.06
+    },
+    "LRCX": {
+      "symbol": "LRCX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 288466101000.0
+    },
+    "MU": {
+      "symbol": "MU",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 464463906736.87
+    },
+    "ADI": {
+      "symbol": "ADI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 172048026968.37003
+    },
+    "APH": {
+      "symbol": "APH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 166140689938.8
+    },
+    "CRM": {
+      "symbol": "CRM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 180794150000.0
+    },
+    "ANET": {
+      "symbol": "ANET",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 162470351245.80002
+    },
+    "IBM": {
+      "symbol": "IBM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 223747566260.22
+    },
+    "ACN": {
+      "symbol": "ACN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 126736562292.87001
+    },
+    "INTU": {
+      "symbol": "INTU",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 116613534707.62
+    },
+    "NOW": {
+      "symbol": "NOW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 114453320000.0
+    },
+    "ADBE": {
+      "symbol": "ADBE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 107091240000.0
+    },
+    "CRWD": {
+      "symbol": "CRWD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 97022605618.40001
+    },
+    "PANW": {
+      "symbol": "PANW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 122522400000.0
+    },
+    "GLW": {
+      "symbol": "GLW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 135435688486.74
+    },
+    "SNPS": {
+      "symbol": "SNPS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 81348730385.82
+    },
+    "CDNS": {
+      "symbol": "CDNS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 82711407360.0
+    },
+    "QCOM": {
+      "symbol": "QCOM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 150479010000.0
+    },
+    "APP": {
+      "symbol": "APP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 146034628440.0
+    },
+    "FTNT": {
+      "symbol": "FTNT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 58882056716.36001
+    },
+    "NXPI": {
+      "symbol": "NXPI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 56795243842.2
+    },
+    "MPWR": {
+      "symbol": "MPWR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 55653929220.0
+    },
+    "MCHP": {
+      "symbol": "MCHP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 40211775883.98
+    },
+    "DELL": {
+      "symbol": "DELL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 101755988847.75
+    },
+    "MSI": {
+      "symbol": "MSI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 80528453712.32
+    },
+    "TEL": {
+      "symbol": "TEL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 62202197190.53999
+    },
+    "STX": {
+      "symbol": "STX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 85022110699.51999
+    },
+    "WDC": {
+      "symbol": "WDC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 91567361973.76
+    },
+    "SNDK": {
+      "symbol": "SNDK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 91376809745.76001
+    },
+    "KEYS": {
+      "symbol": "KEYS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 53819786000.0
+    },
+    "ADSK": {
+      "symbol": "ADSK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 52351280000.0
+    },
+    "DDOG": {
+      "symbol": "DDOG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 39174728359.909996
+    },
+    "WDAY": {
+      "symbol": "WDAY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 35244630000.0
+    },
+    "HPE": {
+      "symbol": "HPE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 29406530865.719997
+    },
+    "TER": {
+      "symbol": "TER",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 51010625188.5
+    },
+    "ROP": {
+      "symbol": "ROP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 36429135383.95
+    },
+    "CTSH": {
+      "symbol": "CTSH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 30368679420.0
+    },
+    "FICO": {
+      "symbol": "FICO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 33389852490.36
+    },
+    "FISV": {
+      "symbol": "FISV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 33075989117.2
+    },
+    "HPQ": {
+      "symbol": "HPQ",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 17166310580.099998
+    },
+    "JBL": {
+      "symbol": "JBL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 27579371835.06
+    },
+    "TDY": {
+      "symbol": "TDY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 31885374101.49
+    },
+    "CDW": {
+      "symbol": "CDW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 16094529974.76
+    },
+    "BR": {
+      "symbol": "BR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 21773635347.5
+    },
+    "FSLR": {
+      "symbol": "FSLR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 21447175260.84
+    },
+    "VRSN": {
+      "symbol": "VRSN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 20912185000.0
+    },
+    "NTAP": {
+      "symbol": "NTAP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 19835743852.2
+    },
+    "SMCI": {
+      "symbol": "SMCI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 19065833493.239998
+    },
+    "PTC": {
+      "symbol": "PTC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 18815665861.920002
+    },
+    "FFIV": {
+      "symbol": "FFIV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 15712357894.0
+    },
+    "TYL": {
+      "symbol": "TYL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 15258492903.36
+    },
+    "AKAM": {
+      "symbol": "AKAM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 14146875450.960001
+    },
+    "GEN": {
+      "symbol": "GEN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13536585348.900002
+    },
+    "ZBRA": {
+      "symbol": "ZBRA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 11015006359.68
+    },
+    "IT": {
+      "symbol": "IT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 11220618325.380001
+    },
+    "GDDY": {
+      "symbol": "GDDY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 11922191422.68
+    },
+    "ON": {
+      "symbol": "ON",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 26194484834.4
+    },
+    "Q": {
+      "symbol": "Q",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 25988098479.579998
+    },
+    "CIEN": {
+      "symbol": "CIEN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 50039868290.880005
+    },
+    "EPAM": {
+      "symbol": "EPAM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 7534118086.04
+    },
+    "SWKS": {
+      "symbol": "SWKS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 8861516955.16
+    },
+    "PAYC": {
+      "symbol": "PAYC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 6820563741.400001
+    },
+    "BRK.B": {
+      "symbol": "BRK.B",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 1035887424986.8201
+    },
+    "JPM": {
+      "symbol": "JPM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 802528953505.0
+    },
+    "V": {
+      "symbol": "V",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 616412297959.94
+    },
+    "MA": {
+      "symbol": "MA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 464634214031.0
+    },
+    "BAC": {
+      "symbol": "BAC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 359252849024.45
+    },
+    "GS": {
+      "symbol": "GS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 258448397928.7
+    },
+    "WFC": {
+      "symbol": "WFC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 254811791233.78
+    },
+    "MS": {
+      "symbol": "MS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 265172654402.0
+    },
+    "C": {
+      "symbol": "C",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 194961603553.05002
+    },
+    "AXP": {
+      "symbol": "AXP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 211085743557.15
+    },
+    "SCHW": {
+      "symbol": "SCHW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 169679692167.3
+    },
+    "BLK": {
+      "symbol": "BLK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 165694881000.0
+    },
+    "PNC": {
+      "symbol": "PNC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 86616161441.25
+    },
+    "USB": {
+      "symbol": "USB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 84949650000.0
+    },
+    "COF": {
+      "symbol": "COF",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 120853747151.76
+    },
+    "BX": {
+      "symbol": "BX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 90324496543.3
+    },
+    "CME": {
+      "symbol": "CME",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 117366426918.42
+    },
+    "SPGI": {
+      "symbol": "SPGI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 132392304000.0
+    },
+    "MCO": {
+      "symbol": "MCO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 82639530000.0
+    },
+    "ICE": {
+      "symbol": "ICE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 93577987412.14
+    },
+    "CB": {
+      "symbol": "CB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 134053856566.51999
+    },
+    "PGR": {
+      "symbol": "PGR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 125036919000.0
+    },
+    "APO": {
+      "symbol": "APO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 61554429130.1
+    },
+    "TFC": {
+      "symbol": "TFC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 62555388500.0
+    },
+    "AJG": {
+      "symbol": "AJG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 58945317000.0
+    },
+    "AFL": {
+      "symbol": "AFL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 58793511500.0
+    },
+    "ALL": {
+      "symbol": "ALL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 55218845743.92
+    },
+    "MET": {
+      "symbol": "MET",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 47756425219.079994
+    },
+    "TRV": {
+      "symbol": "TRV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 67178629014.340004
+    },
+    "KKR": {
+      "symbol": "KKR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 80774451584.84
+    },
+    "BK": {
+      "symbol": "BK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 82223554920.0
+    },
+    "HOOD": {
+      "symbol": "HOOD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 70926294964.2
+    },
+    "NDAQ": {
+      "symbol": "NDAQ",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 50074219275.04
+    },
+    "STT": {
+      "symbol": "STT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 36084154196.060005
+    },
+    "HBAN": {
+      "symbol": "HBAN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 34445576875.27
+    },
+    "FITB": {
+      "symbol": "FITB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 44858414797.840004
+    },
+    "MTB": {
+      "symbol": "MTB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 32705555314.0
+    },
+    "RJF": {
+      "symbol": "RJF",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 30434797933.539997
+    },
+    "ACGL": {
+      "symbol": "ACGL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 36280540000.0
+    },
+    "HIG": {
+      "symbol": "HIG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 39133956389.200005
+    },
+    "AIG": {
+      "symbol": "AIG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 43525719862.560005
+    },
+    "AMP": {
+      "symbol": "AMP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 43397629000.0
+    },
+    "COIN": {
+      "symbol": "COIN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 48917284305.560005
+    },
+    "PRU": {
+      "symbol": "PRU",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 34782600000.0
+    },
+    "MSCI": {
+      "symbol": "MSCI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 42165283222.96
+    },
+    "WRB": {
+      "symbol": "WRB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 27622905439.999996
+    },
+    "IBKR": {
+      "symbol": "IBKR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 31919246265.39
+    },
+    "CBOE": {
+      "symbol": "CBOE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 31137592883.04
+    },
+    "NTRS": {
+      "symbol": "NTRS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 27061867740.0
+    },
+    "WTW": {
+      "symbol": "WTW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 28915679420.2
+    },
+    "AON": {
+      "symbol": "AON",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 72375168748.8
+    },
+    "MRSH": {
+      "symbol": "MRSH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 90255284486.79001
+    },
+    "FIS": {
+      "symbol": "FIS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 25892538200.0
+    },
+    "SYF": {
+      "symbol": "SYF",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 23859008590.56
+    },
+    "CFG": {
+      "symbol": "CFG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 25962251606.13
+    },
+    "CINF": {
+      "symbol": "CINF",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 26451875568.48
+    },
+    "KEY": {
+      "symbol": "KEY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 22784527803.12
+    },
+    "RF": {
+      "symbol": "RF",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 24152282147.27
+    },
+    "CPAY": {
+      "symbol": "CPAY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 23226774172.559998
+    },
+    "L": {
+      "symbol": "L",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 23117071934.06
+    },
+    "BRO": {
+      "symbol": "BRO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 24632792864.28
+    },
+    "PYPL": {
+      "symbol": "PYPL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 42009923051.46
+    },
+    "EBAY": {
+      "symbol": "EBAY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 39773440000.0
+    },
+    "GPN": {
+      "symbol": "GPN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 21801514360.03
+    },
+    "PFG": {
+      "symbol": "PFG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 20779311562.03
+    },
+    "TROW": {
+      "symbol": "TROW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 20699479762.920002
+    },
+    "BEN": {
+      "symbol": "BEN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 14060613096.0
+    },
+    "ERIE": {
+      "symbol": "ERIE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13948322289.0
+    },
+    "EG": {
+      "symbol": "EG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13822941000.0
+    },
+    "AIZ": {
+      "symbol": "AIZ",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 11607381049.95
+    },
+    "JKHY": {
+      "symbol": "JKHY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 11849881825.599998
+    },
+    "GL": {
+      "symbol": "GL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 11648716714.000002
+    },
+    "IVZ": {
+      "symbol": "IVZ",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 11593195793.01
+    },
+    "FDS": {
+      "symbol": "FDS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 8159611024.46
+    },
+    "ARES": {
+      "symbol": "ARES",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 24977997913.44
+    },
+    "XYZ": {
+      "symbol": "XYZ",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 39164009250.0
+    },
+    "GOOGL": {
+      "symbol": "GOOGL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 3707972440000.0
+    },
+    "META": {
+      "symbol": "META",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 1653216269051.8398
+    },
+    "NFLX": {
+      "symbol": "NFLX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 409929723143.5
+    },
+    "TMUS": {
+      "symbol": "TMUS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 238123556525.29
+    },
+    "DIS": {
+      "symbol": "DIS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 184822666054.83
+    },
+    "CMCSA": {
+      "symbol": "CMCSA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 110885613535.08
+    },
+    "VZ": {
+      "symbol": "VZ",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 210799854716.63998
+    },
+    "T": {
+      "symbol": "T",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 196086167400.01
+    },
+    "CHTR": {
+      "symbol": "CHTR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 29479824840.0
+    },
+    "WBD": {
+      "symbol": "WBD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 70676789218.5
+    },
+    "EA": {
+      "symbol": "EA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 50316011535.78
+    },
+    "TTWO": {
+      "symbol": "TTWO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 39605326529.28
+    },
+    "LYV": {
+      "symbol": "LYV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 37993298998.82
+    },
+    "OMC": {
+      "symbol": "OMC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 26490310323.84
+    },
+    "TKO": {
+      "symbol": "TKO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 17754374555.52
+    },
+    "TTD": {
+      "symbol": "TTD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 11761027165.44
+    },
+    "FOX": {
+      "symbol": "FOX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 22116342095.22
+    },
+    "PSKY": {
+      "symbol": "PSKY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 14716248633.76
+    },
+    "NWS": {
+      "symbol": "NWS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 14619867049.960001
+    },
+    "MTCH": {
+      "symbol": "MTCH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 7386636213.809999
+    },
+    "DASH": {
+      "symbol": "DASH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 76637152756.31999
+    },
+    "AMZN": {
+      "symbol": "AMZN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 2237050160099.3
+    },
+    "TSLA": {
+      "symbol": "TSLA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 1513430867786.88
+    },
+    "BKNG": {
+      "symbol": "BKNG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 132387618143.87999
+    },
+    "HD": {
+      "symbol": "HD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 369145613752.85
+    },
+    "LOW": {
+      "symbol": "LOW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 144259886196.69
+    },
+    "TJX": {
+      "symbol": "TJX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 177608107174.3
+    },
+    "MCD": {
+      "symbol": "MCD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 238443519467.0
+    },
+    "NKE": {
+      "symbol": "NKE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 90318191356.02
+    },
+    "SBUX": {
+      "symbol": "SBUX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 110238668000.0
+    },
+    "MAR": {
+      "symbol": "MAR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 87569445560.38
+    },
+    "HLT": {
+      "symbol": "HLT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 69888084252.0
+    },
+    "RCL": {
+      "symbol": "RCL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 81385734674.51999
+    },
+    "ABNB": {
+      "symbol": "ABNB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 79891230043.08
+    },
+    "GM": {
+      "symbol": "GM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 70292540249.28
+    },
+    "F": {
+      "symbol": "F",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 53419073262.75
+    },
+    "CMG": {
+      "symbol": "CMG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 47785899870.0
+    },
+    "ROST": {
+      "symbol": "ROST",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 65432908934.4
+    },
+    "ORLY": {
+      "symbol": "ORLY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 80006634887.14
+    },
+    "AZO": {
+      "symbol": "AZO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 64324067997.869995
+    },
+    "YUM": {
+      "symbol": "YUM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 45128840000.0
+    },
+    "DHI": {
+      "symbol": "DHI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 44730204188.0
+    },
+    "CVNA": {
+      "symbol": "CVNA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 46119492612.67
+    },
+    "CCL": {
+      "symbol": "CCL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 40280718079.36
+    },
+    "LVS": {
+      "symbol": "LVS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 37868888348.28
+    },
+    "DRI": {
+      "symbol": "DRI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 24164274187.63
+    },
+    "GRMN": {
+      "symbol": "GRMN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 49113408582.8
+    },
+    "ULTA": {
+      "symbol": "ULTA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 30033190444.0
+    },
+    "EXPE": {
+      "symbol": "EXPE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 26129336318.52
+    },
+    "PHM": {
+      "symbol": "PHM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 25693170339.24
+    },
+    "LEN": {
+      "symbol": "LEN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 27319204970.55
+    },
+    "TSCO": {
+      "symbol": "TSCO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 27517645232.08
+    },
+    "NVR": {
+      "symbol": "NVR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 20717825720.0
+    },
+    "GPC": {
+      "symbol": "GPC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 16315100903.4
+    },
+    "BBY": {
+      "symbol": "BBY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 12905266993.77
+    },
+    "DPZ": {
+      "symbol": "DPZ",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13497630388.89
+    },
+    "NCLH": {
+      "symbol": "NCLH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 10097611106.02
+    },
+    "WYNN": {
+      "symbol": "WYNN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 10755120107.76
+    },
+    "MGM": {
+      "symbol": "MGM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 9138194698.68
+    },
+    "DECK": {
+      "symbol": "DECK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 16254691179.210001
+    },
+    "APTV": {
+      "symbol": "APTV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 15417876620.47
+    },
+    "POOL": {
+      "symbol": "POOL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 8269385448.0
+    },
+    "RL": {
+      "symbol": "RL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 21437759935.69
+    },
+    "LULU": {
+      "symbol": "LULU",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 20665798372.34
+    },
+    "WSM": {
+      "symbol": "WSM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 24036112352.74
+    },
+    "HAS": {
+      "symbol": "HAS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13900382128.15
+    },
+    "TPR": {
+      "symbol": "TPR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 31669453761.659996
+    },
+    "SWK": {
+      "symbol": "SWK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13032878490.720001
+    },
+    "LLY": {
+      "symbol": "LLY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 909039493787.4
+    },
+    "UNH": {
+      "symbol": "UNH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 267158984196.6
+    },
+    "JNJ": {
+      "symbol": "JNJ",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 599004479532.16
+    },
+    "MRK": {
+      "symbol": "MRK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 300173113084.23
+    },
+    "ABBV": {
+      "symbol": "ABBV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 414211272751.12
+    },
+    "TMO": {
+      "symbol": "TMO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 191077604646.22
+    },
+    "PFE": {
+      "symbol": "PFE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 154992387867.52002
+    },
+    "ABT": {
+      "symbol": "ABT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 198304371064.44
+    },
+    "AMGN": {
+      "symbol": "AMGN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 207918402247.5
+    },
+    "DHR": {
+      "symbol": "DHR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 145670707336.0
+    },
+    "GILD": {
+      "symbol": "GILD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 186250321815.84
+    },
+    "ISRG": {
+      "symbol": "ISRG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 176233380111.25
+    },
+    "SYK": {
+      "symbol": "SYK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 148108170998.5
+    },
+    "VRTX": {
+      "symbol": "VRTX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 123468237365.7
+    },
+    "REGN": {
+      "symbol": "REGN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 83604279782.86
+    },
+    "MDT": {
+      "symbol": "MDT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 125949114968.4
+    },
+    "BMY": {
+      "symbol": "BMY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 126953770769.70001
+    },
+    "BSX": {
+      "symbol": "BSX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 113101749456.31999
+    },
+    "ELV": {
+      "symbol": "ELV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 64902621424.689995
+    },
+    "HCA": {
+      "symbol": "HCA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 119172742823.99998
+    },
+    "MCK": {
+      "symbol": "MCK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 121378944523.20001
+    },
+    "CI": {
+      "symbol": "CI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 76628504400.0
+    },
+    "CVS": {
+      "symbol": "CVS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 103888755404.58
+    },
+    "GEHC": {
+      "symbol": "GEHC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 36532901322.72
+    },
+    "IDXX": {
+      "symbol": "IDXX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 50696622447.8
+    },
+    "DXCM": {
+      "symbol": "DXCM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 28395328042.760002
+    },
+    "A": {
+      "symbol": "A",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 33423159904.29
+    },
+    "IQV": {
+      "symbol": "IQV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 29573619000.0
+    },
+    "RMD": {
+      "symbol": "RMD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 37496163633.39
+    },
+    "ZTS": {
+      "symbol": "ZTS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 54437589352.64001
+    },
+    "EW": {
+      "symbol": "EW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 50590554000.00001
+    },
+    "COR": {
+      "symbol": "COR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 72491858647.3
+    },
+    "CAH": {
+      "symbol": "CAH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 54094445758.08
+    },
+    "BDX": {
+      "symbol": "BDX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 50219742391.0
+    },
+    "LH": {
+      "symbol": "LH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 23605128000.000004
+    },
+    "DGX": {
+      "symbol": "DGX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 23178456610.5
+    },
+    "STE": {
+      "symbol": "STE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 24300048944.25
+    },
+    "CNC": {
+      "symbol": "CNC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 21932986600.0
+    },
+    "HUM": {
+      "symbol": "HUM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 22585212699.76
+    },
+    "BIIB": {
+      "symbol": "BIIB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 27597941190.4
+    },
+    "MRNA": {
+      "symbol": "MRNA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 20870573861.28
+    },
+    "INCY": {
+      "symbol": "INCY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 19909409179.440002
+    },
+    "ZBH": {
+      "symbol": "ZBH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 19465417877.96
+    },
+    "MTD": {
+      "symbol": "MTD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 26932785522.5
+    },
+    "WAT": {
+      "symbol": "WAT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 30139837827.33
+    },
+    "WST": {
+      "symbol": "WST",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 18095399613.75
+    },
+    "PODD": {
+      "symbol": "PODD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 17278660891.6
+    },
+    "HOLX": {
+      "symbol": "HOLX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 16843828082.25
+    },
+    "COO": {
+      "symbol": "COO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 16446475941.92
+    },
+    "BAX": {
+      "symbol": "BAX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 10130308986.050001
+    },
+    "DVA": {
+      "symbol": "DVA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 10293409020.0
+    },
+    "HSIC": {
+      "symbol": "HSIC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 9579267545.59
+    },
+    "VTRS": {
+      "symbol": "VTRS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 18082786990.399998
+    },
+    "CRL": {
+      "symbol": "CRL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 8792577358.0
+    },
+    "MOH": {
+      "symbol": "MOH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 7849629999.999999
+    },
+    "TECH": {
+      "symbol": "TECH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 9046129343.44
+    },
+    "RVTY": {
+      "symbol": "RVTY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 10686902160.66
+    },
+    "SOLV": {
+      "symbol": "SOLV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 12661671661.0
+    },
+    "UHS": {
+      "symbol": "UHS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 12609504228.8
+    },
+    "ALGN": {
+      "symbol": "ALGN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13562184054.900002
+    },
+    "GE": {
+      "symbol": "GE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 362616818212.88
+    },
+    "CAT": {
+      "symbol": "CAT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 350044965610.24005
+    },
+    "RTX": {
+      "symbol": "RTX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 284779753340.16
+    },
+    "HON": {
+      "symbol": "HON",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 157477423072.32
+    },
+    "UPS": {
+      "symbol": "UPS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 97154218115.88
+    },
+    "DE": {
+      "symbol": "DE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 171015454063.04
+    },
+    "LMT": {
+      "symbol": "LMT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 155695298408.0
+    },
+    "BA": {
+      "symbol": "BA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 180425641835.04
+    },
+    "GEV": {
+      "symbol": "GEV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 237503973087.52
+    },
+    "ETN": {
+      "symbol": "ETN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 146582160000.0
+    },
+    "PH": {
+      "symbol": "PH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 127656659595.89
+    },
+    "NOC": {
+      "symbol": "NOC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 108998643360.42
+    },
+    "GD": {
+      "symbol": "GD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 98632776288.01999
+    },
+    "FDX": {
+      "symbol": "FDX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 91051310496.0
+    },
+    "ITW": {
+      "symbol": "ITW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 83915194000.0
+    },
+    "WM": {
+      "symbol": "WM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 98038828287.67
+    },
+    "EMR": {
+      "symbol": "EMR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 85468960000.0
+    },
+    "CMI": {
+      "symbol": "CMI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 80187089761.31
+    },
+    "CTAS": {
+      "symbol": "CTAS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 80617752633.59999
+    },
+    "HWM": {
+      "symbol": "HWM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 106293220101.93001
+    },
+    "TT": {
+      "symbol": "TT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 103178294153.85
+    },
+    "CSX": {
+      "symbol": "CSX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 80277067012.83
+    },
+    "UNP": {
+      "symbol": "UNP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 158417718076.2
+    },
+    "NSC": {
+      "symbol": "NSC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 71294880776.75
+    },
+    "UBER": {
+      "symbol": "UBER",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 156313908908.85
+    },
+    "LHX": {
+      "symbol": "LHX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 70691080020.24
+    },
+    "JCI": {
+      "symbol": "JCI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 89031150324.76001
+    },
+    "CRH": {
+      "symbol": "CRH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 78871104962.28
+    },
+    "ADP": {
+      "symbol": "ADP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 86556458929.08
+    },
+    "TDG": {
+      "symbol": "TDG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 74333892034.38
+    },
+    "PCAR": {
+      "symbol": "PCAR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 65437045542.490005
+    },
+    "AXON": {
+      "symbol": "AXON",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 45989078053.5
+    },
+    "RSG": {
+      "symbol": "RSG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 71139400938.9
+    },
+    "PWR": {
+      "symbol": "PWR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 85681061638.48
+    },
+    "MMM": {
+      "symbol": "MMM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 85040982000.0
+    },
+    "FAST": {
+      "symbol": "FAST",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 53195142799.299995
+    },
+    "CPRT": {
+      "symbol": "CPRT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 37084757474.04
+    },
+    "ODFL": {
+      "symbol": "ODFL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 43440200702.25
+    },
+    "AME": {
+      "symbol": "AME",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 55288835194.92
+    },
+    "DAL": {
+      "symbol": "DAL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 41963647989.0
+    },
+    "WAB": {
+      "symbol": "WAB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 44960267487.3
+    },
+    "IR": {
+      "symbol": "IR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 36800342896.18
+    },
+    "OTIS": {
+      "symbol": "OTIS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 36392038768.26
+    },
+    "CARR": {
+      "symbol": "CARR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 53360273426.880005
+    },
+    "ROK": {
+      "symbol": "ROK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 46308311782.2
+    },
+    "URI": {
+      "symbol": "URI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 51695019465.26
+    },
+    "GWW": {
+      "symbol": "GWW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 54585566904.0
+    },
+    "DOV": {
+      "symbol": "DOV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 30533804126.4
+    },
+    "VRSK": {
+      "symbol": "VRSK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 29628538123.52
+    },
+    "PAYX": {
+      "symbol": "PAYX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 33832682162.5
+    },
+    "EME": {
+      "symbol": "EME",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 32937827413.92
+    },
+    "FIX": {
+      "symbol": "FIX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 50590044538.08
+    },
+    "JBHT": {
+      "symbol": "JBHT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 21954769541.809998
+    },
+    "LDOS": {
+      "symbol": "LDOS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 22674847509.600002
+    },
+    "UAL": {
+      "symbol": "UAL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 33381253544.989998
+    },
+    "LUV": {
+      "symbol": "LUV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 23715919377.300003
+    },
+    "TXT": {
+      "symbol": "TXT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 17534674157.16
+    },
+    "HII": {
+      "symbol": "HII",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 17805584826.24
+    },
+    "SNA": {
+      "symbol": "SNA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 20224832810.39
+    },
+    "EXPD": {
+      "symbol": "EXPD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 19517468181.53
+    },
+    "ROL": {
+      "symbol": "ROL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 29288894414.48
+    },
+    "EFX": {
+      "symbol": "EFX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 25019767683.94
+    },
+    "VLTO": {
+      "symbol": "VLTO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 24095331459.2
+    },
+    "CHRW": {
+      "symbol": "CHRW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 22210564770.920002
+    },
+    "XYL": {
+      "symbol": "XYL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 31419527999.999996
+    },
+    "J": {
+      "symbol": "J",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 16328616508.39
+    },
+    "NDSN": {
+      "symbol": "NDSN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 16298851663.640001
+    },
+    "PNR": {
+      "symbol": "PNR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 16016687472.720001
+    },
+    "IEX": {
+      "symbol": "IEX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 15727538688.96
+    },
+    "LII": {
+      "symbol": "LII",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 19607960057.399998
+    },
+    "FTV": {
+      "symbol": "FTV",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 18358972000.0
+    },
+    "HUBB": {
+      "symbol": "HUBB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 27483485001.96
+    },
+    "MAS": {
+      "symbol": "MAS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 14211774533.0
+    },
+    "ALLE": {
+      "symbol": "ALLE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13998641150.0
+    },
+    "AOS": {
+      "symbol": "AOS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 10776933231.810001
+    },
+    "GNRC": {
+      "symbol": "GNRC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13517737024.26
+    },
+    "BLDR": {
+      "symbol": "BLDR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 10995249909.289999
+    },
+    "TRMB": {
+      "symbol": "TRMB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 16276173010.42
+    },
+    "WMT": {
+      "symbol": "WMT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 1013008221124.3999
+    },
+    "COST": {
+      "symbol": "COST",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 445098929268.47
+    },
+    "PG": {
+      "symbol": "PG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 379997352004.35
+    },
+    "KO": {
+      "symbol": "KO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 345004004595.18
+    },
+    "PEP": {
+      "symbol": "PEP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 228613053585.84
+    },
+    "PM": {
+      "symbol": "PM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 286148840211.77997
+    },
+    "CL": {
+      "symbol": "CL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 77990623124.4
+    },
+    "MDLZ": {
+      "symbol": "MDLZ",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 77474752234.36
+    },
+    "MNST": {
+      "symbol": "MNST",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 79197339768.96
+    },
+    "MO": {
+      "symbol": "MO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 115008923820.93
+    },
+    "KMB": {
+      "symbol": "KMB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 36425160993.54
+    },
+    "KVUE": {
+      "symbol": "KVUE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 36207069180.1
+    },
+    "KDP": {
+      "symbol": "KDP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 40716736256.25
+    },
+    "ADM": {
+      "symbol": "ADM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 33496460360.84
+    },
+    "SYY": {
+      "symbol": "SYY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 43333645121.520004
+    },
+    "TGT": {
+      "symbol": "TGT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 51244102325.06
+    },
+    "KR": {
+      "symbol": "KR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 43698234498.0
+    },
+    "HSY": {
+      "symbol": "HSY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 47772230476.88
+    },
+    "GIS": {
+      "symbol": "GIS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 24075223494.719997
+    },
+    "STZ": {
+      "symbol": "STZ",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 27149198292.32
+    },
+    "CHD": {
+      "symbol": "CHD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 24604366351.95
+    },
+    "KHC": {
+      "symbol": "KHC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 29013583847.010002
+    },
+    "DLTR": {
+      "symbol": "DLTR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 23838520057.559998
+    },
+    "DG": {
+      "symbol": "DG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 33594542092.02
+    },
+    "CLX": {
+      "symbol": "CLX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 15332833347.03
+    },
+    "EL": {
+      "symbol": "EL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 36241432438.17
+    },
+    "HRL": {
+      "symbol": "HRL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13653663061.9
+    },
+    "BG": {
+      "symbol": "BG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 23339130138.8
+    },
+    "TSN": {
+      "symbol": "TSN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 22673885410.4
+    },
+    "SJM": {
+      "symbol": "SJM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 12235705420.36
+    },
+    "MKC": {
+      "symbol": "MKC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 18763551418.800003
+    },
+    "TAP": {
+      "symbol": "TAP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 9131448973.35
+    },
+    "BF.B": {
+      "symbol": "BF.B",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13363592719.050001
+    },
+    "CAG": {
+      "symbol": "CAG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 9175126530.5
+    },
+    "CPB": {
+      "symbol": "CPB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 7846893328.4
+    },
+    "LW": {
+      "symbol": "LW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 6496800973.52
+    },
+    "XOM": {
+      "symbol": "XOM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 642598259721.66
+    },
+    "TPL": {
+      "symbol": "TPL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 36614169913.86
+    },
+    "CVX": {
+      "symbol": "CVX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 375408000000.0
+    },
+    "COP": {
+      "symbol": "COP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 144529381332.47998
+    },
+    "SLB": {
+      "symbol": "SLB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 76665645235.95001
+    },
+    "EOG": {
+      "symbol": "EOG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 69019630574.45
+    },
+    "WMB": {
+      "symbol": "WMB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 93189720000.0
+    },
+    "PSX": {
+      "symbol": "PSX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 64191177443.96
+    },
+    "KMI": {
+      "symbol": "KMI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 75398688794.33
+    },
+    "VLO": {
+      "symbol": "VLO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 65549600026.49
+    },
+    "MPC": {
+      "symbol": "MPC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 61896900000.0
+    },
+    "OKE": {
+      "symbol": "OKE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 54236966560.08
+    },
+    "BKR": {
+      "symbol": "BKR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 64067372943.299995
+    },
+    "FANG": {
+      "symbol": "FANG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 50931104735.68
+    },
+    "OXY": {
+      "symbol": "OXY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 53465515421.76
+    },
+    "TRGP": {
+      "symbol": "TRGP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 51504600318.78001
+    },
+    "HAL": {
+      "symbol": "HAL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 30126613969.649998
+    },
+    "DVN": {
+      "symbol": "DVN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 27880881184.0
+    },
+    "CTRA": {
+      "symbol": "CTRA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 23904874267.58
+    },
+    "EQT": {
+      "symbol": "EQT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 38480249360.0
+    },
+    "EXE": {
+      "symbol": "EXE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 26080807227.399998
+    },
+    "APA": {
+      "symbol": "APA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 11239468564.19
+    },
+    "NEE": {
+      "symbol": "NEE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 193163321282.43997
+    },
+    "SO": {
+      "symbol": "SO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 108838415223.93001
+    },
+    "DUK": {
+      "symbol": "DUK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 102363546915.12
+    },
+    "CEG": {
+      "symbol": "CEG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 118428757998.6
+    },
+    "AEP": {
+      "symbol": "AEP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 72091425736.17
+    },
+    "EXC": {
+      "symbol": "EXC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 50295628404.450005
+    },
+    "XEL": {
+      "symbol": "XEL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 49571032977.4
+    },
+    "SRE": {
+      "symbol": "SRE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 62442041114.07
+    },
+    "D": {
+      "symbol": "D",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 55407434034.549995
+    },
+    "VST": {
+      "symbol": "VST",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 56241643085.100006
+    },
+    "PCG": {
+      "symbol": "PCG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 42003167600.94
+    },
+    "PEG": {
+      "symbol": "PEG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 42178510972.0
+    },
+    "ED": {
+      "symbol": "ED",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 40487579329.340004
+    },
+    "ETR": {
+      "symbol": "ETR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 48302306319.31
+    },
+    "WEC": {
+      "symbol": "WEC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 37963467319.82
+    },
+    "NRG": {
+      "symbol": "NRG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 37693082999.94
+    },
+    "DTE": {
+      "symbol": "DTE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 30682225754.600002
+    },
+    "ES": {
+      "symbol": "ES",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 27944457790.62
+    },
+    "FE": {
+      "symbol": "FE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 29463018171.42
+    },
+    "PPL": {
+      "symbol": "PPL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 29098112054.159996
+    },
+    "EIX": {
+      "symbol": "EIX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 28636140787.34
+    },
+    "CNP": {
+      "symbol": "CNP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 28295454450.56
+    },
+    "CMS": {
+      "symbol": "CMS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 23925343950.079998
+    },
+    "AWK": {
+      "symbol": "AWK",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 26439061723.04
+    },
+    "AEE": {
+      "symbol": "AEE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 31208327743.5
+    },
+    "ATO": {
+      "symbol": "ATO",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 30948663628.219997
+    },
+    "LNT": {
+      "symbol": "LNT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 18598996161.57
+    },
+    "NI": {
+      "symbol": "NI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 22514985695.55
+    },
+    "PNW": {
+      "symbol": "PNW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 12032475811.47
+    },
+    "AES": {
+      "symbol": "AES",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 10119238614.24
+    },
+    "EVRG": {
+      "symbol": "EVRG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 19345956039.86
+    },
+    "LIN": {
+      "symbol": "LIN",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 236025179417.03998
+    },
+    "NEM": {
+      "symbol": "NEM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 140042047310.75998
+    },
+    "FCX": {
+      "symbol": "FCX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 98146497673.74
+    },
+    "SHW": {
+      "symbol": "SHW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 88232594528.70001
+    },
+    "APD": {
+      "symbol": "APD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 61548800291.44
+    },
+    "ECL": {
+      "symbol": "ECL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 85566448690.08
+    },
+    "NUE": {
+      "symbol": "NUE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 41325008055.63
+    },
+    "VMC": {
+      "symbol": "VMC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 39983713580.799995
+    },
+    "MLM": {
+      "symbol": "MLM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 40128619806.1
+    },
+    "CTVA": {
+      "symbol": "CTVA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 54151632480.0
+    },
+    "DOW": {
+      "symbol": "DOW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 21956542603.2
+    },
+    "PPG": {
+      "symbol": "PPG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 26640569908.8
+    },
+    "DD": {
+      "symbol": "DD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 20298980261.48
+    },
+    "STLD": {
+      "symbol": "STLD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 29427484437.09
+    },
+    "CF": {
+      "symbol": "CF",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 16027658030.3
+    },
+    "ALB": {
+      "symbol": "ALB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 20998017659.600002
+    },
+    "IFF": {
+      "symbol": "IFF",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 20679782604.25
+    },
+    "LYB": {
+      "symbol": "LYB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 18647198326.64
+    },
+    "BALL": {
+      "symbol": "BALL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 17799710621.04
+    },
+    "AVY": {
+      "symbol": "AVY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 15070282968.18
+    },
+    "PKG": {
+      "symbol": "PKG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 20803597661.07
+    },
+    "SW": {
+      "symbol": "SW",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 24458795061.96
+    },
+    "IP": {
+      "symbol": "IP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 22647563416.13
+    },
+    "AMCR": {
+      "symbol": "AMCR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 22247499973.5
+    },
+    "MOS": {
+      "symbol": "MOS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 8731911878.970001
+    },
+    "WELL": {
+      "symbol": "WELL",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 146639671704.8
+    },
+    "DOC": {
+      "symbol": "DOC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 12253625667.109999
+    },
+    "PLD": {
+      "symbol": "PLD",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 132666660480.0
+    },
+    "EQIX": {
+      "symbol": "EQIX",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 94924085940.8
+    },
+    "AMT": {
+      "symbol": "AMT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 89041487694.59999
+    },
+    "SPG": {
+      "symbol": "SPG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 66072481429.2
+    },
+    "DLR": {
+      "symbol": "DLR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 61400643688.36
+    },
+    "PSA": {
+      "symbol": "PSA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 54571974630.18
+    },
+    "O": {
+      "symbol": "O",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 62995661128.08
+    },
+    "CCI": {
+      "symbol": "CCI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 39041386135.08
+    },
+    "EQR": {
+      "symbol": "EQR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 23834548928.04
+    },
+    "VTR": {
+      "symbol": "VTR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 41160486311.84
+    },
+    "CBRE": {
+      "symbol": "CBRE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 42789135573.38
+    },
+    "AVB": {
+      "symbol": "AVB",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 25265588114.52
+    },
+    "EXR": {
+      "symbol": "EXR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 32230165630.800003
+    },
+    "IRM": {
+      "symbol": "IRM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 32639498277.98
+    },
+    "VICI": {
+      "symbol": "VICI",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 32449113223.559998
+    },
+    "SBAC": {
+      "symbol": "SBAC",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 21197511960.0
+    },
+    "WY": {
+      "symbol": "WY",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 17742772300.0
+    },
+    "KIM": {
+      "symbol": "KIM",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 15881010368.24
+    },
+    "MAA": {
+      "symbol": "MAA",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 15677595792.2
+    },
+    "INVH": {
+      "symbol": "INVH",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 15935446331.949999
+    },
+    "CSGP": {
+      "symbol": "CSGP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 19144075469.47
+    },
+    "ESS": {
+      "symbol": "ESS",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 16507663801.179998
+    },
+    "REG": {
+      "symbol": "REG",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 14548387861.94
+    },
+    "CPT": {
+      "symbol": "CPT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 11300449188.8
+    },
+    "UDR": {
+      "symbol": "UDR",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 12305020089.25
+    },
+    "HST": {
+      "symbol": "HST",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 13549702965.699999
+    },
+    "FRT": {
+      "symbol": "FRT",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 9519697481.220001
+    },
+    "BXP": {
+      "symbol": "BXP",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 8916756279.52
+    },
+    "ARE": {
+      "symbol": "ARE",
+      "price": null,
+      "change": null,
+      "changesPercentage": null,
+      "marketCap": 9120797999.43
+    }
+  }
+}
