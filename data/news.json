@@ -1,16 +1,68 @@
 {
- "updated": "2026-04-11T07:43:59.737799+09:00",
- "updated_kst": "2026-04-11 07:43",
+ "updated": "2026-04-12T07:39:42.986372+09:00",
+ "updated_kst": "2026-04-12 07:39",
  "retention_days": 90,
  "stats": {
-  "total_articles": 1617,
+  "total_articles": 1668,
   "tickers_with_news": 99,
-  "today_new": 66,
-  "today_filtered": 8,
-  "co_mention_pairs": 237
+  "today_new": 65,
+  "today_filtered": 10,
+  "co_mention_pairs": 245
  },
  "stocks": {
   "NVDA": [
+   {
+    "title": "[비즈톡톡] “너무 강력해서 위험”… 앤트로픽 AI ‘미토스’, 보안 판...",
+    "desc": "구글, 애플, 아마존, 브로드컴, 시스코, 마이크로소프트, 엔비디아, JP모건체이스, 팔로알토 네트웍스 등 ‘프로젝트 글래스윙’ 참여사들은 미토스를 자사 소프트웨어의 보안 취약점을 식별하고 사이버 공격을 막아내는...",
+    "url": "https://biz.chosun.com/it-science/ict/2026/04/12/7BRKBIY6RFFX5JXNANZXVA2JTU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "NVDA",
+     "MSFT",
+     "GOOGL",
+     "AAPL",
+     "CSCO",
+     "AMZN",
+     "AVGO"
+    ]
+   },
+   {
+    "title": "세상 먹어 치우던 SW, 금융 위기 후 최악 위기… AI發 4대 시나리오",
+    "desc": "# 젠슨 황 엔비디아 최고경영자(CEO)는 3월 19일 폐막한 엔비디아 연례 개발자 회의 ‘GTC 2026’에서 사스포칼립스 우려는 “완전히 틀렸다”라며 “AI는 SW 기업을 대체하는 게 아니라 SW 기업의 개발 생산성을...",
+    "url": "https://biz.chosun.com/industry/industry_general/2026/04/12/A64BXZNX5JHJ5OUKE63IFUCULI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "NVDA"
+    ]
+   },
+   {
+    "title": "“세계 1위 오를 삼성전자” 호평 속…자본시장의 섬뜩한 경고[이충희의...",
+    "desc": "증권가에서는 내년 삼성전자가 엔비디아를 넘어 세계 1위 영업이익을 달성할 것이라는 파격적인 전망까지... ①분기 영업익 100조 예고… 엔비디아 추월 시나리오 삼성전자의 올해 1분기 잠정 영업이익은 57조 2000억...",
+    "url": "https://www.sedaily.com/article/20031283?ref=naver",
+    "date": "2026-04-12T06:00:00+09:00",
+    "mentions": [
+     "NVDA"
+    ]
+   },
+   {
+    "title": "AI 붐타고 작년 수출 급증한 대만…올해는 한국 차례[차이나는 중국]",
+    "desc": "TSMC가 생산하는 엔비디아의 최신 GPU GB200과 B300은 TSMC의 첨단 패키징 공정(CoWoS)에서 HBM과 결합된 후 폭스콘, 콴타 등 대만 서버 제조사가 만드는 AI서버에 탑재돼 미국 빅테크에 공급된다. 대만이 글로벌 AI 서버...",
+    "url": "https://www.mt.co.kr/industry/2026/04/12/2026041120304477749",
+    "date": "2026-04-12T05:00:00+09:00",
+    "mentions": [
+     "NVDA"
+    ]
+   },
+   {
+    "title": "성과급이 무려 10억대...“웃으면서 야근한다” SK하이닉스 직원들 얼마...",
+    "desc": "업계에서는 이 같은 고액 보상이 엔비디아·애플·TSMC 등과의 핵심 인재 유치 경쟁에서 비롯된 것으로 본다. 전문가들은 일률적 성과급 확대보다 장기 인센티브 제도나 양도제한조건부주식(RSU) 등 정교한 보상 수단을...",
+    "url": "https://www.sedaily.com/article/20031266?ref=naver",
+    "date": "2026-04-11T19:32:00+09:00",
+    "mentions": [
+     "NVDA",
+     "AAPL"
+    ]
+   },
    {
     "title": "뉴욕증시, 美·이란 협상 앞두고 혼조…엔비디아·브로드컴 강세",
     "desc": "엔비디아(+2.63%), 브로드컴(+4.69%), 아마존(+2.02%), 테슬라(+0.98%) 등은 상승했다. 특히 TSMC는 AI 수요 증가에 따른 사상 최대 분기 매출 소식에 2.30% 상승했으며 클라우드 기업 코어위브는 앤트로픽과 대규모 계약을...",
@@ -633,6 +685,21 @@
    }
   ],
   "AVGO": [
+   {
+    "title": "[비즈톡톡] “너무 강력해서 위험”… 앤트로픽 AI ‘미토스’, 보안 판...",
+    "desc": "구글, 애플, 아마존, 브로드컴, 시스코, 마이크로소프트, 엔비디아, JP모건체이스, 팔로알토 네트웍스 등 ‘프로젝트 글래스윙’ 참여사들은 미토스를 자사 소프트웨어의 보안 취약점을 식별하고 사이버 공격을 막아내는...",
+    "url": "https://biz.chosun.com/it-science/ict/2026/04/12/7BRKBIY6RFFX5JXNANZXVA2JTU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "NVDA",
+     "MSFT",
+     "GOOGL",
+     "AAPL",
+     "CSCO",
+     "AMZN",
+     "AVGO"
+    ]
+   },
    {
     "title": "뉴욕증시, 美·이란 협상 하루 앞두고 혼조...4월 소비자심리지수 사상...",
     "desc": "시가총액 상위 기술주 가운데서는 엔비디아가 2.57% 오른 것을 비롯해 아마존(2.02%), 브로드컴(4.69%), 페이스북 모회사 메타(0.23%), 테슬라(0.96%) 등이 상승했다. 반면 마이크로소프트(-0.59%), 구글 모회사 알파벳(-0.39...",
@@ -3483,6 +3550,15 @@
   ],
   "INTC": [
    {
+    "title": "메모리 가격 폭등에 노트북용 디스플레이는 ‘울상’…“올해 5% 역성장...",
+    "desc": "참석자들이 인텔 코어 울트라 시리즈 프로세서가 장착된 노트북을 살펴보고 있다. [연합] [헤럴드경제=김현일 기자] 메모리 반도체 가격 급등으로 2분기부터 스마트폰·노트북 등 IT 제품 시장의 본격적인 침체가...",
+    "url": "https://biz.heraldcorp.com/article/10714691?ref=naver",
+    "date": "2026-04-12T07:00:00+09:00",
+    "mentions": [
+     "INTC"
+    ]
+   },
+   {
     "title": "SKT, Arm·리벨리온과 GPU 대체 AI 서버 솔루션 공동 개발",
     "desc": "SKT, 英Arm·리벨리온과 차세대 AI 서버 솔루션 개발 맞손 - 핵심 요약: SK텔레콤이 영국 Arm, 국내 AI 반도체... 메타가 코어위브와 352억 달러 규모의 계약을 맺고, 구글이 인텔과 CPU 다년 공급계약을 체결하는 등...",
     "url": "https://www.sedaily.com/article/20031197?ref=naver",
@@ -3957,12 +4033,12 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01118486642402128",
     "date": "2025-12-25T01:22:00+09:00",
     "mentions": [
+     "NVDA",
+     "KLAC",
      "LRCX",
      "ADI",
      "CDNS",
-     "AVGO",
-     "NVDA",
-     "KLAC"
+     "AVGO"
     ]
    },
    {
@@ -3971,9 +4047,9 @@
     "url": "https://www.sedaily.com/NewsView/2H1ODF3LOM",
     "date": "2025-12-10T17:44:00+09:00",
     "mentions": [
+     "ADI",
      "INTC",
      "MCHP",
-     "ADI",
      "TXN"
     ]
    },
@@ -3992,8 +4068,8 @@
     "url": "https://www.mk.co.kr/article/11588649",
     "date": "2025-12-31T21:01:00+09:00",
     "mentions": [
-     "INTC",
-     "ADI"
+     "ADI",
+     "INTC"
     ]
    },
    {
@@ -4002,9 +4078,9 @@
     "url": "https://www.mk.co.kr/article/11497730",
     "date": "2025-12-25T06:57:00+09:00",
     "mentions": [
-     "INTC",
-     "NVDA",
      "ADI",
+     "NVDA",
+     "INTC",
      "MPWR"
     ]
    },
@@ -4014,8 +4090,8 @@
     "url": "https://www.mk.co.kr/article/11490845",
     "date": "2025-12-16T16:48:00+09:00",
     "mentions": [
-     "INTC",
      "ADI",
+     "INTC",
      "MPWR"
     ]
    },
@@ -4025,9 +4101,9 @@
     "url": "https://www.mk.co.kr/article/11485434",
     "date": "2025-12-05T17:31:00+09:00",
     "mentions": [
-     "INTC",
-     "NVDA",
      "ADI",
+     "NVDA",
+     "INTC",
      "MPWR"
     ]
    },
@@ -4592,6 +4668,13 @@
   ],
   "LRCX": [
    {
+    "title": "[단독] 동원산업, 바이오사업 진출 모색…‘참치’서 고기능 바이오 원...",
+    "desc": "실제 참치는 헤엄을 멈추면 호흡이 어려워지는 ‘램 환기(Ram ventilation)’ 방식으로 산소를 공급받으며... 파마리서치처럼, 동원 역시 참치 부산물을 고부가가치 소재로 바꾸는 ‘업사이클링’ 전략을 취하는 것이라...",
+    "url": "https://biz.chosun.com/science-chosun/bio/2026/04/12/NLIBDIFP25EAJNKL7GTTQRQOTQ/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": []
+   },
+   {
     "title": "[K제조업 AI파워업] HBM 경쟁 격화…첨단 증착장비로 수율 '업'",
     "desc": "그는 \"주요 고객사가 공정 난제에 직면하면 아직은 어플라이드머티어리얼즈나 램리서치 등 글로벌 기업을 먼저 찾는 경우가 많다\"며 \"국내 고객사의 만족도를 높여 '믿을 수 있는 장기 파트너'로 자리매김하는 동시에...",
     "url": "https://www.mk.co.kr/article/12011618",
@@ -4886,6 +4969,15 @@
   ],
   "MRVL": [
    {
+    "title": "서학개미 한달새 1억달러 베팅한 이 주식...전쟁 와중에 50% 올랐다",
+    "desc": "이런 수혜로 최근 주가가 급등하고 있는 곳이 바로 마벨테크놀로지(마벨)다. 한국예탁결제원에 따르면 최근 한달(3월11일~4월10일) 서학개미들은 마벨 주식을 1억840만 달러 순매수 결제했다. 매수 상위 종목 대부분이...",
+    "url": "https://www.mk.co.kr/article/12014373",
+    "date": "2026-04-11T15:39:00+09:00",
+    "mentions": [
+     "MRVL"
+    ]
+   },
+   {
     "title": "\"AI 다음은 네트워크\"…광통신株, ‘마지막 퍼즐’로 급부상",
     "desc": "이 ETF에는 루멘텀(Lumentum), 코히런트(Coherent), 시에나(Ciena) 등 광학 기술 및 장거리 전송 장비 기업을 비롯해 코닝(Corning), 노키아(Nokia), 마벨테크놀로지(Marvell Technology) 등 글로벌 네트워크 인프라 기업들이 포함됐다....",
     "url": "http://www.fnnews.com/news/202604042345028404",
@@ -5057,8 +5149,8 @@
     "url": "https://www.hankyung.com/article/2025121667046",
     "date": "2025-12-16T14:54:00+09:00",
     "mentions": [
-     "INTC",
      "NXPI",
+     "INTC",
      "APP"
     ]
    },
@@ -5145,9 +5237,22 @@
     "url": "https://www.hankyung.com/article/202601075604i",
     "date": "2026-01-07T02:18:00+09:00",
     "mentions": [
-     "TSLA",
+     "NVDA",
      "MCHP",
-     "NVDA"
+     "TSLA"
+    ]
+   },
+   {
+    "title": "“세계 1위 오를 삼성전자” 호평 속…자본시장의 섬뜩한 경고[이충희의...",
+    "desc": "최첨단 칩 확보 여부는 기업을 넘어 국가 경쟁력의 핵심이 될 것으로 보입니다. 하지만 미국에서는 애플, 구글, 마이크로소프트, 메타 같은 빅테크는 물론 엔비디아조차 칩을 직접 제조할 역량이 없습니다. 일각에서는...",
+    "url": "https://www.sedaily.com/article/20031283?ref=naver",
+    "date": "2026-04-12T06:00:00+09:00",
+    "mentions": [
+     "NVDA",
+     "MSFT",
+     "GOOGL",
+     "META",
+     "AAPL"
     ]
    },
    {
@@ -5668,9 +5773,9 @@
     "url": "https://www.mk.co.kr/article/11497730",
     "date": "2025-12-25T06:57:00+09:00",
     "mentions": [
-     "INTC",
-     "NVDA",
      "ADI",
+     "NVDA",
+     "INTC",
      "MPWR"
     ]
    },
@@ -5680,8 +5785,8 @@
     "url": "https://www.mk.co.kr/article/11490845",
     "date": "2025-12-16T16:48:00+09:00",
     "mentions": [
-     "INTC",
      "ADI",
+     "INTC",
      "MPWR"
     ]
    },
@@ -5701,9 +5806,9 @@
     "url": "https://www.mk.co.kr/article/11485434",
     "date": "2025-12-05T17:31:00+09:00",
     "mentions": [
-     "INTC",
-     "NVDA",
      "ADI",
+     "NVDA",
+     "INTC",
      "MPWR"
     ]
    },
@@ -6121,6 +6226,83 @@
    }
   ],
   "MSFT": [
+   {
+    "title": "\"40만전자·200만닉스 간다는데…더 사? 팔아?\" 주말 동안 깊어지는 개미...",
+    "desc": "특히 SK하이닉스가 올해 마이크로소프트와 구글을 넘어 전 세계 영업이익 4위에 올라선 데 이어 내년 3위까지 상승할 것으로 전망했다. 김동원 KB증권 리서치본부장은 \"SK하이닉스의 영업이익은 올해 251조원, 내년...",
+    "url": "http://www.fnnews.com/news/202604111056351182",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "MSFT",
+     "GOOGL"
+    ]
+   },
+   {
+    "title": "세상 먹어 치우던 SW, 금융 위기 후 최악 위기… AI發 4대 시나리오",
+    "desc": "세일즈포스, 마이크로소프트(MS), 어도비 등 전 세계 소프트웨어(SW) 기업 시총이 2800억달러(약 421조8200억원) 이상 증발했다. 1월 한 달간 사라진 시총만 1조달러(약 1507조원). S&P 북미 소프트웨어 지수 1월 하락 폭...",
+    "url": "https://biz.chosun.com/industry/industry_general/2026/04/12/A64BXZNX5JHJ5OUKE63IFUCULI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "MSFT",
+     "ADBE"
+    ]
+   },
+   {
+    "title": "[비즈톡톡] “너무 강력해서 위험”… 앤트로픽 AI ‘미토스’, 보안 판...",
+    "desc": "구글, 애플, 아마존, 브로드컴, 시스코, 마이크로소프트, 엔비디아, JP모건체이스, 팔로알토 네트웍스 등 ‘프로젝트 글래스윙’ 참여사들은 미토스를 자사 소프트웨어의 보안 취약점을 식별하고 사이버 공격을 막아내는...",
+    "url": "https://biz.chosun.com/it-science/ict/2026/04/12/7BRKBIY6RFFX5JXNANZXVA2JTU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "NVDA",
+     "MSFT",
+     "GOOGL",
+     "AAPL",
+     "CSCO",
+     "AMZN",
+     "AVGO"
+    ]
+   },
+   {
+    "title": "“세계 1위 오를 삼성전자” 호평 속…자본시장의 섬뜩한 경고[이충희의...",
+    "desc": "하지만 미국에서는 애플, 구글, 마이크로소프트, 메타 같은 빅테크는 물론 엔비디아조차 칩을 직접 제조할 역량이 없습니다. 일각에서는 엔비디아가 보유한 칩 디자인 역량이 언젠가 새로운 혁신에 의해 대체될 수...",
+    "url": "https://www.sedaily.com/article/20031283?ref=naver",
+    "date": "2026-04-12T06:00:00+09:00",
+    "mentions": [
+     "NVDA",
+     "MSFT",
+     "GOOGL",
+     "META",
+     "AAPL"
+    ]
+   },
+   {
+    "title": "“어제 살 걸?” 하루만에 ‘60만원’ 또 올랐다…상상초월 노트북 가격...",
+    "desc": "[AFP] 마이크로소프트(MS)의 Xbox 시리즈 X는 작년 초 대비 누적 인상액이 최대 200달러에 달한다. 보급형 모델인 시리즈 S도 출시가 대비 약 30% 이상 높은 가격에 판매되고 있다. 원자재 상승에 따라 하반기 추가 인상...",
+    "url": "https://biz.heraldcorp.com/article/10715048?ref=naver",
+    "date": "2026-04-11T21:41:00+09:00",
+    "mentions": [
+     "MSFT"
+    ]
+   },
+   {
+    "title": "성과급이 무려 10억대...“웃으면서 야근한다” SK하이닉스 직원들 얼마...",
+    "desc": "증권가는 SK하이닉스의 올해 영업이익이 251조원으로 전년 대비 5배 늘어 마이크로소프트·구글을 넘어서는 글로벌 4위 수준에 오를 것으로 본다. D램·낸드플래시 가격 상승과 공급 부족 장기화가 실적 개선을...",
+    "url": "https://www.sedaily.com/article/20031266?ref=naver",
+    "date": "2026-04-11T19:32:00+09:00",
+    "mentions": [
+     "MSFT",
+     "GOOGL"
+    ]
+   },
+   {
+    "title": "\"이러다 200만닉스도 나오겠네\"…목표가 줄줄이 올린 까닭 [종목+]",
+    "desc": "김동원 KB증권 연구원은 SK하이닉스의 올해 영업이익 추정치에 대해 “마이크로소프트(약 245조원)와 구글의 모회사 알파벳(약 240조원)을 뛰어넘는 수준”이라며 “SK하이닉스의 글로벌 영업이익 톱5 안착이...",
+    "url": "https://www.hankyung.com/article/2026041027996",
+    "date": "2026-04-11T18:08:00+09:00",
+    "mentions": [
+     "MSFT",
+     "GOOGL"
+    ]
+   },
    {
     "title": "뉴욕증시, 美·이란 협상 하루 앞두고 혼조...4월 소비자심리지수 사상...",
     "desc": "반면 마이크로소프트(-0.59%), 구글 모회사 알파벳(-0.39%) 등은 하락했고 애플은 보합으로 거래를 마쳤다. 이날 뉴욕 증시는 11일 파키스탄 이슬라마바드에서 열리는 미국과 이란의 종전 회담을 앞두고 경계감을...",
@@ -6609,6 +6791,30 @@
    }
   ],
   "CSCO": [
+   {
+    "title": "[비즈톡톡] “너무 강력해서 위험”… 앤트로픽 AI ‘미토스’, 보안 판...",
+    "desc": "구글, 애플, 아마존, 브로드컴, 시스코, 마이크로소프트, 엔비디아, JP모건체이스, 팔로알토 네트웍스 등 ‘프로젝트 글래스윙’ 참여사들은 미토스를 자사 소프트웨어의 보안 취약점을 식별하고 사이버 공격을 막아내는...",
+    "url": "https://biz.chosun.com/it-science/ict/2026/04/12/7BRKBIY6RFFX5JXNANZXVA2JTU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "NVDA",
+     "MSFT",
+     "GOOGL",
+     "AAPL",
+     "CSCO",
+     "AMZN",
+     "AVGO"
+    ]
+   },
+   {
+    "title": "세상 먹어 치우던 SW, 금융 위기 후 최악 위기… AI發 4대 시나리오",
+    "desc": "젠슨 황 CEO는 2월 4일 열린 ‘시스코 AI 서밋’에서도 “SW 업계에서 SW 도구의 역할이 쇠퇴하고 AI가 이를 대체할 것이라는 인식이 있다”라며 “이는 세상에서 가장 비논리적인 생각”이라고 했다. 그러면서...",
+    "url": "https://biz.chosun.com/industry/industry_general/2026/04/12/A64BXZNX5JHJ5OUKE63IFUCULI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "CSCO"
+    ]
+   },
    {
     "title": "경기도, AI 혁신클러스터 6개 거점 하나로",
     "desc": "특히 판교 클러스터 앵커기관인 시스코, 엔닷라이트, KAIST 김재철 AI대학원은 각각 네트워크·보안 인프라, 피지컬 AI 솔루션, AI 원천기술 분야 협업 과제를 제안했다. 도는 앵커기관 공동과제에 참여할 스타트업을 발굴...",
@@ -7339,9 +7545,9 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=01118486642402128",
     "date": "2025-12-25T01:22:00+09:00",
     "mentions": [
+     "NVDA",
      "INTC",
-     "CDNS",
-     "NVDA"
+     "CDNS"
     ]
    },
    {
@@ -7503,6 +7709,24 @@
    }
   ],
   "ADBE": [
+   {
+    "title": "AI가 디자이너 대체? “14년 전에도 같은 걱정..기회 더 늘더라”[김창...",
+    "desc": "피그마·어도비 기업 주가가 올 들어 30~50% 빠진 배경이다. 캔바는 상장 계획을 미뤘다는 보도가 나오기도 했다. AI가 소프트웨어 디자인 시장을 위축시키고 그래픽 디자이너를 대체할 것이라는 우울한 전망이 나왔다....",
+    "url": "https://www.sedaily.com/article/20031290?ref=naver",
+    "date": "2026-04-12T06:07:00+09:00",
+    "mentions": [
+     "ADBE"
+    ]
+   },
+   {
+    "title": "세상 먹어 치우던 SW, 금융 위기 후 최악 위기… AI發 4대 시나리오",
+    "desc": "(MS), 어도비 등 전 세계 소프트웨어(SW) 기업 시총이 2800억달러(약 421조8200억원) 이상 증발했다. 1월 한... 차단했고, 어도비는 2024년 6월 창작자 작업물이 외부로 유출돼 AI 학습에 사용되지 않도록 약관을 전면...",
+    "url": "https://biz.chosun.com/industry/industry_general/2026/04/12/A64BXZNX5JHJ5OUKE63IFUCULI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "ADBE"
+    ]
+   },
    {
     "title": "동국대 WISE캠퍼스 대학일자리플러스센터, 문화콘텐츠 직무기초(ACP-Phot...",
     "desc": "교육은 세계적인 소프트웨어 기업 어도비(Adobe)가 인증하는 국제 공인 자격인 ACP(Adobe Certified Professional) 취득을 목표로 진행됐다. 집중 교육을 통해 레이어와 마스크의 심화 활용, 정교한 이미지 합성 기술, 상업용...",
@@ -7911,6 +8135,15 @@
   ],
   "WDAY": [
    {
+    "title": "세상 먹어 치우던 SW, 금융 위기 후 최악 위기… AI發 4대 시나리오",
+    "desc": "스웨덴 대표 핀테크인 클라르나가 2024년 세일즈포스, 2025년 워크데이를 해지하면서 우려는 현실이 됐다. SaaS 업계는 실적 개선으로 사스포칼립스 공포 정면 돌파를 시도하고 있지만, 2025년 유행한 바이브 코딩...",
+    "url": "https://biz.chosun.com/industry/industry_general/2026/04/12/A64BXZNX5JHJ5OUKE63IFUCULI/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "WDAY"
+    ]
+   },
+   {
     "title": "\"에이전틱 AI·양자컴퓨팅 시대 온다\"...시스코, 차세대 네트워크 전략...",
     "desc": "\"확률에 기반해 작동하는 인공지능(AI) 에이전트, 양자컴퓨팅 시대를 맞이하기 위해서는 새로운 네트워크 전략이 필요하다.\" 비조이 판데이 시스코 수석 부사장은 8일 서울 강남 코엑스에서 열린 '시스코 커넥트 2026...",
     "url": "http://www.fnnews.com/news/202604081323530719",
@@ -8240,6 +8473,15 @@
   ],
   "MSTR": [
    {
+    "title": "현금을 비트코인으로…재무 전략 대전환 [홍익희의 비트코인 이야기]",
+    "desc": "따라서 영구 우선주가 팔리는 만큼 보통주(MSTR)를 2~3배 더 팔아 부채 비율을 관리하고 있다. 이로 인해 비트코인 재무 기업들의 비트코인 매입 자금이 날로 커지고 있다. 비트코인 ETF보다 스트래티지 주식 선호 이유...",
+    "url": "https://www.mk.co.kr/article/12007412",
+    "date": "2026-04-11T16:26:00+09:00",
+    "mentions": [
+     "MSTR"
+    ]
+   },
+   {
     "title": "[단독] 제프 켄드릭 \"비트코인, 5만달러까지 밀릴 수도\" [한경 코알라]",
     "desc": "2024년과 지난해 트럼프 당선 및 취임 전후로 대규모 자금이 유입됐고, 마이크로스트래티지를 비롯한 디지털 자산 재무 전략 기업의 매수세도 강했다. 단기 조정은 있지만 구조적인 수요 자체가 사라졌다고 보진...",
     "url": "https://www.hankyung.com/article/202604087153i",
@@ -8365,6 +8607,21 @@
   ],
   "PANW": [
    {
+    "title": "[비즈톡톡] “너무 강력해서 위험”… 앤트로픽 AI ‘미토스’, 보안 판...",
+    "desc": "구글, 애플, 아마존, 브로드컴, 시스코, 마이크로소프트, 엔비디아, JP모건체이스, 팔로알토 네트웍스 등 ‘프로젝트 글래스윙’ 참여사들은 미토스를 자사 소프트웨어의 보안 취약점을 식별하고 사이버 공격을 막아내는...",
+    "url": "https://biz.chosun.com/it-science/ict/2026/04/12/7BRKBIY6RFFX5JXNANZXVA2JTU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "NVDA",
+     "MSFT",
+     "GOOGL",
+     "AAPL",
+     "CSCO",
+     "AMZN",
+     "AVGO"
+    ]
+   },
+   {
     "title": "27년 묵은 버그도 잡았다…앤트로픽, 최첨단 AI ‘미토스’ 제한 공개",
     "desc": "아마존, 애플, 브로드컴, 시스코, 크라우드스트라이크, 리눅스 재단, 마이크로소프트, 팔로알토 네트웍스 등이 프로젝트 글래스윙 협력사로 참여한다. 앤트로픽은 “AI 모델은 이제 소프트웨어 내 취약점을 발견하고...",
     "url": "https://biz.chosun.com/it-science/ict/2026/04/08/UWXPX6FZJZD5LGRT5VT22ZSN34/?utm_source=naver&utm_medium=original&utm_campaign=biz",
@@ -8433,6 +8690,15 @@
    }
   ],
   "CRWD": [
+   {
+    "title": "[비즈톡톡] “너무 강력해서 위험”… 앤트로픽 AI ‘미토스’, 보안 판...",
+    "desc": "프로젝트 글래스윙 참여사인 팔로알토 네트웍스와 크라우드스트라이크도 각각 3.9%, 7.5% 내렸습니다. 다만 일부 전문가들은 앤트로픽이 공개한 정보가 제한적인 만큼, “성능이 너무 뛰어나서 일반에 공개하기...",
+    "url": "https://biz.chosun.com/it-science/ict/2026/04/12/7BRKBIY6RFFX5JXNANZXVA2JTU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "CRWD"
+    ]
+   },
    {
     "title": "27년 묵은 버그도 잡았다…앤트로픽, 최첨단 AI ‘미토스’ 제한 공개",
     "desc": "아마존, 애플, 브로드컴, 시스코, 크라우드스트라이크, 리눅스 재단, 마이크로소프트, 팔로알토 네트웍스 등이 프로젝트 글래스윙 협력사로 참여한다. 앤트로픽은 “AI 모델은 이제 소프트웨어 내 취약점을 발견하고...",
@@ -8519,6 +8785,17 @@
    }
   ],
   "FTNT": [
+   {
+    "title": "[비즈톡톡] “너무 강력해서 위험”… 앤트로픽 AI ‘미토스’, 보안 판...",
+    "desc": "지난 9일(현지시각) 미국 증시에서 포티넷은 3.4% 하락했고, 지스케일러는 11% 급락했습니다. 프로젝트 글래스윙 참여사인 팔로알토 네트웍스와 크라우드스트라이크도 각각 3.9%, 7.5% 내렸습니다. 다만 일부 전문가들은...",
+    "url": "https://biz.chosun.com/it-science/ict/2026/04/12/7BRKBIY6RFFX5JXNANZXVA2JTU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "CRWD",
+     "FTNT",
+     "ZS"
+    ]
+   },
    {
     "title": "롱퍼트 부드럽게 스트로크 리듬은 일정하게 [톱골퍼 비밀노트]",
     "desc": "대회인 포티넷 파운더스컵 정상에 오른 김효주의 퍼트 장면을 보면 거침없다는 생각이 단번에 듭니다. 남은 거리에 관계없이 빠르고 자신감 있게 스트로크를 하는데요. 김효주는 날카로운 퍼트를 앞세워 포티넷...",
@@ -8728,6 +9005,17 @@
    }
   ],
   "ZS": [
+   {
+    "title": "[비즈톡톡] “너무 강력해서 위험”… 앤트로픽 AI ‘미토스’, 보안 판...",
+    "desc": "지난 9일(현지시각) 미국 증시에서 포티넷은 3.4% 하락했고, 지스케일러는 11% 급락했습니다. 프로젝트 글래스윙 참여사인 팔로알토 네트웍스와 크라우드스트라이크도 각각 3.9%, 7.5% 내렸습니다. 다만 일부 전문가들은...",
+    "url": "https://biz.chosun.com/it-science/ict/2026/04/12/7BRKBIY6RFFX5JXNANZXVA2JTU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "CRWD",
+     "FTNT",
+     "ZS"
+    ]
+   },
    {
     "title": "메가존클라우드, 작년 매출 1조7500억원...흑자 전환",
     "desc": "보안 부문에서는 위즈, 지스케일러, 체크포인트 등 보안 전문기업과 파트너십을 통해 보안 사업 역량을 확충하고 있다. 메가존클라우드는 해외 사업에서도 1500억원 매출을 달성했으며 북미, 중동, 일본 등을...",
@@ -9191,6 +9479,16 @@
    }
   ],
   "GOOGL": [
+   {
+    "title": "\"이러다 200만닉스도 나오겠네\"…목표가 줄줄이 올린 까닭 [종목+]",
+    "desc": "김동원 KB증권 연구원은 SK하이닉스의 올해 영업이익 추정치에 대해 “마이크로소프트(약 245조원)와 구글의 모회사 알파벳(약 240조원)을 뛰어넘는 수준”이라며 “SK하이닉스의 글로벌 영업이익 톱5 안착이...",
+    "url": "https://www.hankyung.com/article/2026041027996",
+    "date": "2026-04-11T18:08:00+09:00",
+    "mentions": [
+     "MSFT",
+     "GOOGL"
+    ]
+   },
    {
     "title": "뉴욕증시, 美·이란 협상 하루 앞두고 혼조...4월 소비자심리지수 사상...",
     "desc": "반면 마이크로소프트(-0.59%), 구글 모회사 알파벳(-0.39%) 등은 하락했고 애플은 보합으로 거래를 마쳤다. 이날 뉴욕 증시는 11일 파키스탄 이슬라마바드에서 열리는 미국과 이란의 종전 회담을 앞두고 경계감을...",
@@ -10364,6 +10662,15 @@
   ],
   "NFLX": [
    {
+    "title": "3월 고용·수입 물가 동향은...中 1분기 성장률 주목 [한동훈의 위클리...",
+    "desc": "골드만삭스를 시작으로 모건스탠리, 뱅크오브아메리카 등 금융기업과 넷플릭스 등이 이번주 실적을 발표한다. 미국과 이란이 2주간 휴전에 돌입해 당분간은 미 기업 실적이 증시의 주요 변수가 될 것으로 보인다. 이...",
+    "url": "https://www.sedaily.com/article/20031278?ref=naver",
+    "date": "2026-04-12T07:01:00+09:00",
+    "mentions": [
+     "NFLX"
+    ]
+   },
+   {
     "title": "아이유X이효리, SNS 언팔이 키운 불화설 9년만 종식 (‘완벽한 하루’)",
     "desc": "이상순은 지난해 큰 사랑을 받은 넷플릭스 ‘폭싹 속았수다’를 언급하며 “아내와 함께 정말 많은 눈물을 흘렸다. 울면서 아내와 이야기했다. 너무 재미있게 봤다. 그래서 이번 작품도 기대가 된다”고 칭찬했다....",
     "url": "https://www.mk.co.kr/article/12012124",
@@ -11125,6 +11432,30 @@
   ],
   "AMZN": [
    {
+    "title": "AI가 디자이너 대체? “14년 전에도 같은 걱정..기회 더 늘더라”[김창...",
+    "desc": "익스피디아·페덱스·아마존과 같은 대기업 브랜드 팀들이 캔바로 원하지 않는 작업을 줄이고 중요한 작업에 집중할 수 있도록 확장하는 모습을 봤다. 우리는 디자이너들이 캔바로 더 많은 작업을 하고 더 많은 일을 하는...",
+    "url": "https://www.sedaily.com/article/20031290?ref=naver",
+    "date": "2026-04-12T06:07:00+09:00",
+    "mentions": [
+     "AMZN"
+    ]
+   },
+   {
+    "title": "[비즈톡톡] “너무 강력해서 위험”… 앤트로픽 AI ‘미토스’, 보안 판...",
+    "desc": "구글·아마존 등 일부 빅테크에만 제공 경쟁사 오픈AI, 연산 자원 부족으로 일반에 공개 못했다고 지적... 구글, 애플, 아마존, 브로드컴, 시스코, 마이크로소프트, 엔비디아, JP모건체이스, 팔로알토 네트웍스 등...",
+    "url": "https://biz.chosun.com/it-science/ict/2026/04/12/7BRKBIY6RFFX5JXNANZXVA2JTU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "NVDA",
+     "MSFT",
+     "GOOGL",
+     "AAPL",
+     "CSCO",
+     "AMZN",
+     "AVGO"
+    ]
+   },
+   {
     "title": "이란 전장의 비밀병기 ‘스타링크’, 우주 인터넷 시대 열까[테크트렌드...",
     "desc": "현재 가장 큰 경쟁자는 제프 베이조스가 이끌고 있는 아마존이다. 아마존은 2019년 설립된 카이퍼 프로젝트(Project Kuiper)가 이름이 변경된 아마존 레오(Amazon Leo)를 통해 3236개의 위성으로 대규모 인터넷망을 구축...",
     "url": "https://magazine.hankyung.com/business/article/202604099763b",
@@ -11712,6 +12043,15 @@
   ],
   "ABNB": [
    {
+    "title": "“140자 잡담 누가 읽어”…모범답안 무시하자 벌어진 일 [Book]",
+    "desc": "공동저자 마이크 메이플스 주니어는 트위터(X), 에어비앤비, 리프트 등 혁신기업의 초창기를 함께한 시드 투자자다. 그는 수천 개의 사례를 분석한 끝에 이례적인 성과를 낸 창립자들은 기존의 비법이나 모범사례를 따르지...",
+    "url": "https://www.mk.co.kr/article/12014496",
+    "date": "2026-04-12T05:51:00+09:00",
+    "mentions": [
+     "ABNB"
+    ]
+   },
+   {
     "title": "[주목! 이 책] 패턴 파괴자들",
     "desc": "리프트, 에어비앤비 등 유니콘 기업의 초기 투자 경험을 바탕으로 스타트업의 성패를 가르는 ‘변곡점 포착’의 원리를 분석한다. 평범한 아이디어를 넘어 미래의 변화를 먼저 경험하는 창업 전략을 구체적 사례로...",
     "url": "https://www.hankyung.com/article/2026041030571",
@@ -12066,6 +12406,42 @@
   ],
   "MAR": [
    {
+    "title": "‘하나 트래블로그’ 인기 꺾였다...대신 뜬 카드 뭐길래",
+    "desc": "‘메리어트 본보이™ 더 베스트 신한카드’와 ‘신한카드 The CLASSIC-S’가 5~6위에 올랐다. 7위 KB국민 트래블러스 체크카드, 8위 GOAT BC 바로카드, 9위 NH농협 클래시 트래블카드, 10위 현대카드T가 뒤를 이었다. 순위권...",
+    "url": "https://www.mk.co.kr/article/12013741",
+    "date": "2026-04-11T17:01:00+09:00",
+    "mentions": [
+     "MAR"
+    ]
+   },
+   {
+    "title": "미·이란 협상, 세레나 호텔에서 진행…주변 경계 강화",
+    "desc": "인근 메리어트 호텔에도 유사한 조치가 내려졌습니다. 이슬라마바드 전역에는 경찰과 군 병력이 대거 배치됐고, 주요 거점마다 검문소와 바리케이드가 설치되는 등 경계가 한층 강화됐습니다. 파키스탄 정부는...",
+    "url": "http://mbn.mk.co.kr/pages/news/newsView.php?category=mbn00008&news_seq_no=5187513",
+    "date": "2026-04-11T16:23:00+09:00",
+    "mentions": [
+     "MAR"
+    ]
+   },
+   {
+    "title": "中신화통신 \"미국·이란, 이슬라마바드 세레나 호텔서 종전 협상\"",
+    "desc": "호텔 및 주변 지역은 전면 통제됐으며, 인근 메리어트 호텔에도 비슷한 조치가 내려졌다. 세레나 호텔은 오는 12일까지 일반인 출입이 엄격히 금지되며 협상장 주변 도로 역시 봉쇄됐다. 이슬라마바드 전역에 경찰과 군...",
+    "url": "https://view.asiae.co.kr/article/2026041116041699823",
+    "date": "2026-04-11T16:04:00+09:00",
+    "mentions": [
+     "MAR"
+    ]
+   },
+   {
+    "title": "“오로지 고객 위해 연 7억원 포기했다”…전직원 정규직, 회장님의 철...",
+    "desc": "팬데믹이 한창이던 2022년, 9년 만에 전면 개보수해 AC 호텔 바이 메리어트 서울 강남으로 재탄생시켰다. 올해... 메리어트 인터내셔널 브랜드 목시 서울 인사동은 댄스 버스킹을 여는 젊고 역동적인 브랜드로, 강북...",
+    "url": "https://www.mk.co.kr/article/12014298",
+    "date": "2026-04-11T08:54:00+09:00",
+    "mentions": [
+     "MAR"
+    ]
+   },
+   {
     "title": "JW 메리어트 동대문 ‘JW 시그니처 뷔페’, 고급한식 만난다",
     "desc": "JW 메리어트 동대문 ‘JW 시그니처 뷔페-패밀리 게더링’ [JW 메리어트 동대문 제공] JW 메리어트 동대문 스퀘어 서울의 다이닝 레스토랑 타볼로 24(Tavolo 24)는 가정의 달을 맞아 ‘JW 시그니처 뷔페: 패밀리 게더링(Family...",
     "url": "https://biz.heraldcorp.com/article/10714363?ref=naver",
@@ -12345,9 +12721,9 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=04188566642266336",
     "date": "2025-08-11T18:56:00+09:00",
     "mentions": [
-     "TSLA",
+     "ROST",
      "AMZN",
-     "ROST"
+     "TSLA"
     ]
    }
   ],
@@ -12771,6 +13147,73 @@
    }
   ],
   "AAPL": [
+   {
+    "title": "메모리 가격 폭등에 노트북용 디스플레이는 ‘울상’…“올해 5% 역성장...",
+    "desc": "성장…‘애플 효과’ 기대 지난 1월 서울 강남구 웨스틴서울파르나스에서 열린 ‘2026 인텔 AI PC... 노트북 시장 위축 속에 애플이 올해 출시하는 맥북 프로에 OLED 패널을 채택하는 점은 디스플레이 업계에 호재로...",
+    "url": "https://biz.heraldcorp.com/article/10714691?ref=naver",
+    "date": "2026-04-12T07:00:00+09:00",
+    "mentions": [
+     "AAPL",
+     "INTC"
+    ]
+   },
+   {
+    "title": "[비즈톡톡] “너무 강력해서 위험”… 앤트로픽 AI ‘미토스’, 보안 판...",
+    "desc": "구글, 애플, 아마존, 브로드컴, 시스코, 마이크로소프트, 엔비디아, JP모건체이스, 팔로알토 네트웍스 등 ‘프로젝트 글래스윙’ 참여사들은 미토스를 자사 소프트웨어의 보안 취약점을 식별하고 사이버 공격을 막아내는...",
+    "url": "https://biz.chosun.com/it-science/ict/2026/04/12/7BRKBIY6RFFX5JXNANZXVA2JTU/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "NVDA",
+     "MSFT",
+     "GOOGL",
+     "AAPL",
+     "CSCO",
+     "AMZN",
+     "AVGO"
+    ]
+   },
+   {
+    "title": "“세계 1위 오를 삼성전자” 호평 속…자본시장의 섬뜩한 경고[이충희의...",
+    "desc": "하지만 미국에서는 애플, 구글, 마이크로소프트, 메타 같은 빅테크는 물론 엔비디아조차 칩을 직접 제조할 역량이 없습니다. 일각에서는 엔비디아가 보유한 칩 디자인 역량이 언젠가 새로운 혁신에 의해 대체될 수...",
+    "url": "https://www.sedaily.com/article/20031283?ref=naver",
+    "date": "2026-04-12T06:00:00+09:00",
+    "mentions": [
+     "NVDA",
+     "MSFT",
+     "GOOGL",
+     "META",
+     "AAPL"
+    ]
+   },
+   {
+    "title": "“140자 잡담 누가 읽어”…모범답안 무시하자 벌어진 일 [Book]",
+    "desc": "애플이 아이폰을 만들기 위해 기존 비즈니스 모델을 뒤엎고 통신사와 협상한 것, 페이스북이 매출도 없던 인스타그램을 10억달러에 인수한 것은 결코 안전한 선택이 아니었다. 이는 계산된 위험을 감수한 패턴 파괴였다....",
+    "url": "https://www.mk.co.kr/article/12014496",
+    "date": "2026-04-12T05:51:00+09:00",
+    "mentions": [
+     "AAPL",
+     "META"
+    ]
+   },
+   {
+    "title": "AI 붐타고 작년 수출 급증한 대만…올해는 한국 차례[차이나는 중국]",
+    "desc": "애플의 최대 협력사로 유명한 폭스콘은 작년 AI 서버 매출 비중이 아이폰 등 스마트 가전 매출을 넘어섰다. 한국은 2월 기준 반도체 수출(252억달러)이 전체 수출(673억달러)의 37.4%를 차지했지만, AI 서버 수출이 거의...",
+    "url": "https://www.mt.co.kr/industry/2026/04/12/2026041120304477749",
+    "date": "2026-04-12T05:00:00+09:00",
+    "mentions": [
+     "AAPL",
+     "INTC"
+    ]
+   },
+   {
+    "title": "가격 올려도 살 사람은 다 샀다...삼성전자, 또 일냈다는데",
+    "desc": "지난해 연간 스마트폰 판매량에서 애플에 1위를 빼앗겼던 삼성전자가 올 1분기에 1위 자리를 탈환했다. 시장조사기관 옴디아는 삼성전자가 1분기 전 세계 스마트폰 시장에서 점유율 22%를 기록, 20%를 기록한 애플을...",
+    "url": "https://www.sedaily.com/article/20031279?ref=naver",
+    "date": "2026-04-11T22:03:00+09:00",
+    "mentions": [
+     "AAPL"
+    ]
+   },
    {
     "title": "‘갤럭시 S26’ 인기 폭발...삼성전자, 또 일냈다",
     "desc": "지난해 연간 스마트폰 판매량에서 애플에 정상 자리를 내줬던 삼성전자가 올해 1분기 세계 시장 1위를 다시... 지난해 4분기 1위였던 애플은 20%의 점유율로 2위로 밀렸다. '갤럭시 S26' 사전 예약 대박이 견인차...",
@@ -13259,6 +13702,15 @@
    }
   ],
   "COST": [
+   {
+    "title": "'업성 푸르지오 레이크시티', 견본주택 개관 첫날부터 북적",
+    "desc": "단지 앞 준주거용지 내 상업시설과 인근 이마트, 코스트코, 롯데마트 등 대형 유통시설 이용이 편리하며, 삼성전자 천안캠퍼스와 아산스마트밸리도 가까워 직주근접성도 갖췄다. 천안에서 보기 드문 25m 4레인 규모의...",
+    "url": "https://www.hankyung.com/article/202604102741O",
+    "date": "2026-04-11T09:01:00+09:00",
+    "mentions": [
+     "COST"
+    ]
+   },
    {
     "title": "'업성 푸르지오 레이크시티' 10일 견본주택 개관",
     "desc": "단지 앞 근린생활시설 및 상업시설이 들어설 수 있는 준주거 용지 계획과 단지 주변으로 이마트, 코스트코, 롯데마트 등 대형 쇼핑시설을 비롯해 성성지구 중심상권이 인접해 있어 편리한 생활이 가능하다. 또한...",
@@ -13831,6 +14283,36 @@
   ],
   "TMUS": [
    {
+    "title": "“이마이, 오 마이!” 1회도 못 버티고 무너진 휴스턴 日 우완에게 전해...",
+    "desc": "이마이는 전날 T모바일파크에서 열린 시애틀 매리너스와 원정경기 선발 등판했으나 1/3이닝 1피안타 4볼넷... 등판을 마친 뒤 그는 현지 언론과 가진 인터뷰에서 T모바일파크의 마운드가 자신의 커맨드에 영향을 미쳤다고...",
+    "url": "https://www.mk.co.kr/article/12014500",
+    "date": "2026-04-12T06:04:00+09:00",
+    "mentions": [
+     "TMUS"
+    ]
+   },
+   {
+    "title": "이치로 동상 제막식서 배트가 '뚝'…\"리베라 왔나보다\"",
+    "desc": "시애틀은 11일 미국 워싱턴주 시애틀 T-모바일파크에서 프랜차이즈 스타인 이치로 동상 제막식을 열었다. 시애틀 구단에서 영구결번 선수 동상을 건립한 것은 캔 그리피 주니어, 에드가 마르티네스에 이어 이치로가 세...",
+    "url": "https://www.hankyung.com/article/2026041139527",
+    "date": "2026-04-11T15:57:00+09:00",
+    "mentions": []
+   },
+   {
+    "title": "장막 걷자 배트가 ‘뚝’…동상 제막식 해프닝에 이치로가 던진 농담",
+    "desc": "시애틀 구단은 10일(현지시간) 미국 워싱턴주 시애틀 T-모바일파크에서 이치로 동상 제막식을 열었다. 이날 행사에서는 참석자들이 동상을 덮고 있는 장막을 벗겨 동상을 공개하는 이벤트가 진행됐다. 그런데 이치로의...",
+    "url": "https://biz.heraldcorp.com/article/10714977?ref=naver",
+    "date": "2026-04-11T14:01:00+09:00",
+    "mentions": []
+   },
+   {
+    "title": "\"리베라 왔나?\"…이치로, 동상 제막식서 배트 '뚝' 해프닝",
+    "desc": "연합뉴스는 MLB 시애틀 매리너스가 11일(한국시간) 미국 워싱턴주 시애틀 T-모바일 파크에서 이치로의 동상 제막식을 열었다고 보도했다. 이 동상은 이치로 특유의 타격 준비 동작을 형상화한 것으로, 켄 그리피 주니어...",
+    "url": "https://view.asiae.co.kr/article/2026041113563936204",
+    "date": "2026-04-11T13:59:00+09:00",
+    "mentions": []
+   },
+   {
     "title": "드디어 공개된 레전드 동상, 그런데 이럴 수가...시애틀 구단이 저지른...",
     "desc": "매리너스 구단은 11일(한국시간) 홈구장 T모바일파크에서 이치로의 동상을 대중에 공개했다. 시카고 출신 예술가 루 셀라가 제작한 이 동상은 이치로의 전형적인 타격 준비 자세, 배트를 든 오른팔을 앞으로 뻗고 왼팔로...",
     "url": "https://www.mk.co.kr/article/12014277",
@@ -13998,6 +14480,24 @@
    }
   ],
   "SBUX": [
+   {
+    "title": "“커피값도 비싼데 팁까지?” 스타벅스, ‘손님 주머니’로 노조 임금인...",
+    "desc": "오찬종 기자의 매일뉴욕-스타벅스 편 한때 스타벅스는 단순한 커피숍을 넘어 현대인의 안식처로 꼽혔습니다. 집과 직장을 넘어 마음 편히 머무를 수 있는 휴식처라는 뜻의 ‘제3의 공간(The Third Space)’이란 개념을...",
+    "url": "https://www.mk.co.kr/article/12012587",
+    "date": "2026-04-11T13:13:00+09:00",
+    "mentions": [
+     "SBUX"
+    ]
+   },
+   {
+    "title": "아직도 말차? 대세는 ‘우베’야! [똑똑! 스마슈머]",
+    "desc": "글로벌 시장에서는 미국 스타벅스가 지난달 ‘우베 코코넛 마키아토’를 출시했으며 케이크와 젤라또, 쿠키에 이르기까지 활용 범위도 넓어지고 있다. 국내 일부 주점에서는 우베를 접목한 맥주와 막걸리까지 등장했다....",
+    "url": "https://www.sedaily.com/article/20031022?ref=naver",
+    "date": "2026-04-11T12:01:00+09:00",
+    "mentions": [
+     "SBUX"
+    ]
+   },
    {
     "title": "\"술이요? 전 카페 가서 마셔요\"...'알코올' 품은 커피, 2030 홀렸다",
     "desc": "11일 외식업계 등에 따르면 스타벅스가 지난해 12월 제주도에 문을 연 그랜드조선제주점에선 월평균 450잔의... 스타벅스는 2023년부터 일부 특화 매장을 중심으로 수제 맥주인 '별다방 라거'를 선보이며 주류 메뉴를...",
@@ -14538,9 +15038,9 @@
     "date": "2025-11-21T07:04:00+09:00",
     "mentions": [
      "KDP",
+     "NVDA",
      "WMT",
-     "COST",
-     "NVDA"
+     "COST"
     ]
    },
    {
@@ -14570,13 +15070,6 @@
     "mentions": [
      "CEG"
     ]
-   },
-   {
-    "title": "“전기 없이는 AI도 없다”… 원전·전력망 확보에 사활 건 美 빅테크",
-    "desc": "MS는 컨스텔레이션 에너지와 2027년까지 펜실베이니아주의 스리마일섬 원전을 재가동해 전력을 공급받기로 했다. 빅테크의 이런 행보는 AI 수요 폭증에 따른 전력난 문제를 해결하기 위한 포석이다. 국제에너지기구...",
-    "url": "https://biz.chosun.com/it-science/ict/2026/01/12/TBT2K32ISNBAVMF4JZBVJL2D7I/?utm_source=naver&utm_medium=original&utm_campaign=biz",
-    "date": "2026-01-12T17:30:00+09:00",
-    "mentions": []
    }
   ],
   "XEL": [
@@ -14707,9 +15200,9 @@
     "url": "https://www.hankyung.com/article/2025111450731",
     "date": "2025-11-14T18:03:00+09:00",
     "mentions": [
-     "INTC",
+     "EXC",
      "AEP",
-     "EXC"
+     "INTC"
     ]
    },
    {
@@ -14881,8 +15374,8 @@
     "url": "https://www.mk.co.kr/article/11478056",
     "date": "2025-11-26T23:01:00+09:00",
     "mentions": [
-     "ALNY",
-     "VRTX"
+     "VRTX",
+     "ALNY"
     ]
    },
    {
@@ -14891,8 +15384,8 @@
     "url": "https://www.mk.co.kr/article/11477869",
     "date": "2025-11-26T17:59:00+09:00",
     "mentions": [
-     "ALNY",
-     "VRTX"
+     "VRTX",
+     "ALNY"
     ]
    },
    {
@@ -15296,8 +15789,8 @@
     "url": "https://www.mk.co.kr/article/11478056",
     "date": "2025-11-26T23:01:00+09:00",
     "mentions": [
-     "ALNY",
-     "VRTX"
+     "VRTX",
+     "ALNY"
     ]
    },
    {
@@ -15306,8 +15799,8 @@
     "url": "https://www.mk.co.kr/article/11477869",
     "date": "2025-11-26T17:59:00+09:00",
     "mentions": [
-     "ALNY",
-     "VRTX"
+     "VRTX",
+     "ALNY"
     ]
    },
    {
@@ -15465,6 +15958,33 @@
    }
   ],
   "TSLA": [
+   {
+    "title": "“테슬라 모델Y, 이젠 비싸게 사야하나요?”…전기차 보조금 평가 바뀐...",
+    "desc": "전기차 제조사 평가 기준 공개 80점 이상 받아야 보조금 지급 국내 부품 사용·R&D 기여 평가 테슬라·BYD 등... 국내 전기차 산업 생태계를 보호하자는 취지지만 테슬라·BYD 등 해외 제조사를 선호하는 소비자들 사이에서...",
+    "url": "https://www.mk.co.kr/article/12014501",
+    "date": "2026-04-12T06:10:00+09:00",
+    "mentions": [
+     "TSLA"
+    ]
+   },
+   {
+    "title": "전기차 수요는 테슬라 쏠림, ESS는 걸음마… 적자 늪 못 빠져나오는 배...",
+    "desc": "그러나 반등한 전기차 판매량의 상당 부분은 미국 전기차 제조사인 테슬라에 쏠려 국내 배터리 업체들에 미친 영향은 크지 않았다. 한국수입자동차협회(KAIDA)에 따르면 테슬라의 올 1분기 국내 판매량은 전년 동기...",
+    "url": "https://biz.chosun.com/industry/company/2026/04/12/2FUSPFZWGNCWLBQKSFKAJXYUIM/?utm_source=naver&utm_medium=original&utm_campaign=biz",
+    "date": "2026-04-12T06:01:00+09:00",
+    "mentions": [
+     "TSLA"
+    ]
+   },
+   {
+    "title": "“요즘 줄 서더니 500만원 올랐네” 일주일 만에 ‘기습 인상’ 테슬라...",
+    "desc": "테슬라 가격표가 일주일 만에 바뀌었다. 신차 수요 확대와 환율, 보조금 정책 변화 등 다양한 변수가 맞물리며 가격이 움직이는 모습이다. 모델Y L 일주일 만에 500만원 인상…인기 모델 중심 인상 10일 테슬라코리아...",
+    "url": "https://www.sedaily.com/article/20031260?ref=naver",
+    "date": "2026-04-11T18:18:00+09:00",
+    "mentions": [
+     "TSLA"
+    ]
+   },
    {
     "title": "이란 전장의 비밀병기 ‘스타링크’, 우주 인터넷 시대 열까[테크트렌드...",
     "desc": "머스크가 야심차게 진행 중인 자율주행차(테슬라), 도심항공모빌리티(UAM), 군사용 통신망(스타실드) 등 미래 산업의 핵심 통신 인프라 역할을 위한 전략적 선택이라는 평가도 수긍이 가는 대목이다. 물론 이러한...",
@@ -16053,8 +16573,8 @@
     "url": "http://www.edaily.co.kr/news/newspath.asp?newsid=03004486642197784",
     "date": "2025-06-02T16:11:00+09:00",
     "mentions": [
-     "TSLA",
-     "AAPL"
+     "AAPL",
+     "TSLA"
     ]
    }
   ],
@@ -16517,43 +17037,43 @@
   ]
  },
  "co_mentions": {
-  "GOOGL-NVDA": 129,
-  "AMZN-MSFT": 121,
-  "GOOGL-MSFT": 118,
+  "GOOGL-NVDA": 139,
+  "GOOGL-MSFT": 132,
+  "AMZN-MSFT": 128,
+  "AMZN-GOOGL": 121,
   "INTC-NVDA": 117,
-  "AMZN-GOOGL": 114,
-  "MSFT-NVDA": 104,
-  "AAPL-GOOGL": 101,
+  "MSFT-NVDA": 114,
+  "AAPL-GOOGL": 111,
+  "AAPL-MSFT": 110,
+  "AAPL-NVDA": 105,
+  "AVGO-NVDA": 105,
+  "AMZN-NVDA": 102,
   "INTC-MU": 101,
-  "AAPL-MSFT": 100,
-  "AVGO-NVDA": 98,
-  "AMZN-NVDA": 95,
-  "GOOGL-META": 94,
-  "AAPL-NVDA": 94,
+  "GOOGL-META": 97,
+  "AAPL-AMZN": 86,
+  "META-NVDA": 85,
+  "AVGO-GOOGL": 82,
   "NVDA-TSLA": 82,
-  "META-NVDA": 82,
-  "META-MSFT": 79,
-  "AAPL-AMZN": 79,
+  "META-MSFT": 82,
   "AMD-INTC": 77,
   "AMZN-META": 75,
-  "AVGO-GOOGL": 75,
   "AAPL-TSLA": 74,
   "GOOGL-TSLA": 72,
   "ASML-INTC": 72,
   "MSFT-TSLA": 70,
-  "AAPL-META": 59,
+  "AAPL-META": 63,
+  "AMZN-AVGO": 58,
   "AMZN-TSLA": 57,
   "META-TSLA": 57,
+  "AVGO-MSFT": 56,
+  "AAPL-AVGO": 53,
   "AVGO-META": 52,
   "AMD-NVDA": 52,
-  "AMZN-AVGO": 51,
   "AVGO-INTC": 50,
   "GOOGL-INTC": 50,
-  "AVGO-MSFT": 49,
-  "AAPL-AVGO": 46,
   "AVGO-TSLA": 45,
   "INTC-MSFT": 40,
-  "MCHP-MSFT": 38,
+  "MCHP-MSFT": 39,
   "AMD-MU": 36,
   "MU-NVDA": 32,
   "AMD-AVGO": 32,
@@ -16561,9 +17081,10 @@
   "AMZN-INTC": 31,
   "ASML-MU": 30,
   "ASML-NVDA": 29,
+  "AAPL-INTC": 27,
   "INTC-META": 26,
-  "AAPL-INTC": 25,
   "AMD-ASML": 24,
+  "CSCO-NVDA": 22,
   "AVGO-MU": 21,
   "GOOGL-MU": 21,
   "NVDA-PLTR": 21,
@@ -16585,25 +17106,29 @@
   "AAPL-PLTR": 16,
   "INTC-LRCX": 16,
   "COST-WMT": 16,
+  "AAPL-CSCO": 15,
+  "CSCO-MSFT": 15,
   "LRCX-NVDA": 15,
   "INTC-MCHP": 15,
-  "CSCO-NVDA": 15,
+  "MCHP-NVDA": 15,
   "MRVL-NVDA": 14,
-  "MCHP-NVDA": 14,
+  "GOOGL-MCHP": 14,
+  "CSCO-GOOGL": 13,
   "NFLX-NVDA": 13,
   "AAPL-QCOM": 13,
   "ASML-LRCX": 13,
   "ADI-INTC": 13,
-  "GOOGL-MCHP": 13,
   "NFLX-WBD": 13,
   "AAPL-MU": 12,
   "GOOGL-NFLX": 12,
   "META-NFLX": 12,
   "NVDA-QCOM": 12,
+  "AMZN-CSCO": 11,
   "INTC-MRVL": 11,
   "GOOGL-WMT": 11,
   "AMZN-PLTR": 11,
   "AMZN-NFLX": 11,
+  "AVGO-CSCO": 10,
   "AMZN-MU": 10,
   "MSFT-MU": 10,
   "ASML-KLAC": 10,
@@ -16616,6 +17141,7 @@
   "INTC-NXPI": 9,
   "STX-WDC": 9,
   "INTC-PLTR": 9,
+  "CRWD-ZS": 9,
   "AMD-AMZN": 8,
   "ASML-GOOGL": 8,
   "AVGO-QCOM": 8,
@@ -16623,8 +17149,8 @@
   "AAPL-NFLX": 8,
   "NVDA-WDC": 8,
   "AMD-QCOM": 8,
-  "AAPL-CSCO": 8,
-  "CSCO-MSFT": 8,
+  "AAPL-MCHP": 8,
+  "MCHP-META": 8,
   "META-WMT": 7,
   "MSFT-WMT": 7,
   "AVGO-COST": 7,
@@ -16632,17 +17158,13 @@
   "AVGO-KLAC": 7,
   "AMAT-INTC": 7,
   "INTC-MPWR": 7,
-  "MCHP-META": 7,
-  "AAPL-MCHP": 7,
   "MU-PLTR": 7,
   "INTC-SNPS": 7,
-  "CRWD-ZS": 7,
   "GOOGL-QCOM": 6,
   "AAPL-AMD": 6,
   "MSFT-QCOM": 6,
   "ADI-MPWR": 6,
   "MU-STX": 6,
-  "CSCO-GOOGL": 6,
   "CSCO-META": 6,
   "CDNS-SNPS": 6,
   "AMGN-GILD": 6,
@@ -16670,7 +17192,6 @@
   "CDNS-NVDA": 4,
   "AVGO-MRVL": 4,
   "MCHP-MU": 4,
-  "AMZN-CSCO": 4,
   "CDNS-INTC": 4,
   "AMZN-ZS": 4,
   "GOOGL-ZS": 4,
@@ -16696,7 +17217,6 @@
   "NVDA-WDAY": 3,
   "NXPI-TXN": 3,
   "MCHP-TSLA": 3,
-  "AVGO-CSCO": 3,
   "ADBE-GOOGL": 3,
   "GOOGL-SHOP": 3,
   "SHOP-WMT": 3,
@@ -16737,10 +17257,18 @@
   "CRWD-WDAY": 2,
   "MSFT-MSTR": 2,
   "MSTR-NVDA": 2,
+  "AAPL-PANW": 2,
+  "AMZN-PANW": 2,
+  "AVGO-PANW": 2,
+  "CSCO-PANW": 2,
+  "GOOGL-PANW": 2,
+  "MSFT-PANW": 2,
   "AAPL-CRWD": 2,
   "AMZN-CRWD": 2,
   "CRWD-CSCO": 2,
   "CRWD-MSFT": 2,
+  "CRWD-FTNT": 2,
+  "FTNT-ZS": 2,
   "MSFT-TEAM": 2,
   "ADSK-AMZN": 2,
   "ADSK-META": 2,
